@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.Menu.Menu_main;
+import com.twu.biblioteca.support.Messages;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
@@ -14,7 +14,7 @@ public class menu_mainTest {
 
     @Test
     public void printWelcomeMessage() {
-        Menu_main.printWelcomeMessage();
+        Messages.printWelcomeMessage();
 
         assertEquals("##########################################\n#\t\t\t\tBiblioteca\t\t\t\t#\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n#\t\tNihil Sciemus Sed Est Exiguus\t#\n##########################################\n\t\t\t   We welcome you",systemOutRule.getLog().substring(0,205));
     }

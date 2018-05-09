@@ -17,7 +17,7 @@ sourceSets {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'src.com.twu.biblioteca.BibliotecaApp'
+        attributes 'Messages-Class': 'src.com.twu.biblioteca.BibliotecaApp'
     }
 }
 

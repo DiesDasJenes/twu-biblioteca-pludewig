@@ -1,4 +1,4 @@
-package com.twu.biblioteca.support_data;
+package com.twu.biblioteca.support;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ public class Book {
     private Integer Id;
 
 
-    public Book(String name, com.twu.biblioteca.support_data.Author author, Date published, Boolean checkedOut, Integer id) {
+    public Book(String name, com.twu.biblioteca.support.Author author, Date published, Boolean checkedOut, Integer id) {
         Name = name;
         Author = author;
         Published = published;
@@ -22,7 +22,7 @@ public class Book {
         return Name;
     }
 
-    public com.twu.biblioteca.support_data.Author getAuthor() {
+    public com.twu.biblioteca.support.Author getAuthor() {
         return Author;
     }
 

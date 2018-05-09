@@ -1,4 +1,4 @@
-package com.twu.biblioteca.support_data;
+package com.twu.biblioteca.support;
 
 
 import io.bloco.faker.Faker;
@@ -11,6 +11,7 @@ public class Library {
 
     public Library() {
         initiateBookList();
+
     }
 
     private void initiateBookList () {

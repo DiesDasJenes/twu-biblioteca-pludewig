@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.support;
 
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -15,6 +15,8 @@ public class Querist {
 
     public Object ask(String message){
         out.println(message);
+        out.print("*");
         return scanner.next();
     }
+
 }

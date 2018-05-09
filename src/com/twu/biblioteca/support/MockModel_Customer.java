@@ -1,4 +1,4 @@
-package com.twu.biblioteca.support_data;
+package com.twu.biblioteca.support;
 
 import io.bloco.faker.Faker;
 import java.util.HashMap;
