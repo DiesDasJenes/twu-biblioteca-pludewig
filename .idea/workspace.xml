@@ -7,22 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78569df4-c5c4-4448-8489-35beb549790c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Author.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/twu_biblioteca_pludewig_jar/twu-biblioteca-pludewig.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/twu_biblioteca_pludewig_jar/twu-biblioteca-pludewig.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/twu/biblioteca/menu_mainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/com/twu/biblioteca/menu_mainTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/menu_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu_main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/menu_mainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/menu_mainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Librarian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -75,17 +62,63 @@
       <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#775#776#0" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="-15">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding>
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#959#960#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#1045#1046#0" expanded="true" />
+                <element signature="e#1096#1097#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Librarian.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Librarian.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -124,6 +157,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -501,9 +535,12 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/menu_main.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/menu_mainTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Author.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Book.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Book.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Librarian.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/User.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Customer.java" />
       </list>
     </option>
   </component>
@@ -562,6 +599,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="twu" type="462c0819:PsiDirectoryNode" />
               <item name="biblioteca" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="twu-biblioteca-pludewig" type="b2602c69:ProjectViewProjectNode" />
+              <item name="twu-biblioteca-pludewig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="twu" type="462c0819:PsiDirectoryNode" />
+              <item name="biblioteca" type="462c0819:PsiDirectoryNode" />
+              <item name="support_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="twu-biblioteca-pludewig" type="b2602c69:ProjectViewProjectNode" />
@@ -758,7 +803,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525864385825</updated>
-      <workItem from="1525864392562" duration="7367000" />
+      <workItem from="1525864392562" duration="8648000" />
     </task>
     <servers />
   </component>
@@ -783,7 +828,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7367000" />
+    <option name="totallyTimeSpent" value="8648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1445" height="781" extended-state="6" />
@@ -892,17 +937,66 @@
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Librarian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support_data/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
