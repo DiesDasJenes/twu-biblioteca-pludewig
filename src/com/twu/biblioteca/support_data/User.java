@@ -7,12 +7,12 @@ public class User {
     private String Firstname;
     private String Lastname;
     private String LoginName;
-    private String PasswordHash;
+    private int PasswordHash;
     private int Id;
     private ArrayList<Book> checkedOutBooks;
 
 
-    User(int permission, String firstname, String lastname, String loginName, String passwordHash, int id) {
+    User(int permission, String firstname, String lastname, String loginName, int passwordHash, int id) {
         Permission = permission;
         Firstname = firstname;
         Lastname = lastname;
@@ -38,7 +38,7 @@ public class User {
         return LoginName;
     }
 
-    public String getPasswordHash() {
+    public int getPasswordHash() {
         return PasswordHash;
     }
 
