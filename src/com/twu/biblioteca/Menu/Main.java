@@ -1,6 +1,6 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Menu;
 
-class Menu_main {
+class Main {
 
     static void printWelcomeMessage(){
         System.out.println("##########################################");
@@ -10,4 +10,6 @@ class Menu_main {
         System.out.println("##########################################");
         System.out.println("\t\t\t   We welcome you");
     }
+
+
 }
