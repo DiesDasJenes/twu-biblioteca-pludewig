@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="twu-biblioteca-pludewig:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/twu_biblioteca_pludewig_jar</output-path>
+    <root id="archive" name="twu-biblioteca-pludewig.jar">
+      <element id="module-output" name="twu-biblioteca-pludewig" />
+    </root>
+  </artifact>
+</component>
