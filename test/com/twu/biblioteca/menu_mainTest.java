@@ -13,7 +13,7 @@ public class menu_mainTest {
 
     @Test
     public void printWelcomeMessage() {
-        menu_main.printWelcomeMessage();
+        Menu_main.printWelcomeMessage();
 
         assertEquals("##########################################\n#\t\t\t\tBiblioteca\t\t\t\t#\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n#\t\tNihil Sciemus Sed Est Exiguus\t#\n##########################################\n\t\t\t   We welcome you",systemOutRule.getLog().substring(0,205));
     }

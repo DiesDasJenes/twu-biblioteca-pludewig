@@ -2,16 +2,37 @@ plugins {
     id 'java'
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+    test {
+        java {
+            srcDir "test"
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'src.com.twu.biblioteca.BibliotecaApp'
+    }
+}
+
 group 'twu-biblioteca-pludewig'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.9'
     testCompile 'com.github.stefanbirkner:system-rules:1.17.0'
+    testCompile "org.mockito:mockito-core:2.+"
 }
