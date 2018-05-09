@@ -7,8 +7,7 @@ import com.twu.biblioteca.support.MockModel_Customer;
 public class BibliotecaApp {
 
     public static void main(String[] args) {
-        Messages messages= new Messages();
-        messages.printWelcomeMessage();
+        Messages.printWelcomeMessage();
         Login LoginMenu = new Login();
         MockModel_Customer MM_C = new MockModel_Customer();
         LoginMenu.askandcheckCredentials(MM_C);

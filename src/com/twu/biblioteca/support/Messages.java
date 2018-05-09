@@ -12,7 +12,9 @@ public class Messages {
         printCharacterLine('~');
         printStringinMiddleSorroundedWith('#',"Nihil Sciemus Sed Est Exiguus");
         printCharacterLine('#');
-        printStringinMiddleSorroundedWith('!', "May you be greeted");
+        printStringinMiddleSorroundedWith('#', "May you be greeted");
+        printCharacterLine('#');
+        System.out.print("\n");
     }
 
     private static void printCharacterLine(char c){
@@ -37,15 +39,7 @@ public class Messages {
     }
 
     public static void clearConsole() {
-        final String os = System.getProperty("os.name");
-        try {
-            if (os.contains("Windows")) {
-                Runtime.getRuntime().exec("cls");
-            } else {
-                Runtime.getRuntime().exec("clear");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }
