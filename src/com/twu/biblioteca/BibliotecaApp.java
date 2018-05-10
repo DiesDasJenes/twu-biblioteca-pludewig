@@ -1,16 +1,17 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.SubMenu.Login;
+import com.twu.biblioteca.support.Library;
 import com.twu.biblioteca.support.Messages;
 import com.twu.biblioteca.support.MockModel_Customer;
+import sun.security.tools.keytool.Main;
 
 public class BibliotecaApp {
 
     public static void main(String[] args) {
+        Library Library = new Library();
         Messages.printWelcomeMessage();
-        Login LoginMenu = new Login();
-        MockModel_Customer MM_C = new MockModel_Customer();
-        LoginMenu.askandcheckCredentials(MM_C);
+        com.twu.biblioteca.Menu.Main.initiate();
 
     }
 

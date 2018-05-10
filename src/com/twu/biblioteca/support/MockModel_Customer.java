@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class MockModel_Customer {
     private HashMap<Integer,Customer> ListofCustomers = new HashMap<>();
 
-    public MockModel_Customer() {
+    MockModel_Customer() {
         Faker Faker = new Faker();
         ListofCustomers.putIfAbsent((int)(Math.random()*Integer.MAX_VALUE),new Customer(Faker.name.firstName(),Faker.name.lastName(),"Cos1","TWiscool".hashCode(),(int)(Math.random()*Integer.MAX_VALUE)));
         ListofCustomers.putIfAbsent((int)(Math.random()*Integer.MAX_VALUE),new Customer(Faker.name.firstName(),Faker.name.lastName(),"Cos2","TWseemscool".hashCode(),(int)(Math.random()*Integer.MAX_VALUE)));
