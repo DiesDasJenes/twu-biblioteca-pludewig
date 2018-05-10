@@ -1,48 +1,80 @@
 package com.twu.biblioteca.support;
 
+import org.joda.time.LocalDate;
+
 import java.util.Date;
 
-public class Book {
-    private String Name;
+public class Book implements Resource {
+    private String Title;
     private Author Author;
-    private Date Published;
+    private LocalDate Published;
     private Boolean checkedOut;
-    private Integer Id;
+    private String BookId;
+    private String UserId;
 
-
-    public Book(String name, com.twu.biblioteca.support.Author author, Date published, Boolean checkedOut, Integer id) {
-        Name = name;
+    Book(String title, Author author, LocalDate published, Boolean checkedOut, String id) {
+        Title = title;
         Author = author;
         Published = published;
         this.checkedOut = checkedOut;
-        Id = id;
+        BookId = id;
     }
 
-    public String getName() {
-        return Name;
+    public void setCheckedOut(Boolean checkedOut) {
+        this.checkedOut = checkedOut;
     }
 
-    public com.twu.biblioteca.support.Author getAuthor() {
-        return Author;
-    }
-
-    public Date getPublished() {
-        return Published;
-    }
-
-    public Boolean getCheckedOut() {
+    Boolean isCheckedOut() {
         return checkedOut;
     }
 
-    public Integer getId() {
-        return Id;
+    Boolean isAvailable(){ return !checkedOut; }
+
+    public String getBookId() {
+        return BookId;
+    }
+
+
+    public int getYearPublished() {
+        return Published.getYear();
     }
 
     @Override
     public String toString() {
-        return  "Name='" + Name + '\'' +
+        return  "Title='" + Title + '\'' +
                 ", Author=" + Author +
                 ", Published=" + Published +
-                ", checkedOut=" + checkedOut;
+                ", Available=" + !checkedOut;
+    }
+
+    @Override
+    public String getTitle() {
+        return Title;
+    }
+
+    @Override
+    public String getUserID() {
+        return UserId;
+    }
+
+    @Override
+    public void setUserID(String userID) {
+        this.UserId = userID;
+    }
+
+    @Override
+    public String propertyList(String fieldFormatStr) {
+        String formatStr = String.format(
+                "%1$ss %1$ss %1$sd %1$sd%n", fieldFormatStr
+        );
+        return String.format(
+                formatStr,
+                Title, Author, getYearPublished(), isAvailable()
+        );
+    }
+
+    @Override
+    public String propertyHeaders(String fieldFormatStr) {
+        return String.format("| %-20s | %-20s | %-20s | %-20s | %-20s", "Book No.", "Title", "Author", "Published", "Available");
     }
 }

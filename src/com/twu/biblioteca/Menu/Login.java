@@ -1,4 +1,4 @@
-package com.twu.biblioteca.SubMenu;
+package com.twu.biblioteca.Menu;
 
 import com.twu.biblioteca.support.Querist;
 import com.twu.biblioteca.support.Customer;
