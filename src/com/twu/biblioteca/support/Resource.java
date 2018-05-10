@@ -10,5 +10,4 @@ public interface Resource {
 
     String propertyList(String fieldFormatStr);
 
-    String propertyHeaders(String fieldFormatStr);
 }

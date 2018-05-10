@@ -25,7 +25,7 @@ public class Library extends Observable {
 
     private Book generateMockDataForBook() {
         Faker Faker = new Faker();
-        return new Book(Faker.book.title(),new Author(Faker.name.firstName(),Faker.name.lastName()),LocalDate.now().minusYears((int)(Math.random()*500)),false,Faker.number.digit());
+        return new Book(Faker.book.title(),new Author(Faker.name.firstName(),Faker.name.lastName()),LocalDate.now().minusYears((int)(Math.random()*500)),false,String.valueOf(Faker.number.positive()));
     }
 
     public Map<Integer, Book> getListOfAllBooks() {

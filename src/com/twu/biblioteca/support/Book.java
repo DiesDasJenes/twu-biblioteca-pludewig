@@ -65,16 +65,12 @@ public class Book implements Resource {
     @Override
     public String propertyList(String fieldFormatStr) {
         String formatStr = String.format(
-                "%1$ss %1$ss %1$sd %1$sd%n", fieldFormatStr
+                "| %1$s | %1$s | %1$s | %1$s | %1$s |%n", fieldFormatStr
         );
         return String.format(
                 formatStr,
-                Title, Author, getYearPublished(), isAvailable()
+                BookId, Title, Author, getYearPublished(), isAvailable()
         );
     }
 
-    @Override
-    public String propertyHeaders(String fieldFormatStr) {
-        return String.format("| %-20s | %-20s | %-20s | %-20s | %-20s", "Book No.", "Title", "Author", "Published", "Available");
-    }
 }

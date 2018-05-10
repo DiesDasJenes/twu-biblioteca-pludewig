@@ -15,7 +15,7 @@ public class BibliotecaApp {
         Messages.printWelcomeMessage();
         Library Library = new Library();
         ListBookOption LL = new ListBookOption();
-        LL.displayRessources(Library);
+        System.out.print(LL.displayRessources(Library));
 
     }
 
