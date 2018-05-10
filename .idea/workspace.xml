@@ -6,25 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78569df4-c5c4-4448-8489-35beb549790c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support/BookHeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support/DisplayHeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/twu_biblioteca_pludewig_jar/twu-biblioteca-pludewig.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/twu_biblioteca_pludewig_jar/twu-biblioteca-pludewig.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/Menu/ListBookOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/Menu/ListBookOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/Menu/MenuOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/Menu/MenuOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/support/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/support/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/support/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/support/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/support/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/twu/biblioteca/support/Library.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ListBookOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ListBookOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/MenuOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/MenuOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Resource.java" afterDir="false" />
-    </list>
+    <list default="true" id="78569df4-c5c4-4448-8489-35beb549790c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -70,8 +52,8 @@
       <file leaf-file-name="ListBookOption.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ListBookOption.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="95">
+              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#173#174#0" expanded="true" />
@@ -87,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -96,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Book.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="457">
-              <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#551#552#0" expanded="true" />
@@ -908,7 +890,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525864385825</updated>
-      <workItem from="1525864392562" duration="40109000" />
+      <workItem from="1525864392562" duration="41372000" />
     </task>
     <servers />
   </component>
@@ -933,11 +915,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40109000" />
+    <option name="totallyTimeSpent" value="41372000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1613" height="1025" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1581" height="878" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500346" side_tool="true" weight="0.33084947" />
@@ -956,10 +937,10 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49965397" visible="true" weight="0.24262296" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49965397" visible="true" weight="0.2890625" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.22380657" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2283365" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32896176" />
       <window_info id="Learn" order="4" />
       <window_info anchor="right" id="Gradle" order="3" />
@@ -1189,14 +1170,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#551#552#0" expanded="true" />
@@ -1229,8 +1210,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ListBookOption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state relative-caret-position="95">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#173#174#0" expanded="true" />
