@@ -2,14 +2,14 @@ package com.twu.biblioteca.support;
 
 
 import io.bloco.faker.Faker;
+import org.joda.time.LocalDate;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Observable;
 
 public class Library extends Observable {
-    private Map<Integer, Book> ListofAllBooks = new HashMap<>();
+    private Map<Integer, Book> ListOfAllBooks = new HashMap<>();
     private MockModel_Customer MockModel_Customer;
     public Library() {
         initiateBookList();
@@ -18,22 +18,22 @@ public class Library extends Observable {
 
     private void initiateBookList () {
         for (int i = 0; i < 25 ; i++) {
-            Book b = generateMockDataforBook();
-            ListofAllBooks.putIfAbsent(b.getId(),b);
+            Book b = generateMockDataForBook();
+            ListOfAllBooks.putIfAbsent(Integer.parseInt(b.getBookId()),b);
         }
     }
 
-    private Book generateMockDataforBook() {
+    private Book generateMockDataForBook() {
         Faker Faker = new Faker();
-        return new Book(Faker.book.title(),new Author(Faker.name.firstName(),Faker.name.lastName()),Faker.date.birthday(),false,(int)(Math.random()*Integer.MAX_VALUE));
+        return new Book(Faker.book.title(),new Author(Faker.name.firstName(),Faker.name.lastName()),LocalDate.now().minusYears((int)(Math.random()*500)),false,Faker.number.digit());
     }
 
-    public Map<Integer, Book> getListofAllBooks() {
-        return ListofAllBooks;
+    public Map<Integer, Book> getListOfAllBooks() {
+        return ListOfAllBooks;
     }
 
     public void setBook(int key, Book Book) {
-        ListofAllBooks.replace(key,Book);
+        ListOfAllBooks.replace(key,Book);
         hasChanged();
         notifyObservers();
     }

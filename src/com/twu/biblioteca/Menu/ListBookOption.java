@@ -17,10 +17,12 @@ public class ListBookOption implements MenuOption {
 
     @Override
     public void displayRessources(Library Library) {
-        String BookList = Library.getListofAllBooks().get(1).propertyHeaders("%-20s");
-        for (Book book: Library.getListofAllBooks().values()
+        String BookList = Library.getListOfAllBooks().get(1).propertyHeaders("%-20s");
+        for (Book book: Library.getListOfAllBooks().values()
              ) {
-            BookList = BookList.concat(String.format("%s", book.propertyList("%-20s") ));
+            BookList = BookList.concat(String.format("%s", book.propertyList("%-20s")));
     }
+
+        System.out.println(BookList);
     }
 }
