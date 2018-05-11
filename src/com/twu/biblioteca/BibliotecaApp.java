@@ -1,13 +1,10 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.Menu.ListBookOption;
-import com.twu.biblioteca.Menu.Main;
-import com.twu.biblioteca.Menu.MenuOption;
-import com.twu.biblioteca.Menu.QuietOption;
+import com.twu.biblioteca.Menu.*;
 import com.twu.biblioteca.support.Library;
 import com.twu.biblioteca.support.Messages;
+import com.twu.biblioteca.support.MockModel_Customer;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 public class BibliotecaApp {
@@ -18,22 +15,42 @@ public class BibliotecaApp {
     }
 
     private void run(){
-        Library Library = new Library();
+        Menu Parent = setUpMenuStructure();
         Messages.printWelcomeMessage();
-        Main Main = new Main(setUpOptionList(Library));
-        Main.run();
-
+        Parent.executeMenu();
     }
 
 
-    private ArrayList<MenuOption> setUpOptionList(Library Library){
+
+
+    private Menu setUpMenuStructure(){
+        Library Library = new Library();
+        ArrayList<MenuOption> LoginOption = new ArrayList<>();
+        MockModel_Customer MMC = new MockModel_Customer();
+        LoginOption LO = new LoginOption(MMC);
+        LoginOption.add(LO);
+        Menu Login = new Menu(LoginOption, null, ArrayList<Menu> subMenus, "Login Menu");
+        return Parent;
+    }
+
+    private Menu setUpMenuBookList(){
+
+    }
+
+    private Menu setUpMenuMain(Library Library,Menu parent){
+        ArrayList<Menu> subMenus = new ArrayList<>();
+        subMenus.add(setUpMenuBookList());
+        Menu Main = new Menu(setUpOptionStructureForMain(Library),parent,subMenus,"Main Menu");
+
+    }
+
+    private ArrayList<MenuOption> setUpOptionStructureForMain(Library Library){
         ArrayList<MenuOption> Options = new ArrayList<>();
         ListBookOption LBO = new ListBookOption(Library);
-        QuietOption QO = new QuietOption();
+        QuitOption QO = new QuitOption();
         Options.add(LBO); Options.add(QO);
         return Options;
     }
-
 
 
 

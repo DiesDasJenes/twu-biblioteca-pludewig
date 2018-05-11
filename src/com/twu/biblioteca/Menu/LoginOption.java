@@ -5,22 +5,23 @@ import com.twu.biblioteca.support.Customer;
 import com.twu.biblioteca.support.Messages;
 import com.twu.biblioteca.support.MockModel_Customer;
 
-public class Login {
+public class LoginOption implements MenuOption{
+    MockModel_Customer MockModel_Customer;
+    public LoginOption(MockModel_Customer MockModel_Customer){
+        this.MockModel_Customer = MockModel_Customer;
+    }
 
-    public Login(){}
-
-    public boolean askandcheckCredentials(MockModel_Customer MockModel_Customer){
-        System.out.println("Please enter your Login Credentials");
-        while(true){
-            if(checkCredentials(MockModel_Customer,askForLoginName(),askForPassword())){
-                return true;
+    private void loginUser(){
+        this.getCommandContent();
+        if(checkCredentials(MockModel_Customer,askForLoginName(),askForPassword())){
+                //goto Mainmenu
             }else{
                 Messages.clearConsole();
                 Messages.printWelcomeMessage();
                 System.out.println("LoginName or Password wrong.");
                 System.out.println("Please try again.");
+                this.loginUser();
             }
-        }
     }
 
     private String askForLoginName(){
@@ -42,5 +43,20 @@ public class Login {
             }
         }
         return false;
+    }
+
+    @Override
+    public String getCommandContent() {
+        return "Please enter your Credentials";
+    }
+
+    @Override
+    public String getCommand() {
+        return null;
+    }
+
+    @Override
+    public void executeCommand() {
+        loginUser();
     }
 }

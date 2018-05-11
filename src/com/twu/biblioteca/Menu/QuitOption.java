@@ -2,7 +2,7 @@ package com.twu.biblioteca.Menu;
 
 import com.twu.biblioteca.support.Library;
 
-public class QuietOption implements MenuOption {
+public class QuitOption implements MenuOption {
     @Override
     public String getCommandContent() {
         return "Press (Q) to Quit";
