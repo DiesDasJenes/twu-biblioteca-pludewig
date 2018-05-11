@@ -63,14 +63,22 @@ public class Book implements Resource {
     }
 
     @Override
-    public String propertyList(String fieldFormatStr) {
+    public String getPropertyList(String fieldFormatStr) {
         String formatStr = String.format(
                 "| %1$s | %1$s | %1$s | %1$s | %1$s |%n", fieldFormatStr
         );
         return String.format(
                 formatStr,
-                BookId, Title, Author, getYearPublished(), isAvailable()
+                BookId, isTitleTooLong() ? reduceTitle() : Title, Author, getYearPublished(), isAvailable()
         );
+    }
+
+    private boolean isTitleTooLong(){
+        return Title.length() >= 19;
+    }
+
+    private String reduceTitle(){
+        return Title= Title.substring(0,17).concat("...");
     }
 
 }

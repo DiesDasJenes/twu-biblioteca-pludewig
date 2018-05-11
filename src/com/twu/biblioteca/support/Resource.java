@@ -8,6 +8,6 @@ public interface Resource {
 
     void setUserID(String userID);
 
-    String propertyList(String fieldFormatStr);
+    String getPropertyList(String fieldFormatStr);
 
 }

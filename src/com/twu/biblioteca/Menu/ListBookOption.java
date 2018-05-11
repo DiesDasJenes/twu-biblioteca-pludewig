@@ -23,7 +23,7 @@ public class ListBookOption implements MenuOption {
         BookList = BookList.concat("\n");
         for (Book book: Library.getListOfAllBooks().values()
              ) {
-            BookList = BookList.concat(String.format("%s", book.propertyList("%-20s")));
+            BookList = BookList.concat(String.format("%s", book.getPropertyList("%-20s")));
     }
 
         return BookList;
