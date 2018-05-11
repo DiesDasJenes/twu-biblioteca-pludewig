@@ -14,7 +14,7 @@ public class BookTest {
 
     Book TestBook;
     String Title;
-    Author Author;
+    String Author;
     LocalDate randomYear;
     String randomDigit;
 
@@ -22,15 +22,10 @@ public class BookTest {
     public void setUp() throws Exception {
         Faker Faker = new Faker();
         Title =Faker.book.title();
-        Author = new Author(Faker.name.firstName(),Faker.name.lastName());
+        Author = Faker.book.author();
         randomYear = LocalDate.now().minusYears((int)(Math.random()*500));
         randomDigit = String.valueOf(Faker.number.positive());
         TestBook = new Book(Title,Author,randomYear,false,randomDigit);
-    }
-
-    @Test
-    public void isAvailable() {
-        assertTrue(!TestBook.isCheckedOut());
     }
 
     @Test
@@ -47,7 +42,7 @@ public class BookTest {
     @Test
     public void TitleTooLong() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Faker Faker = new Faker();
-        Author = new Author(Faker.name.firstName(),Faker.name.lastName());
+        Author = Faker.book.author();
         randomYear = LocalDate.now().minusYears((int)(Math.random()*500));
         randomDigit = String.valueOf(Faker.number.positive());
         String LongTitle = "THis is a really long Title which we want to reduce";

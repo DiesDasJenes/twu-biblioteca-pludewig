@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Observable;
 
 public class Library extends Observable {
+    private static final boolean CHECKED_IN = true;
     private Map<Integer, Book> ListOfAllBooks = new HashMap<>();
     private MockModel_Customer MockModel_Customer;
     public Library() {
@@ -25,7 +26,7 @@ public class Library extends Observable {
 
     private Book generateMockDataForBook() {
         Faker Faker = new Faker();
-        return new Book(Faker.book.title(),new Author(Faker.name.firstName(),Faker.name.lastName()),LocalDate.now().minusYears((int)(Math.random()*500)),false,String.valueOf(Faker.number.positive()));
+        return new Book(Faker.book.title(),Faker.name.firstName().concat(" " + Faker.name.lastName()),LocalDate.now().minusYears((int)(Math.random()*500)), CHECKED_IN,String.valueOf(Faker.number.positive()));
     }
 
     public Map<Integer, Book> getListOfAllBooks() {

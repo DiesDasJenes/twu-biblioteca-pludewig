@@ -8,6 +8,6 @@ public interface MenuOption {
 
     String getCommand();
 
-    void executeCommand();
+    void executeCommand(Library Library);
 
 }

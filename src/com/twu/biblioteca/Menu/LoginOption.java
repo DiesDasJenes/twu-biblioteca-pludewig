@@ -5,16 +5,16 @@ import com.twu.biblioteca.support.Customer;
 import com.twu.biblioteca.support.Messages;
 import com.twu.biblioteca.support.MockModel_Customer;
 
-public class LoginOption implements MenuOption{
+public class LoginOption {
     MockModel_Customer MockModel_Customer;
     public LoginOption(MockModel_Customer MockModel_Customer){
         this.MockModel_Customer = MockModel_Customer;
     }
 
     private void loginUser(){
-        this.getCommandContent();
+        System.out.println("Please Login with your Credentials");
         if(checkCredentials(MockModel_Customer,askForLoginName(),askForPassword())){
-                //goto Mainmenu
+                //dosomething
             }else{
                 Messages.clearConsole();
                 Messages.printWelcomeMessage();
@@ -43,20 +43,5 @@ public class LoginOption implements MenuOption{
             }
         }
         return false;
-    }
-
-    @Override
-    public String getCommandContent() {
-        return "Please enter your Credentials";
-    }
-
-    @Override
-    public String getCommand() {
-        return null;
-    }
-
-    @Override
-    public void executeCommand() {
-        loginUser();
     }
 }

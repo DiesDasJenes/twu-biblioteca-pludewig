@@ -3,7 +3,6 @@ package com.twu.biblioteca;
 import com.twu.biblioteca.Menu.*;
 import com.twu.biblioteca.support.Library;
 import com.twu.biblioteca.support.Messages;
-import com.twu.biblioteca.support.MockModel_Customer;
 
 import java.util.ArrayList;
 
@@ -15,43 +14,26 @@ public class BibliotecaApp {
     }
 
     private void run(){
-        Menu Parent = setUpMenuStructure();
         Messages.printWelcomeMessage();
-        Parent.executeMenu();
+        Menu MainMenu = setUpMainMenu();
+        while(true){
+            MainMenu.executeMenu();
+        }
     }
 
-
-
-
-    private Menu setUpMenuStructure(){
-        Library Library = new Library();
-        ArrayList<MenuOption> LoginOption = new ArrayList<>();
-        MockModel_Customer MMC = new MockModel_Customer();
-        LoginOption LO = new LoginOption(MMC);
-        LoginOption.add(LO);
-        Menu Login = new Menu(LoginOption, null, ArrayList<Menu> subMenus, "Login Menu");
-        return Parent;
-    }
-
-    private Menu setUpMenuBookList(){
-
-    }
-
-    private Menu setUpMenuMain(Library Library,Menu parent){
-        ArrayList<Menu> subMenus = new ArrayList<>();
-        subMenus.add(setUpMenuBookList());
-        Menu Main = new Menu(setUpOptionStructureForMain(Library),parent,subMenus,"Main Menu");
-
-    }
-
-    private ArrayList<MenuOption> setUpOptionStructureForMain(Library Library){
-        ArrayList<MenuOption> Options = new ArrayList<>();
-        ListBookOption LBO = new ListBookOption(Library);
+    private Menu setUpMainMenu() {
+        Library Libary = new Library();
+        ListallBookOption LBO = new ListallBookOption();
         QuitOption QO = new QuitOption();
-        Options.add(LBO); Options.add(QO);
-        return Options;
+        ListOneBookOption LOBO = new ListOneBookOption();
+        CheckOutOption COO = new CheckOutOption();
+        CheckInOption CIO = new CheckInOption();
+        ArrayList<MenuOption> Options= new ArrayList<>();
+        Options.add(LBO);  Options.add(LOBO);
+        Options.add(COO); Options.add(CIO);
+        Options.add(QO);
+        return new Menu(Options,Libary);
     }
-
 
 
 }

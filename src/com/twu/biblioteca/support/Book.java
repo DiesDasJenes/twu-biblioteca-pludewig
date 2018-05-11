@@ -2,33 +2,30 @@ package com.twu.biblioteca.support;
 
 import org.joda.time.LocalDate;
 
-import java.util.Date;
 
 public class Book implements Resource {
     private String Title;
-    private Author Author;
+    private String Author;
     private LocalDate Published;
-    private Boolean checkedOut;
+    private Boolean checkedIn;
     private String BookId;
     private String UserId;
 
-    Book(String title, Author author, LocalDate published, Boolean checkedOut, String id) {
+    Book(String title, String author, LocalDate published, Boolean checkedIn, String id) {
         Title = title;
         Author = author;
         Published = published;
-        this.checkedOut = checkedOut;
+        this.checkedIn = checkedIn;
         BookId = id;
     }
 
-    public void setCheckedOut(Boolean checkedOut) {
-        this.checkedOut = checkedOut;
+    public void invertCheckedFlag() {
+        this.checkedIn = !checkedIn;
     }
 
-    Boolean isCheckedOut() {
-        return checkedOut;
+    public Boolean isCheckedIn() {
+        return checkedIn;
     }
-
-    Boolean isAvailable(){ return !checkedOut; }
 
     public String getBookId() {
         return BookId;
@@ -43,8 +40,7 @@ public class Book implements Resource {
     public String toString() {
         return  "Title='" + Title + '\'' +
                 ", Author=" + Author +
-                ", Published=" + Published +
-                ", Available=" + !checkedOut;
+                ", Published=" + Published;
     }
 
     @Override
@@ -64,21 +60,29 @@ public class Book implements Resource {
 
     @Override
     public String getPropertyList(String fieldFormatStr) {
+
         String formatStr = String.format(
-                "| %1$s | %1$s | %1$s | %1$s | %1$s |%n", fieldFormatStr
+                "| %1$s | %1$s | %1$s | %1$s |%n", fieldFormatStr
         );
         return String.format(
                 formatStr,
-                BookId, isTitleTooLong() ? reduceTitle() : Title, Author, getYearPublished(), isAvailable()
+                BookId, isStringTooLong(Title,19) ? reduceString(Title,17) : Title, isStringTooLong(Author,19) ? reduceString(Author,17) : Author, getYearPublished()
         );
     }
 
-    private boolean isTitleTooLong(){
-        return Title.length() >= 19;
+    private boolean isStringTooLong(String str,int range){
+        return str.length() >= range;
     }
 
-    private String reduceTitle(){
-        return Title= Title.substring(0,17).concat("...");
+    private String reduceString(String str,int range){
+        return str.substring(0,range).concat("...");
     }
 
+    public String getAuthor() {
+        return Author;
+    }
+
+    public LocalDate getPublished() {
+        return Published;
+    }
 }
