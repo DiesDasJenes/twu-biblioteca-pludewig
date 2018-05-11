@@ -4,7 +4,7 @@ import com.twu.biblioteca.support.Querist;
 import com.twu.biblioteca.support.Customer;
 import com.twu.biblioteca.support.Messages;
 import com.twu.biblioteca.support.MockModel_Customer;
-// Only using this for simulation, never for work
+
 public class Login {
 
     public Login(){}

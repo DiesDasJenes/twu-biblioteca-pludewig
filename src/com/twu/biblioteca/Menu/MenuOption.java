@@ -4,10 +4,10 @@ import com.twu.biblioteca.support.Library;
 
 public interface MenuOption {
 
-    String getOptionContent();
+    String getCommandContent();
 
     String getCommand();
 
-    String displayRessources(Library Library);
+    void executeCommand();
 
 }

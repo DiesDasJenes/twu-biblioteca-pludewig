@@ -5,9 +5,12 @@ import com.twu.biblioteca.support.BookHeader;
 import com.twu.biblioteca.support.Library;
 
 public class ListBookOption implements MenuOption {
-
+    Library Library;
+    public ListBookOption(Library library){
+        this.Library = library;
+    }
     @Override
-    public String getOptionContent() {
+    public String getCommandContent() {
         return "List all (B)ooks";
     }
 
@@ -17,7 +20,7 @@ public class ListBookOption implements MenuOption {
     }
 
     @Override
-    public String displayRessources(Library Library) {
+    public void executeCommand() {
         BookHeader BH = new BookHeader();
         String BookList =BH.getHeader("%-20s");
         BookList = BookList.concat("\n");
@@ -26,6 +29,6 @@ public class ListBookOption implements MenuOption {
             BookList = BookList.concat(String.format("%s", book.getPropertyList("%-20s")));
     }
 
-        return BookList;
+        System.out.println(BookList);
     }
 }
