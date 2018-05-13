@@ -11,7 +11,7 @@ public class Book implements Resource {
     private String BookId;
     private String UserId;
 
-    Book(String title, String author, LocalDate published, Boolean checkedIn, String id) {
+    public Book(String title, String author, LocalDate published, Boolean checkedIn, String id) {
         Title = title;
         Author = author;
         Published = published;

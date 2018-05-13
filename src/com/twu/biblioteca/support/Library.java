@@ -6,20 +6,31 @@ import org.joda.time.LocalDate;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Observable;
-
-public class Library extends Observable {
+public class Library  {
     private static final boolean CHECKED_IN = true;
+    private static final int AMOUNT_OF_BOOKS = 25;
     private Map<String, Book> ListOfAllBooks = new HashMap<String, Book>();
     private MockModel_Customer MockModel_Customer;
     public Library() {
-        initiateBookList();
+        initiateBookList(AMOUNT_OF_BOOKS);
         MockModel_Customer = new MockModel_Customer();
     }
 
-    private void initiateBookList () {
-        for (int i = 0; i < 25 ; i++) {
+    public Library(int amount) {
+        initiateBookList(amount);
+        MockModel_Customer = new MockModel_Customer();
+    }
+
+    private void initiateBookList (int amount) {
+        for (int i = 0; i < amount ; i++) {
             Book b = generateMockDataForBook();
+            ListOfAllBooks.putIfAbsent(b.getBookId(),b);
+        }
+    }
+
+    public void addBooks(Book... books){
+        for (Book b:books
+             ) {
             ListOfAllBooks.putIfAbsent(b.getBookId(),b);
         }
     }
@@ -35,17 +46,9 @@ public class Library extends Observable {
 
     public void setBook(String key, Book Book) {
         ListOfAllBooks.replace(key,Book);
-        hasChanged();
-        notifyObservers();
-    }
-
-    public MockModel_Customer getMockModel_Customer() {
-        return MockModel_Customer;
     }
 
     public void setCustomer(int key, Customer Customer) {
         MockModel_Customer.getListofCustomers().replace(key,Customer);
-        hasChanged();
-        notifyObservers();
     }
 }

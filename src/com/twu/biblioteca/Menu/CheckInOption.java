@@ -16,11 +16,11 @@ public class CheckInOption implements MenuOption {
     }
 
     @Override
-    public void executeCommand(Library Library) {
+    public void executeCommand(Library library) {
         Querist querist = new Querist(System.in,System.out);
-        String answer = querist.ask("Please enter the Id of the book you want to see the details of.").toString().trim();
-        if(Library.getListOfAllBooks().containsKey(answer) && !Library.getListOfAllBooks().get(answer).isCheckedIn()){
-            Library.getListOfAllBooks().get(answer).invertCheckedFlag();
+        String answer = querist.ask("Please enter the IDw of the book you want to see the details of.").toString().trim();
+        if(library.getListOfAllBooks().containsKey(answer) && !library.getListOfAllBooks().get(answer).isCheckedIn()){
+            library.getListOfAllBooks().get(answer).invertCheckedFlag();
             System.out.println("Thank you for returning the book.");
         }else{
             System.out.println("That is not a valid book to return.");

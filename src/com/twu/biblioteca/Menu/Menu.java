@@ -4,6 +4,7 @@ import com.twu.biblioteca.support.Library;
 import com.twu.biblioteca.support.Querist;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Menu {
@@ -13,6 +14,16 @@ public class Menu {
     public Menu(ArrayList<MenuOption> options,Library Library) {
         this.Options = options;
         this.Library = Library;
+    }
+
+    public Menu(Library Library,MenuOption... options) {
+        Options = new ArrayList<>();
+        addOptions(options);
+        this.Library = Library;
+    }
+
+    public void addOptions(MenuOption... options){
+        this.Options.addAll(Arrays.asList(options));
     }
 
     public void executeMenu() {

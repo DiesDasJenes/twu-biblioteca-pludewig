@@ -14,7 +14,7 @@ public class QuitOption implements MenuOption {
     }
 
     @Override
-    public void executeCommand(Library Library) {
+    public void executeCommand(Library library) {
         System.exit(1);
     }
 }

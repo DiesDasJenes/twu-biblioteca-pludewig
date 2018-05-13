@@ -12,11 +12,11 @@ import static org.junit.Assert.*;
 
 public class BookTest {
 
-    Book TestBook;
-    String Title;
-    String Author;
-    LocalDate randomYear;
-    String randomDigit;
+    private Book TestBook;
+    private String Title;
+    private String Author;
+    private LocalDate randomYear;
+    private String randomDigit;
 
     @Before
     public void setUp() throws Exception {
@@ -30,8 +30,6 @@ public class BookTest {
 
     @Test
     public void propertyList() {
-
-
         String formatTestStr = String.format("| %1$s | %1$s | %1$s | %1$s | %1$s |%n", "%-20s");
         String test = String.format(formatTestStr,
                 randomDigit, Title,Author, randomYear.getYear(), true

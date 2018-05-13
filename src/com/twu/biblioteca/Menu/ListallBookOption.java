@@ -17,11 +17,11 @@ public class ListallBookOption implements MenuOption {
     }
 
     @Override
-    public void executeCommand(Library Library) {
+    public void executeCommand(Library library) {
         BookHeader BH = new BookHeader();
         String BookList =BH.getHeader("%-20s");
         BookList = BookList.concat("\n");
-        for (Book book: Library.getListOfAllBooks().values()
+        for (Book book: library.getListOfAllBooks().values()
              ) {
             if(book.isCheckedIn()){
                 BookList = BookList.concat(String.format("%s", book.getPropertyList("%-20s")));

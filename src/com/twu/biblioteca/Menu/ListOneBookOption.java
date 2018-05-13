@@ -16,10 +16,10 @@ public class ListOneBookOption implements MenuOption {
     }
 
     @Override
-    public void executeCommand(Library Library) {
-        String id = getId(Library);
-        if(Library.getListOfAllBooks().containsKey(id)){
-            Book Book = Library.getListOfAllBooks().get(id);
+    public void executeCommand(Library library) {
+        String id = getId(library);
+        if(library.getListOfAllBooks().containsKey(id)){
+            Book Book = library.getListOfAllBooks().get(id);
             System.out.print("\n");
             System.out.println("Book Details:");
             System.out.println("No." + Book.getBookId());
