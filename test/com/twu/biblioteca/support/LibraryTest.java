@@ -32,10 +32,8 @@ public class LibraryTest {
 
     @Test
     public void getGeneratedBook() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        //TODO Add Argument Text
-        Method method = Library.class.getDeclaredMethod("generateMockDataForBook");
-        method.setAccessible(true);
-        Book b = (Book)method.invoke("");
+        FakeDataGenerator FDG = new FakeDataGenerator();
+        Book b = FDG.generateMockDataForBook();
         assertTrue("Book is not null",b != null);
     }
 
