@@ -21,18 +21,18 @@ public class BookTest {
     @Before
     public void setUp() throws Exception {
         Faker Faker = new Faker();
-        Title =Faker.book.title();
-        Author = Faker.book.author();
+        Title = Faker.book.title();
+        Author = Faker.name.firstName() + Faker.name.lastName();
         randomYear = LocalDate.now().minusYears((int)(Math.random()*500));
         randomDigit = String.valueOf(Faker.number.positive());
-        TestBook = new Book(Title,Author,randomYear,false,randomDigit);
+        TestBook = new Book(Title,Author,randomYear,true,randomDigit);
     }
 
     @Test
     public void propertyList() {
-        String formatTestStr = String.format("| %1$s | %1$s | %1$s | %1$s | %1$s |%n", "%-20s");
+        String formatTestStr = String.format("| %1$s | %1$s | %1$s | %1$s |%n", "%-20s");
         String test = String.format(formatTestStr,
-                randomDigit, Title,Author, randomYear.getYear(), true
+                randomDigit, TestBook.getReducedTitle(),Author, randomYear.getYear()
         );
         assertEquals(test,TestBook.getPropertyList("%-20s"));
     }
@@ -47,8 +47,6 @@ public class BookTest {
         String reducedTitle = "THis is a really ...";
         Book TestBook = new Book(LongTitle,Author,randomYear,false,randomDigit);
 
-        Method method = Book.class.getDeclaredMethod("reduceTitle");
-        method.setAccessible(true);
-        assertEquals(reducedTitle,method.invoke(TestBook));
+        assertEquals(reducedTitle,TestBook.getReducedTitle());
     }
 }

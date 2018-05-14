@@ -2,7 +2,7 @@ package com.twu.biblioteca.support;
 
 public interface Resource {
 
-    String getTitle();
+    String getOriginalTitle();
 
     String getUserID();
 

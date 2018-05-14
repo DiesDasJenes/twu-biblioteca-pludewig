@@ -4,6 +4,8 @@ import org.joda.time.LocalDate;
 
 
 public class Book implements Resource {
+    public static final int RANGE_OF_TABLE = 19;
+    public static final int RANGE_MINUS_DOTS = RANGE_OF_TABLE-2;
     private String Title;
     private String Author;
     private LocalDate Published;
@@ -44,7 +46,7 @@ public class Book implements Resource {
     }
 
     @Override
-    public String getTitle() {
+    public String getOriginalTitle() {
         return Title;
     }
 
@@ -66,20 +68,24 @@ public class Book implements Resource {
         );
         return String.format(
                 formatStr,
-                BookId, isStringTooLong(Title,19) ? reduceString(Title,17) : Title, isStringTooLong(Author,19) ? reduceString(Author,17) : Author, getYearPublished()
+                BookId, isStringTooLong(Title) ? reduceStringAddDots(Title) : Title, isStringTooLong(Author) ? reduceStringAddDots(Author) : Author, getYearPublished()
         );
     }
 
-    private boolean isStringTooLong(String str,int range){
-        return str.length() >= range;
+    private boolean isStringTooLong(String str){
+        return str.length() >= RANGE_OF_TABLE;
     }
 
-    private String reduceString(String str,int range){
-        return str.substring(0,range).concat("...");
+    private String reduceStringAddDots(String str){
+        return str.substring(0,RANGE_MINUS_DOTS).concat("...");
     }
 
     public String getAuthor() {
         return Author;
+    }
+
+    public String getReducedTitle(){
+        return this.isStringTooLong(Title) ? reduceStringAddDots(Title) : Title;
     }
 
     public LocalDate getPublished() {
