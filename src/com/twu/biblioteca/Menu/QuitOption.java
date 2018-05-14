@@ -14,7 +14,12 @@ public class QuitOption implements MenuOption {
     }
 
     @Override
-    public void executeCommand(Library library) {
+    public void processOption(Library library) {
+        executeCommand(library,null);
+    }
+
+    @Override
+    public void executeCommand(Library library, String input) {
         System.exit(1);
     }
 }

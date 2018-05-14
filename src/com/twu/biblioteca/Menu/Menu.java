@@ -28,10 +28,10 @@ public class Menu {
 
     public void executeMenu() {
         printOptions();
-        executeOption(askForOptions());
+        executeOption(askForOption());
     }
 
-    public MenuOption askForOptions() {
+    public MenuOption askForOption() {
         Querist Querist = new Querist(System.in, System.out);
         String answer = Querist.ask("Choose an option through typing in the Letter within the brackets.").toString().trim();
         if (isValidOption(answer)) {
@@ -42,13 +42,13 @@ public class Menu {
         } else {
             System.out.println("Select a valid option!");
             printOptions();
-            return askForOptions();
+            return askForOption();
         }
 
     }
 
     private void executeOption(MenuOption Option){
-        Option.executeCommand(Library);
+        Option.processOption(Library);
     }
 
     public void printOptions() {

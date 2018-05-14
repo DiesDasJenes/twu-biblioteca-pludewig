@@ -14,7 +14,7 @@ public class LoginOption {
     private void loginUser(){
         System.out.println("Please Login with your Credentials");
         if(checkCredentials(MockModel_Customer,askForLoginName(),askForPassword())){
-                //dosomething
+                // For Release 2
             }else{
                 Messages.clearConsole();
                 Messages.printWelcomeMessage();

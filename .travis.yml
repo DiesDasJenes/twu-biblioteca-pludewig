@@ -1,0 +1,16 @@
+sudo: required
+language: java
+before_install:
+ - chmod +x gradlew
+install: gradle assemble
+jdk:
+  - oraclejdk8
+  - openjdk8
+cache:
+  directories:
+    - $HOME/.gradle
+    - $HOME/.m2
+    - ./build
+    - ./.gradle
+script:
+  ./gradlew check --info

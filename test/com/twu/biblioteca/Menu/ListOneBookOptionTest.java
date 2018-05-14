@@ -41,7 +41,7 @@ public class ListOneBookOptionTest {
 
     @Test
     public void canGetDetailsofOneBook() {
-        listOneBookOption.executeCommand(library);
+        listOneBookOption.executeCommand(library,null);
         //TODO Mock INput set to One
 
     }

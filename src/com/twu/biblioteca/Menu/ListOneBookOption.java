@@ -16,8 +16,8 @@ public class ListOneBookOption implements MenuOption {
     }
 
     @Override
-    public void executeCommand(Library library) {
-        String id = getId(library);
+    public void executeCommand(Library library, String input) {
+        String id = input;
         if(library.getListOfAllBooks().containsKey(id)){
             Book Book = library.getListOfAllBooks().get(id);
             System.out.print("\n");
@@ -32,10 +32,9 @@ public class ListOneBookOption implements MenuOption {
         }
     }
 
-    private String getId(Library Library){
+    @Override
+    public void processOption(Library library) {
         Querist querist = new Querist(System.in,System.out);
-        String answer = querist.ask("Please enter the Id of the book you want to see the details of.").toString().trim();
-        return answer;
+        executeCommand(library,querist.ask("Please enter the Id of the book you want to see the details of.").toString().trim());
     }
-
 }
