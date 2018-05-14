@@ -7,6 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78569df4-c5c4-4448-8489-35beb549790c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -26,20 +33,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MessagesTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java">
+      <file leaf-file-name="Messages.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+            <state relative-caret-position="118">
+              <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Messages.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java">
+      <file leaf-file-name="MessagesTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="73">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -460,7 +467,6 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Querist.java" />
         <option value="$PROJECT_DIR$/src/com/twu/resources/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/SubMenu/Login.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/Author.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/BookPropertys.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/displayHeader.java" />
@@ -503,6 +509,7 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/FakeDataGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/Library.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/support/LibraryTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java" />
       </list>
     </option>
@@ -530,8 +537,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -679,9 +686,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MessagesTest">
+  <component name="RunManager" selected="JUnit.BookHeaderTest.getHeader">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="BookHeaderTest.getHeader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="twu-biblioteca-pludewig" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.support.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.support" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.support.BookHeaderTest" />
+      <option name="METHOD_NAME" value="getHeader" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ExampleTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="twu-biblioteca-pludewig" />
@@ -695,29 +725,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.ExampleTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="LibraryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="twu-biblioteca-pludewig" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.support.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca.support" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.support.LibraryTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -871,19 +878,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.ExampleTest" />
-      <item itemvalue="JUnit.LibraryTest" />
       <item itemvalue="JUnit.MessagesTest" />
       <item itemvalue="JUnit.MessagesTest.canGetCharacterLine" />
       <item itemvalue="JUnit.MessagesTest.printWelcomeMessage" />
       <item itemvalue="JUnit.MessagesTest.clearConsole" />
+      <item itemvalue="JUnit.BookHeaderTest.getHeader" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookHeaderTest.getHeader" />
         <item itemvalue="JUnit.MessagesTest" />
         <item itemvalue="JUnit.MessagesTest.canGetCharacterLine" />
         <item itemvalue="JUnit.MessagesTest.clearConsole" />
         <item itemvalue="JUnit.MessagesTest.printWelcomeMessage" />
-        <item itemvalue="JUnit.LibraryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -901,13 +908,11 @@
       <workItem from="1526020531325" duration="24395000" />
       <workItem from="1526224692906" duration="10066000" />
       <workItem from="1526290856469" duration="10900000" />
+      <workItem from="1526308039040" duration="356000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MessagesTest_printWelcomeMessage - 2018.05.14 at 14h 34m 10s.xml">
-      <configuration name="MessagesTest.printWelcomeMessage" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MessagesTest_printWelcomeMessage - 2018.05.14 at 14h 34m 38s.xml">
       <configuration name="MessagesTest.printWelcomeMessage" configurationId="JUnit" />
     </history-entry>
@@ -935,41 +940,44 @@
     <history-entry file="MessagesTest - 2018.05.14 at 14h 39m 46s.xml">
       <configuration name="MessagesTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MessagesTest_canGetCharacterLine - 2018.05.14 at 16h 30m 32s.xml">
+      <configuration name="MessagesTest.canGetCharacterLine" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86733000" />
+    <option name="totallyTimeSpent" value="87089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1613" height="853" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500346" side_tool="true" weight="0.33084947" />
-      <window_info anchor="right" id="Maven Projects" order="0" />
-      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Designer" order="0" />
-      <window_info anchor="bottom" id="Build" order="0" weight="0.32974428" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.28936744" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500346" side_tool="true" weight="0.33084947" />
+      <window_info anchor="right" id="Maven Projects" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49965397" visible="true" weight="0.28667563" />
       <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Designer" order="0" />
       <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.18536888" />
+      <window_info anchor="right" id="Database" order="2" />
       <window_info id="Learn" order="4" />
       <window_info anchor="right" id="Gradle" order="3" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="0" weight="0.32974428" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
@@ -979,9 +987,8 @@
       <window_info anchor="bottom" id="Build" order="0" weight="0.32974428" />
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49965397" visible="true" weight="0.28667563" />
       <window_info id="Image Layers" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49965397" visible="true" weight="0.28667563" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -989,10 +996,10 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500346" side_tool="true" weight="0.33084947" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.28936744" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32788798" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="right" id="Maven Projects" order="0" />
@@ -1006,6 +1013,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32788798" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -1021,6 +1029,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Author.java" />
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
@@ -1039,6 +1061,8 @@
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1105,16 +1129,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-945" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/LoginOption.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1351,23 +1369,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="118">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="73">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
         </state>
       </provider>
     </entry>

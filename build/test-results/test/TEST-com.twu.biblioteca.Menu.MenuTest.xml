@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.twu.biblioteca.Menu.MenuTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-05-14T14:36:59" hostname="alaskaVM" time="3.035">
+  <properties/>
+  <testcase name="printOptions" classname="com.twu.biblioteca.Menu.MenuTest" time="1.262"/>
+  <testcase name="canAddSeveralOptions" classname="com.twu.biblioteca.Menu.MenuTest" time="1.773"/>
+  <system-out><![CDATA[(L)ist all Books
+(L)ist all Books
+Press (Q) to Quit
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

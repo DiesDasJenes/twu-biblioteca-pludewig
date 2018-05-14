@@ -17,7 +17,7 @@ public class Messages {
         System.out.print("\n");
     }
 
-    private static void printCharacterLine(char c){
+    static void printCharacterLine(char c){
         for (int i = 0; i < MAXLENGTHLINE; i++) {
             System.out.print(c);
         }
@@ -25,7 +25,7 @@ public class Messages {
     }
 
 
-    private static void printStringinMiddleSorroundedWith(char c,String something){
+    static void printStringinMiddleSorroundedWith(char c,String something){
         System.out.print(c);
         for (int i = 0; i < MAXLENGTHLINE-2; i++) {
             System.out.print(" ");

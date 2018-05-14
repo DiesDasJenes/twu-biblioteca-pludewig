@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.twu.biblioteca.Menu.ListOneBookOptionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-05-14T14:36:58" hostname="alaskaVM" time="0.49">
+  <properties/>
+  <testcase name="canGetCommandContent" classname="com.twu.biblioteca.Menu.ListOneBookOptionTest" time="0.264"/>
+  <testcase name="canGetDetailsofOneBook" classname="com.twu.biblioteca.Menu.ListOneBookOptionTest" time="0.111"/>
+  <testcase name="canGetCommand" classname="com.twu.biblioteca.Menu.ListOneBookOptionTest" time="0.113"/>
+  <system-out><![CDATA[Select a valid option!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

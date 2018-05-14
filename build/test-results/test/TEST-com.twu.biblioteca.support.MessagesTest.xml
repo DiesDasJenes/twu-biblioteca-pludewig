@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.twu.biblioteca.support.MessagesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-05-14T14:37:03" hostname="alaskaVM" time="0.03">
+  <properties/>
+  <testcase name="printWelcomeMessage" classname="com.twu.biblioteca.support.MessagesTest" time="0.023"/>
+  <testcase name="canGetCharacterLine" classname="com.twu.biblioteca.support.MessagesTest" time="0.004"/>
+  <testcase name="canGetStringinMiddleSorroundedWith" classname="com.twu.biblioteca.support.MessagesTest" time="0.003"/>
+  <system-out><![CDATA[##################################################
+#                     Biblioteca                 #
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#            Nihil Sciemus Sed Est Exiguus       #
+##################################################
+#                 May you be greeted             #
+##################################################
+
+##################################################
+#                     Biblioteca                 #
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

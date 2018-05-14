@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.twu.biblioteca.Menu.CheckInOptionTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-05-14T14:36:59" hostname="alaskaVM" time="0.138">
+  <properties/>
+  <testcase name="canGetCommandContent" classname="com.twu.biblioteca.Menu.CheckInOptionTest" time="0.0"/>
+  <testcase name="cannotCheckInNonExistentBook" classname="com.twu.biblioteca.Menu.CheckInOptionTest" time="0.042"/>
+  <testcase name="canGetCommand" classname="com.twu.biblioteca.Menu.CheckInOptionTest" time="0.0"/>
+  <testcase name="cannotCheckInInvalidBook" classname="com.twu.biblioteca.Menu.CheckInOptionTest" time="0.044"/>
+  <testcase name="canCheckInValidBook" classname="com.twu.biblioteca.Menu.CheckInOptionTest" time="0.051"/>
+  <system-out><![CDATA[That is not a valid book to return.
+That is not a valid book to return.
+Thank you for returning the book.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

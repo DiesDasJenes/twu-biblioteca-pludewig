@@ -9,7 +9,7 @@ public class BookHeaderTest {
     @Test
     public void getHeader() {
         BookHeader BH = new BookHeader();
-        String test = String.format("| %-20s | %-20s | %-20s | %-20s | %-20s |","Book No.","Title","Author","Published","Available");
+        String test = String.format("| %-20s | %-20s | %-20s | %-20s |","Book No.","Title","Author","Published");
         assertEquals(test,BH.getHeader("%-20s"));
     }
 }
