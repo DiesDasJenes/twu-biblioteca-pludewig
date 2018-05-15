@@ -1,7 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.menu.*;
-import com.twu.biblioteca.support.Library;
+import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Messages;
 
 import java.util.ArrayList;

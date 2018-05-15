@@ -1,8 +1,8 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.support.Book;
-import com.twu.biblioteca.support.BookHeader;
-import com.twu.biblioteca.support.Library;
+import com.twu.biblioteca.resources.Book;
+import com.twu.biblioteca.resources.BookHeader;
+import com.twu.biblioteca.resources.Library;
 
 public class ListallBookOption implements MenuOption {
 

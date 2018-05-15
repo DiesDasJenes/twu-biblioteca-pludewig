@@ -1,6 +1,6 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.support.Library;
+import com.twu.biblioteca.resources.Library;
 
 public class QuitOption implements MenuOption {
     @Override

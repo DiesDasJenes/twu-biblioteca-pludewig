@@ -1,7 +1,7 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.support.Book;
-import com.twu.biblioteca.support.Library;
+import com.twu.biblioteca.resources.Book;
+import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
 public class ListOneBookOption implements MenuOption {

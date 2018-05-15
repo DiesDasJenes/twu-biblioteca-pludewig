@@ -1,5 +1,6 @@
 package com.twu.biblioteca.support;
 
+import com.twu.biblioteca.resources.BookHeader;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -2,8 +2,8 @@ package com.twu.biblioteca.menu;
 
 import com.twu.biblioteca.support.Querist;
 import com.twu.biblioteca.support.Messages;
-import com.twu.biblioteca.support.MockModel_Customer;
-import com.twu.biblioteca.user.Customer;
+import com.twu.biblioteca.dataprovider.MockModel_Customer;
+import com.twu.biblioteca.resources.Customer;
 
 public class LoginOption {
     MockModel_Customer MockModel_Customer;

@@ -1,12 +1,12 @@
 package com.twu.biblioteca.support;
 
+import com.twu.biblioteca.resources.Book;
 import io.bloco.faker.Faker;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 import static org.junit.Assert.*;
 

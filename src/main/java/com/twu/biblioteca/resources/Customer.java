@@ -1,4 +1,4 @@
-package com.twu.biblioteca.user;
+package com.twu.biblioteca.resources;
 
 public class Customer {
     private String firstname;
