@@ -1,8 +1,13 @@
 package com.twu.biblioteca.support;
 
+<<<<<<< Updated upstream
+import com.twu.biblioteca.dataprovider.FakeBookFactory;
 import com.twu.biblioteca.resources.Book;
-import com.twu.biblioteca.dataprovider.FakeDataGenerator;
 import com.twu.biblioteca.resources.Library;
+=======
+import io.bloco.faker.Faker;
+import org.joda.time.LocalDate;
+>>>>>>> Stashed changes
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -32,8 +37,9 @@ public class LibraryTest {
 
     @Test
     public void getGeneratedBook() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        FakeDataGenerator FDG = new FakeDataGenerator();
-        Book b = FDG.generateMockDataForBook();
+        FakeBookFactory FDG = new FakeBookFactory();
+        Faker Faker = new Faker();
+        Book b = new Book(Faker.book.title(), Faker.name.firstName().concat(" " + Faker.name.lastName()), LocalDate.now().minusYears((int) (Math.random() * 500)), FakeBookFactory.CHECKED_IN, String.valueOf(Faker.number.positive()));
         assertTrue("Book is not null",b != null);
     }
 

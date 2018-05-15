@@ -2,11 +2,9 @@ package com.twu.biblioteca.resources;
 
 public interface Resource {
 
-    String getOriginalTitle();
+    String getID();
 
-    String getUserID();
-
-    void setUserID(String userID);
+    void setID(String userID);
 
     String getPropertyList(String fieldFormatStr);
 

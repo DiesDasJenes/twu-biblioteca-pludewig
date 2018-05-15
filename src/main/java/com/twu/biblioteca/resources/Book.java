@@ -4,21 +4,20 @@ import org.joda.time.LocalDate;
 
 
 public class Book implements Resource {
-    public static final int RANGE_OF_TABLE = 19;
-    public static final int RANGE_MINUS_DOTS = RANGE_OF_TABLE-2;
-    private String Title;
+    private static final int RANGE_OF_TABLE = 19;
+    private static final int RANGE_MINUS_DOTS = RANGE_OF_TABLE-2;
+    private String title;
     private String Author;
     private LocalDate Published;
     private Boolean checkedIn;
-    private String BookId;
-    private String UserId;
+    private String id;
 
     public Book(String title, String author, LocalDate published, Boolean checkedIn, String id) {
-        Title = title;
+        this.title = title;
         Author = author;
         Published = published;
         this.checkedIn = checkedIn;
-        BookId = id;
+        id = id;
     }
 
     public void invertCheckedFlag() {
@@ -29,35 +28,24 @@ public class Book implements Resource {
         return checkedIn;
     }
 
-    public String getBookId() {
-        return BookId;
-    }
-
-
     public int getYearPublished() {
         return Published.getYear();
     }
 
     @Override
     public String toString() {
-        return  "Title='" + Title + '\'' +
+        return  "title='" + title + '\'' +
                 ", Author=" + Author +
                 ", Published=" + Published;
     }
 
     @Override
-    public String getOriginalTitle() {
-        return Title;
+    public void setID(String userID) {
+        this.id = id;
     }
 
-    @Override
-    public String getUserID() {
-        return UserId;
-    }
-
-    @Override
-    public void setUserID(String userID) {
-        this.UserId = userID;
+    public String getID() {
+        return id;
     }
 
     @Override
@@ -68,7 +56,7 @@ public class Book implements Resource {
         );
         return String.format(
                 formatStr,
-                BookId, isStringTooLong(Title) ? reduceStringAddDots(Title) : Title, isStringTooLong(Author) ? reduceStringAddDots(Author) : Author, getYearPublished()
+                id, isStringTooLong(title) ? reduceStringAddDots(title) : title, isStringTooLong(Author) ? reduceStringAddDots(Author) : Author, getYearPublished()
         );
     }
 
@@ -85,10 +73,11 @@ public class Book implements Resource {
     }
 
     public String getReducedTitle(){
-        return this.isStringTooLong(Title) ? reduceStringAddDots(Title) : Title;
+        return this.isStringTooLong(title) ? reduceStringAddDots(title) : title;
     }
 
-    public LocalDate getPublished() {
-        return Published;
+    public String getTitle() {
+        return title;
     }
+
 }

@@ -22,8 +22,8 @@ public class ListOneBookOption implements MenuOption {
             Book Book = library.getListOfAllBooks().get(id);
             System.out.print("\n");
             System.out.println("Book Details:");
-            System.out.println("No." + Book.getBookId());
-            System.out.println("Title: " + Book.getOriginalTitle());
+            System.out.println("No." + Book.getID());
+            System.out.println("Title: " + Book.getTitle());
             System.out.println("Author " + Book.getAuthor());
             System.out.println("Published " + Book.getYearPublished());
             System.out.print("\n");
