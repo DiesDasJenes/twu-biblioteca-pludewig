@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.twu.biblioteca.support.MessagesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-05-14T14:37:03" hostname="alaskaVM" time="0.03">
+<testsuite name="com.twu.biblioteca.support.MessagesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-05-15T13:09:25" hostname="alaskaVM" time="0.016">
   <properties/>
-  <testcase name="printWelcomeMessage" classname="com.twu.biblioteca.support.MessagesTest" time="0.023"/>
-  <testcase name="canGetCharacterLine" classname="com.twu.biblioteca.support.MessagesTest" time="0.004"/>
-  <testcase name="canGetStringinMiddleSorroundedWith" classname="com.twu.biblioteca.support.MessagesTest" time="0.003"/>
+  <testcase name="printWelcomeMessage" classname="com.twu.biblioteca.support.MessagesTest" time="0.013"/>
+  <testcase name="canGetCharacterLine" classname="com.twu.biblioteca.support.MessagesTest" time="0.001"/>
+  <testcase name="canGetStringinMiddleSorroundedWith" classname="com.twu.biblioteca.support.MessagesTest" time="0.002"/>
   <system-out><![CDATA[##################################################
 #                     Biblioteca                 #
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

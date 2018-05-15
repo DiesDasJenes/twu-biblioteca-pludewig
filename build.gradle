@@ -3,30 +3,11 @@ plugins {
     id 'application'
 }
 
-sourceSets {
-    main {
-        java {
-            srcDir 'src'
-        }
-    }
-    test {
-        java {
-            srcDir "test"
-        }
-    }
-}
-
-jar {
-    manifest {
-        attributes 'Messages-Class': 'src.com.twu.biblioteca.BibliotecaApp'
-    }
-}
-
 run{
     standardInput = System.in
 }
 
-group 'twu-biblioteca-pludewig'
+group 'com.twu'
 version '1.0-SNAPSHOT'
 mainClassName = 'com.twu.biblioteca.BibliotecaApp'
 sourceCompatibility = 1.8

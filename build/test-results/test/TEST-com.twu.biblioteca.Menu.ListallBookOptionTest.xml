@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.twu.biblioteca.Menu.ListallBookOptionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-05-14T14:36:59" hostname="alaskaVM" time="0.175">
+<testsuite name="com.twu.biblioteca.Menu.ListallBookOptionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-05-15T13:09:19" hostname="alaskaVM" time="0.391">
   <properties/>
-  <testcase name="canGetCommandContent" classname="com.twu.biblioteca.Menu.ListallBookOptionTest" time="0.066"/>
-  <testcase name="canGetCommand" classname="com.twu.biblioteca.Menu.ListallBookOptionTest" time="0.05"/>
-  <testcase name="printAllBooks" classname="com.twu.biblioteca.Menu.ListallBookOptionTest" time="0.058"/>
+  <testcase name="canGetCommandContent" classname="com.twu.biblioteca.Menu.ListallBookOptionTest" time="0.144"/>
+  <testcase name="canGetCommand" classname="com.twu.biblioteca.Menu.ListallBookOptionTest" time="0.119"/>
+  <testcase name="printAllBooks" classname="com.twu.biblioteca.Menu.ListallBookOptionTest" time="0.126"/>
   <system-out><![CDATA[| Book No.             | Title                | Author               | Published            |
 | 0                    | Enders Game          | Orson Scoott         | 1990                 |
 | 1                    | Earth Unaware        | Orson Scoott         | 2005                 |
