@@ -6,16 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78569df4-c5c4-4448-8489-35beb549790c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="78569df4-c5c4-4448-8489-35beb549790c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,11 +33,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessagesTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessagesTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="223">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookHeaderTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/BookHeaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -472,7 +472,6 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/displayHeader.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/Resource.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/DisplayHeader.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/support/BookHeaderTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/QuietOption.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/Login.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/MockModel_Customer.java" />
@@ -511,6 +510,7 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/support/LibraryTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/support/Messages.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/support/BookHeaderTest.java" />
       </list>
     </option>
   </component>
@@ -908,26 +908,11 @@
       <workItem from="1526020531325" duration="24395000" />
       <workItem from="1526224692906" duration="10066000" />
       <workItem from="1526290856469" duration="10900000" />
-      <workItem from="1526308039040" duration="356000" />
+      <workItem from="1526308039040" duration="650000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MessagesTest_printWelcomeMessage - 2018.05.14 at 14h 34m 38s.xml">
-      <configuration name="MessagesTest.printWelcomeMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagesTest_printWelcomeMessage - 2018.05.14 at 14h 35m 17s.xml">
-      <configuration name="MessagesTest.printWelcomeMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagesTest_printWelcomeMessage - 2018.05.14 at 14h 35m 29s.xml">
-      <configuration name="MessagesTest.printWelcomeMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagesTest_printWelcomeMessage - 2018.05.14 at 14h 36m 09s.xml">
-      <configuration name="MessagesTest.printWelcomeMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagesTest_printWelcomeMessage - 2018.05.14 at 14h 36m 30s.xml">
-      <configuration name="MessagesTest.printWelcomeMessage" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MessagesTest_clearConsole - 2018.05.14 at 14h 36m 56s.xml">
       <configuration name="MessagesTest.clearConsole" configurationId="JUnit" />
     </history-entry>
@@ -943,9 +928,24 @@
     <history-entry file="MessagesTest_canGetCharacterLine - 2018.05.14 at 16h 30m 32s.xml">
       <configuration name="MessagesTest.canGetCharacterLine" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MessagesTest - 2018.05.14 at 16h 34m 40s.xml">
+      <configuration name="MessagesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessagesTest - 2018.05.14 at 16h 35m 19s.xml">
+      <configuration name="MessagesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessagesTest - 2018.05.14 at 16h 35m 28s.xml">
+      <configuration name="MessagesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookHeaderTest_getHeader - 2018.05.14 at 16h 36m 26s.xml">
+      <configuration name="BookHeaderTest.getHeader" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookHeaderTest_getHeader - 2018.05.14 at 16h 36m 53s.xml">
+      <configuration name="BookHeaderTest.getHeader" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87089000" />
+    <option name="totallyTimeSpent" value="87383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1613" height="853" extended-state="6" />
@@ -961,7 +961,7 @@
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49965397" visible="true" weight="0.28667563" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49965397" weight="0.28667563" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="0" />
@@ -1098,13 +1098,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/MenuHandler.java" />
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ExampleTest.java" />
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/MeessagesTest.java" />
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/BookHeaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/support/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1381,8 +1374,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/MessagesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="223">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/support/BookHeaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
         </state>
       </provider>
     </entry>
