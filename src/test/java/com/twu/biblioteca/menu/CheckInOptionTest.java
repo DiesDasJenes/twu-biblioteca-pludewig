@@ -1,4 +1,4 @@
-package com.twu.biblioteca.Menu;
+package com.twu.biblioteca.menu;
 
 import com.twu.biblioteca.support.Book;
 import com.twu.biblioteca.support.Library;
@@ -9,7 +9,6 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 public class CheckInOptionTest {
