@@ -14,11 +14,12 @@ public class MovieTest {
     private static final String DIRECTOR = "Steven Seagull";
     private static final int FAULTY_RATING = 12;
     private static final int HIGHEST_RATING = 10;
+    public static final boolean CHECKED_IN = true;
     private Movie movie;
 
     @Before
     public void setUp() throws Exception {
-        movie = new Movie(ID, TITLE, PUBLISHED, DIRECTOR, HIGHEST_RATING);
+        movie = new Movie(ID, TITLE, PUBLISHED, DIRECTOR, HIGHEST_RATING, CHECKED_IN);
     }
 
     @Test
@@ -32,12 +33,18 @@ public class MovieTest {
 
     @Test
     public void shouldNotInitialiseRatingOver10(){
-        Movie movie = new Movie(ID, TITLE, PUBLISHED, DIRECTOR, FAULTY_RATING);
+        Movie movie = new Movie(ID, TITLE, PUBLISHED, DIRECTOR, FAULTY_RATING,CHECKED_IN);
         assertEquals(10,movie.getRating());
     }
 
     @Test
     public void shouldReturnYear(){
         assertEquals(2013,movie.getYear());
+    }
+
+    @Test
+    public void shouldInvertCheckedFlad(){
+        movie.invertCheckedFlag();
+        assertEquals(!CHECKED_IN,movie.isChecked_in());
     }
 }

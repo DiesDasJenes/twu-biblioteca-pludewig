@@ -23,6 +23,6 @@ public class FakeMovieFactory implements FakeResourceFactory {
     @Override
     public Resource create() {
         Faker faker = new Faker();
-        return new Movie(faker.number().digit(),"Life at the " + faker.educator().university(),LocalDate.now().minusYears((int)(Math.random()*100)),faker.name().fullName(),(int)(Math.random()*10));
+        return new Movie(faker.number().digit(),"Life at the " + faker.educator().university(),LocalDate.now().minusYears((int)(Math.random()*100)),faker.name().fullName(),(int)(Math.random()*10),CHECKED_IN);
     }
 }

@@ -10,13 +10,15 @@ public class Movie implements Resource {
     private LocalDate published;
     private String director;
     private int rating;
+    private boolean checked_in;
 
-    public Movie(String id, String title, LocalDate published, String director, int rating) {
+    public Movie(String id, String title, LocalDate published, String director, int rating, boolean checked_in) {
         this.id = id;
         this.title = title;
         this.published = published;
         this.director = director;
         this.rating =   reduceRatingOutOfRange(rating);
+        this.checked_in = checked_in;
         stringFormatter = new StringFormatter();
     }
 
@@ -63,5 +65,13 @@ public class Movie implements Resource {
 
     private int reduceRatingOutOfRange(int rating){
         return rating > HIGHEST_POSSIBLE_RATING ? HIGHEST_POSSIBLE_RATING : rating;
+    }
+
+    public boolean isChecked_in() {
+        return checked_in;
+    }
+
+    public void invertCheckedFlag() {
+        this.checked_in = !isChecked_in();
     }
 }
