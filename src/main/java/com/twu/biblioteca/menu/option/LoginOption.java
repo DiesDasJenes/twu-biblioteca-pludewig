@@ -1,5 +1,6 @@
 package com.twu.biblioteca.menu.option;
 
+import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Customer;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
@@ -46,17 +47,22 @@ public class LoginOption implements Option {
     }
 
     @Override
-    public void processOption() {
-
-    }
-
-    @Override
     public String getCommandContent() {
         return null;
     }
 
     @Override
     public String getCommand() {
+        return null;
+    }
+
+    @Override
+    public String executeCommand(Library library) {
+        return null;
+    }
+
+    @Override
+    public String getUserInput() {
         return null;
     }
 }

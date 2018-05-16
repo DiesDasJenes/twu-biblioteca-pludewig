@@ -1,9 +1,10 @@
 package com.twu.biblioteca.menu.suboption;
 
+import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
-public class CheckOutBookOption implements SubMenuOption {
+public class CheckOutBookOption implements Option {
 
     @Override
     public String getCommandContent() {
@@ -12,26 +13,25 @@ public class CheckOutBookOption implements SubMenuOption {
 
     @Override
     public String getCommand() {
-        return "bB";
+        return "B";
     }
 
 
     @Override
-    public void executeCommand(Library library, String input) {
+    public String executeCommand(Library library) {
+        String input = getUserInput();
         if(library.getListOfAllBooks().containsKey(input) && library.getListOfAllBooks().get(input).isCheckedIn()){
             library.getListOfAllBooks().get(input).invertCheckedFlag();
-            System.out.println("Thank you! Enjoy the book");
+            return "Thank you! Enjoy the book";
         }else{
-            System.out.println("That book is not available.");
+            return "That book is not available.";
         }
     }
 
     @Override
-    public void processOption(Library library) {
-        Querist querist = new Querist(System.in,System.out);
-        executeCommand(library,querist.ask(getCommandContent()).toString().trim());
+    public String getUserInput() {
+        return new Querist(System.in,System.out).ask(getCommandContent());
     }
-
 
 
 }

@@ -1,10 +1,11 @@
 package com.twu.biblioteca.menu.suboption;
 
+import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Book;
 import com.twu.biblioteca.resources.TableHeader;
 import com.twu.biblioteca.resources.Library;
 
-public class ListallBookOption implements SubMenuOption {
+public class ListallBookOption implements Option {
 
     @Override
     public String getCommandContent() {
@@ -17,7 +18,7 @@ public class ListallBookOption implements SubMenuOption {
     }
 
     @Override
-    public void executeCommand(Library library, String input) {
+    public String executeCommand(Library library) {
         TableHeader BH = new TableHeader();
         String BookList =BH.getBookHeader("%-20s");
         BookList = BookList.concat("\n");
@@ -28,14 +29,13 @@ public class ListallBookOption implements SubMenuOption {
             }
         }
 
-        System.out.println(BookList);
+        return BookList;
     }
 
     @Override
-    public void processOption(Library library) {
-        executeCommand(library,null);
+    public String getUserInput() {
+        return null;
     }
-
 
 
 }

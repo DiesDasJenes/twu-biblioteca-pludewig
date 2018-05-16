@@ -39,7 +39,7 @@ public class ListallMoviesOptionTest {
         Movie movie = new Movie("M0","The Running Man",new LocalDate(1990,10,14),"Arnold Normal",10,true);
         String test = "| Movie No.            | Title                | Author               | Published            | Rating               |\n| M0                   | The Running Man      | Arnold Normal        | 1990                 | 10/10                |\n\n";
         library.addMovies(movie);
-        listallMoviesOption.executeCommand(library,null);
+        listallMoviesOption.executeCommand(library);
         assertEquals(test,systemOutRule.getLog());
     }
 

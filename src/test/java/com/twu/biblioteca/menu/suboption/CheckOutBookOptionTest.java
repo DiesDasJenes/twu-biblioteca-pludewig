@@ -32,7 +32,7 @@ public class CheckOutBookOptionTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, VALID_ID);
         library.addBooks(book);
-        checkOutBookOption.executeCommand(library, "0");
+        checkOutBookOption.executeCommand(library);
         assertEquals("Thank you! Enjoy the book\n", systemOutRule.getLog());
     }
 
@@ -45,7 +45,7 @@ public class CheckOutBookOptionTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), false, "0");
         library.addBooks(book);
-        checkOutBookOption.executeCommand(library, s);
+        checkOutBookOption.executeCommand(library);
         assertEquals("That book is not available.\n", systemOutRule.getLog());
     }
 

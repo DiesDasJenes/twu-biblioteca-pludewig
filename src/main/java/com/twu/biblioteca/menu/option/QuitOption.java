@@ -1,5 +1,6 @@
 package com.twu.biblioteca.menu.option;
 
+import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 
 import java.util.ArrayList;
@@ -14,17 +15,16 @@ public class QuitOption implements Option {
 
 
     public String getCommand() {
-
         return "Q";
     }
 
-    @Override
-    public void processOption() {
-        executeCommand();
+    public String executeCommand(Library library) {
+        System.exit(1);
+        return "Cyao"; //TODO Umbauen zu string sagt quit
     }
 
-
-    public void executeCommand() {
-        System.exit(1);
+    @Override
+    public String getUserInput() {
+        return null;
     }
 }

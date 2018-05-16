@@ -1,10 +1,28 @@
 package com.twu.biblioteca.menu.option;
 
-import com.twu.biblioteca.menu.suboption.SubMenuOption;
+import com.twu.biblioteca.menu.Option;
+import com.twu.biblioteca.resources.Library;
 
-public class CheckOutResource extends OptionWithSubOption {
-    public CheckOutResource(SubMenuOption... subMenuOptions){
-        super("What would you like to (b)orrow: (B)ook or (M)ovie", subMenuOptions);
+public class CheckOutResource implements Option {
+
+
+    @Override
+    public String getCommandContent() {
+        return null;
     }
 
+    @Override
+    public String getCommand() {
+        return null;
+    }
+
+    @Override
+    public String executeCommand(Library library) {
+        return null;
+    }
+
+    @Override
+    public String getUserInput() {
+        return null;
+    }
 }

@@ -33,7 +33,7 @@ public class ListallBookOptionTest {
 
     @Test
     public void printAllBooks() {
-        listallBookOption.executeCommand(library, null);
+        listallBookOption.executeCommand(library);
         assertEquals("| Book No.             | Title                | Author               | Published            |\n| 0                    | Enders Game          | Orson Scoott         | 1990                 |\n| 1                    | Earth Unaware        | Orson Scoott         | 2005                 |\n\n", systemOutRule.getLog());
     }
 }

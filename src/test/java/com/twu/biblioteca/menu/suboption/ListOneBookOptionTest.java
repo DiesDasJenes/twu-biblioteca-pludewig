@@ -37,7 +37,7 @@ public class ListOneBookOptionTest {
 
     @Test
     public void shouldGetDetailsOfOneBook() {
-        listOneBookOption.executeCommand(library,"26");
+        listOneBookOption.executeCommand(library);
         assertEquals("\nBook Details:\n" +
                 "No.26\n" +
                 "Title: The Tea Rose\n" +

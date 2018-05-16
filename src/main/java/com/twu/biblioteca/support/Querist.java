@@ -13,10 +13,10 @@ public class Querist {
         this.out = out;
     }
 
-    public Object ask(String message){
+    public String ask(String message){
         out.println(message);
         out.print("*");
-        return scanner.next();
+        return scanner.next().toUpperCase().trim();
     }
 
 }

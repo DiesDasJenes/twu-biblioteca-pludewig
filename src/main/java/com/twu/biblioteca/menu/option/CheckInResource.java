@@ -1,9 +1,27 @@
 package com.twu.biblioteca.menu.option;
 
-import com.twu.biblioteca.menu.suboption.SubMenuOption;
+import com.twu.biblioteca.menu.Option;
+import com.twu.biblioteca.resources.Library;
 
-public class CheckInResource extends OptionWithSubOption {
-    public CheckInResource(SubMenuOption... subMenuOptions){
-        super("What would you like to (r)eturn: (B)ook or (M)ovie?",subMenuOptions);
+public class CheckInResource implements Option {
+
+    @Override
+    public String getCommandContent() {
+        return null;
+    }
+
+    @Override
+    public String getCommand() {
+        return null;
+    }
+
+    @Override
+    public String executeCommand(Library library) {
+        return null;
+    }
+
+    @Override
+    public String getUserInput() {
+        return null;
     }
 }
