@@ -24,7 +24,7 @@ public class CheckInBookOptionTest {
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("(R)eturn a Book", checkInBookOption.getCommandContent());
+        assertEquals("Please enter the ID of the book you want to return.", checkInBookOption.getCommandContent());
     }
 
     @Test

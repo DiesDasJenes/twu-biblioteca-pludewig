@@ -28,7 +28,7 @@ public class ListallBookOptionTest {
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("(L)ist all Books", listallBookOption.getCommandContent());
+        assertEquals("List all Books", listallBookOption.getCommandContent());
     }
 
 

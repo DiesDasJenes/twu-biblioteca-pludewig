@@ -16,13 +16,13 @@ public class FakeMovieFactoryTest {
         fakeMovieFactory = new FakeMovieFactory();
     }
     @Test
-    public void getMovieList() {
+    public void shouldGetMovieList() {
         Map<String,Movie> movieList = fakeMovieFactory.getMovieList(25);
         assertNotNull(movieList);
     }
 
     @Test
-    public void create() {
+    public void shouldCreateMovie() {
         Movie m = (Movie) fakeMovieFactory.create();
         assertNotNull(m);
     }

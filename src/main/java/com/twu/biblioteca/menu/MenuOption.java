@@ -12,6 +12,7 @@ public class MenuOption {
     private String commandContent;
 
     MenuOption(String content,SubMenuOption... subMenuOptionsList){
+        subMenuOptions = new ArrayList<>();
         this.subMenuOptions.addAll(Arrays.asList(subMenuOptionsList));
         this.commandContent = content;
     }

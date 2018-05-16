@@ -1,6 +1,10 @@
 package com.twu.biblioteca.menu.submenu;
 
 import com.twu.biblioteca.menu.submenu.ListallMoviesOption;
+import com.twu.biblioteca.resources.Library;
+import com.twu.biblioteca.resources.Movie;
+import com.twu.biblioteca.support.Setup;
+import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -18,6 +22,7 @@ public class ListallMoviesOptionTest {
     @Before
     public void setUp() throws Exception {
         listallMoviesOption = new ListallMoviesOption();
+
     }
 
     @Test
@@ -32,7 +37,11 @@ public class ListallMoviesOptionTest {
 
     @Test
     public void executeCommand() {
-        String test = "yadda yadda";
+        Library library = new Library();
+        Movie movie = new Movie("M0","The Running Man",new LocalDate(1990,10,14),"Arnold Normal",10,true);
+        String test = "| Movie No.            | Title                | Author               | Published            | Rating               |\n| M0                   | The Running Man      | Arnold Normal        | 1990                 | 10/10                |\n\n";
+        library.addMovies(movie);
+        listallMoviesOption.executeCommand(library,null);
         assertEquals(test,systemOutRule.getLog());
     }
 

@@ -55,7 +55,7 @@ public class Movie implements Resource {
         );
         return String.format(
                 formatStr,
-                id, stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title, stringFormatter.isStringTooLong(director) ? stringFormatter.reduceStringAddDots(director) : director, getYear(), getRating()
+                id, stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title, stringFormatter.isStringTooLong(director) ? stringFormatter.reduceStringAddDots(director) : director, getYear(), getRating() + "/10"
         );
     }
 

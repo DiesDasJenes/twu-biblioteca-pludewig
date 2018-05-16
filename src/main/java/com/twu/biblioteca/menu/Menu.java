@@ -1,5 +1,6 @@
 package com.twu.biblioteca.menu;
 
+import com.twu.biblioteca.menu.submenu.ListallBookOption;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
@@ -21,6 +22,7 @@ public class Menu {
         addOptions(options);
         this.Library = Library;
     }
+
 
     public void addOptions(MenuOption... options){
         this.Options.addAll(Arrays.asList(options));

@@ -32,14 +32,19 @@ public class ListOneBookOptionTest {
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("(S)how the Details of a Book", listOneBookOption.getCommandContent());
+        assertEquals("Please enter the Id of the book you want to see the details of.", listOneBookOption.getCommandContent());
     }
 
 
     @Test
     public void shouldGetDetailsOfOneBook() {
         listOneBookOption.executeCommand(library,"26");
-        assertEquals("",systemOutRule.getLog());
+        assertEquals("\nBook Details:\n" +
+                "No.26\n" +
+                "Title: The Tea Rose\n" +
+                "Author Jennifer Donelly\n" +
+                "Published 2014\n" +
+                "\n",systemOutRule.getLog());
 
     }
 }

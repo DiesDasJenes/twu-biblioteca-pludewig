@@ -1,9 +1,8 @@
 package com.twu.biblioteca.menu.submenu;
 
-import com.twu.biblioteca.resources.Book;
+import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.resources.Movie;
 import com.twu.biblioteca.resources.TableHeader;
-import com.twu.biblioteca.resources.Library;
 
 public class ListallMoviesOption implements SubMenuOption {
 
@@ -22,9 +21,9 @@ public class ListallMoviesOption implements SubMenuOption {
         TableHeader TH = new TableHeader();
         String MovieList = TH.getMovieHeader("%-20s");
         MovieList = MovieList.concat("\n");
-        for (Movie movie: library.getListOfAllMovies().values()
+        for (Movie movie : library.getListOfAllMovies().values()
                 ) {
-            if(movie.isCheckedIn()){
+            if (movie.isCheckedIn()) {
                 MovieList = MovieList.concat(String.format("%s", movie.getPropertyList("%-20s")));
             }
         }
@@ -34,6 +33,6 @@ public class ListallMoviesOption implements SubMenuOption {
 
     @Override
     public void processOption(Library library) {
-        executeCommand(library,null);
+        executeCommand(library, null);
     }
 }

@@ -1,7 +1,5 @@
 package com.twu.biblioteca.dataprovider;
 
-import com.twu.biblioteca.dataprovider.FakeCustomerFactory;
-import com.twu.biblioteca.dataprovider.FakeUserFactory;
 import com.twu.biblioteca.resources.Customer;
 import org.junit.Test;
 

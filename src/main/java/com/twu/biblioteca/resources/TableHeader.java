@@ -7,6 +7,6 @@ public class TableHeader {
     }
 
     public String getMovieHeader(String fieldFormatStr) {
-        return String.format("| " + fieldFormatStr + " | " + fieldFormatStr + " | " + fieldFormatStr + " | " + fieldFormatStr + " |", "Movie No.", "Title", "Author", "Published");
+        return String.format("| " + fieldFormatStr + " | " + fieldFormatStr + " | " + fieldFormatStr + " | " + fieldFormatStr + " | " + fieldFormatStr + " |", "Movie No.", "Title", "Author", "Published","Rating");
     }
 }

@@ -26,7 +26,7 @@ public class MovieTest {
     public void getPropertyList() {
         String formatTestStr = String.format("| %1$s | %1$s | %1$s | %1$s | %1$s |%n", "%-20s");
         String test = String.format(formatTestStr,
-                ID, TITLE,DIRECTOR,PUBLISHED.getYear(),HIGHEST_RATING
+                ID, TITLE,DIRECTOR,PUBLISHED.getYear(),HIGHEST_RATING + "/10"
         );
         assertEquals(test,movie.getPropertyList("%-20s"));
     }
