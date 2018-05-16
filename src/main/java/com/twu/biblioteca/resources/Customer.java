@@ -1,13 +1,15 @@
 package com.twu.biblioteca.resources;
 
-public class Customer implements Resource {
+import java.util.Map;
+
+public class Customer implements User {
     private String firstname;
     private String lastname;
     private String loginName;
     private int passwordHash;
     private String id;
 
-    public Customer(String id, String firstname, String lastname, String loginName, int passwordHash) {
+    public Customer(String id, String firstname, String lastname, String loginName, int passwordHash){
         this.firstname = firstname;
         this.lastname = lastname;
         this.loginName = loginName;
@@ -41,13 +43,7 @@ public class Customer implements Resource {
     }
 
     @Override
-    public String getPropertyList(String fieldFormatStr) {
-        String formatStr = String.format(
-                "| %1$s | %1$s |%n", fieldFormatStr
-        );
-        return String.format(
-                formatStr,
-                id, firstname + " " + lastname
-        );
+    public Map<String, Resource> getBorrowedResources() {
+        return null;
     }
 }

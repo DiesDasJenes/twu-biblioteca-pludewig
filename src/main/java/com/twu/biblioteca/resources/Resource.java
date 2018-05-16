@@ -4,7 +4,7 @@ public interface Resource {
 
     String getID();
 
-    void setID(String userID);
+    void setID(String ID);
 
     String getPropertyList(String fieldFormatStr);
 

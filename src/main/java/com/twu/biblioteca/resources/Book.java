@@ -4,8 +4,7 @@ import org.joda.time.LocalDate;
 
 
 public class Book implements Resource {
-    private static final int RANGE_OF_TABLE = 19;
-    private static final int RANGE_MINUS_DOTS = RANGE_OF_TABLE-2;
+    private StringFormatter stringFormatter;
     private String title;
     private String author;
     private LocalDate published;
@@ -18,6 +17,7 @@ public class Book implements Resource {
         this.published = published;
         this.checkedIn = checkedIn;
         this.id = id;
+        stringFormatter = new StringFormatter();
     }
 
     public void invertCheckedFlag() {
@@ -33,13 +33,6 @@ public class Book implements Resource {
     }
 
     @Override
-    public String toString() {
-        return  "title='" + title + '\'' +
-                ", author=" + author +
-                ", published=" + published;
-    }
-
-    @Override
     public void setID(String ID) {
         this.id = ID;
     }
@@ -50,30 +43,29 @@ public class Book implements Resource {
 
     @Override
     public String getPropertyList(String fieldFormatStr) {
-
         String formatStr = String.format(
                 "| %1$s | %1$s | %1$s | %1$s |%n", fieldFormatStr
         );
         return String.format(
                 formatStr,
-                id, isStringTooLong(title) ? reduceStringAddDots(title) : title, isStringTooLong(author) ? reduceStringAddDots(author) : author, getYearPublished()
+                id, stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title, stringFormatter.isStringTooLong(author) ? stringFormatter.reduceStringAddDots(author) : author, getYearPublished()
         );
     }
 
-    private boolean isStringTooLong(String str){
-        return str.length() >= RANGE_OF_TABLE;
+    @Override
+    public String toString() {
+        return  "title='" + title + '\'' +
+                ", author=" + author +
+                ", published=" + published;
     }
 
-    private String reduceStringAddDots(String str){
-        return str.substring(0,RANGE_MINUS_DOTS).concat("...");
-    }
 
     public String getAuthor() {
         return author;
     }
 
     public String getReducedTitle(){
-        return this.isStringTooLong(title) ? reduceStringAddDots(title) : title;
+        return stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title;
     }
 
     public String getTitle() {

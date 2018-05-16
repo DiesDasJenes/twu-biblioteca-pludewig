@@ -1,6 +1,5 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.dataprovider.FakeUserFactory;
 import com.twu.biblioteca.resources.Customer;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;

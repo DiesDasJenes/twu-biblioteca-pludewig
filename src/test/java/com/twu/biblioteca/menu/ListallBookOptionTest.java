@@ -17,7 +17,7 @@ public class ListallBookOptionTest {
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         library = new Library();
         listallBookOption = new ListallBookOption();
         Book b1 = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, "0");

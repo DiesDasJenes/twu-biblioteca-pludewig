@@ -1,14 +1,12 @@
 package com.twu.biblioteca.support;
 
+import com.github.javafaker.Faker;
 import com.twu.biblioteca.resources.Book;
-import io.bloco.faker.Faker;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.InvocationTargetException;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class BookTest {
 
@@ -21,10 +19,10 @@ public class BookTest {
     @Before
     public void setUp() throws Exception {
         Faker Faker = new Faker();
-        Title = Faker.book.title();
-        Author = Faker.name.firstName() + Faker.name.lastName();
+        Title = Faker.book().title();
+        Author = Faker.name().fullName();
         randomYear = LocalDate.now().minusYears((int)(Math.random()*500));
-        randomDigit = String.valueOf(Faker.number.positive());
+        randomDigit = String.valueOf(Faker.number().digit());
         TestBook = new Book(Title,Author,randomYear,true,randomDigit);
     }
 
@@ -38,11 +36,11 @@ public class BookTest {
     }
 
     @Test
-    public void TitleTooLong() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public void TitleTooLong()  {
         Faker Faker = new Faker();
-        Author = Faker.book.author();
+        Author = Faker.name().fullName();
         randomYear = LocalDate.now().minusYears((int)(Math.random()*500));
-        randomDigit = String.valueOf(Faker.number.positive());
+        randomDigit = String.valueOf(Faker.number().digit());
         String LongTitle = "THis is a really long Title which we want to reduce";
         String reducedTitle = "THis is a really ...";
         Book TestBook = new Book(LongTitle,Author,randomYear,false,randomDigit);

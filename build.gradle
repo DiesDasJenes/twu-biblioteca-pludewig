@@ -15,14 +15,11 @@ sourceCompatibility = 1.8
 repositories {
     jcenter()
     mavenCentral()
-    maven { url 'https://jitpack.io'}
-    flatDir {
-        dirs 'lib'
-    }
 }
 
 dependencies {
-    compile 'com.github.blocoio:faker:1.2.7'
+    compile 'com.github.javafaker:javafaker:0.15'
+    compile 'joda-time:joda-time:2.9.9'
     testCompile 'junit:junit:4.12'
     testCompile 'com.github.stefanbirkner:system-rules:1.17.0'
     testCompile "org.mockito:mockito-core:2.+"
