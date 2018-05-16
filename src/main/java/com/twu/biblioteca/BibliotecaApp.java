@@ -4,6 +4,10 @@ import com.twu.biblioteca.dataprovider.FakeBookFactory;
 import com.twu.biblioteca.dataprovider.FakeCustomerFactory;
 import com.twu.biblioteca.dataprovider.FakeMovieFactory;
 import com.twu.biblioteca.menu.*;
+import com.twu.biblioteca.menu.submenu.CheckInBookOption;
+import com.twu.biblioteca.menu.submenu.CheckOutBookOption;
+import com.twu.biblioteca.menu.submenu.ListOneBookOption;
+import com.twu.biblioteca.menu.submenu.ListallBookOption;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Messages;
 

@@ -1,9 +1,6 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.support.Querist;
-
-import java.util.ArrayList;
-import java.util.stream.Collectors;
+import com.twu.biblioteca.menu.submenu.SubMenuOption;
 
 public class CheckOutResource extends MenuOption {
     CheckOutResource(SubMenuOption... subMenuOptions){

@@ -1,10 +1,8 @@
-package com.twu.biblioteca.menu;
+package com.twu.biblioteca.menu.submenu;
 
 import com.twu.biblioteca.resources.Book;
 import com.twu.biblioteca.resources.BookHeader;
 import com.twu.biblioteca.resources.Library;
-
-import java.util.ArrayList;
 
 public class ListallBookOption implements SubMenuOption {
 

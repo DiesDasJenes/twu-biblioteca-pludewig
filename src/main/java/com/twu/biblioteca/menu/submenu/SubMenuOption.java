@@ -1,4 +1,4 @@
-package com.twu.biblioteca.menu;
+package com.twu.biblioteca.menu.submenu;
 
 import com.twu.biblioteca.resources.Library;
 

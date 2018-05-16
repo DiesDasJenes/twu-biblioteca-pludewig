@@ -1,5 +1,6 @@
 package com.twu.biblioteca.menu;
 
+import com.twu.biblioteca.menu.submenu.CheckInBookOption;
 import com.twu.biblioteca.resources.Book;
 import com.twu.biblioteca.resources.Library;
 import org.junit.Before;
