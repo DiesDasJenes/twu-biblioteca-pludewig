@@ -48,7 +48,7 @@ public class Menu {
     }
 
     private void executeOption(MenuOption Option){
-        Option.processOption(Library);
+        Option.processOption();
     }
 
     public void printOptions() {

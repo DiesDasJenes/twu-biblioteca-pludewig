@@ -45,6 +45,6 @@ public class MovieTest {
     @Test
     public void shouldInvertCheckedFlad(){
         movie.invertCheckedFlag();
-        assertEquals(!CHECKED_IN,movie.isChecked_in());
+        assertEquals(!CHECKED_IN,movie.isCheckedIn());
     }
 }

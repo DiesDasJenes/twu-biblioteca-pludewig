@@ -1,7 +1,7 @@
 package com.twu.biblioteca.menu.submenu;
 
 import com.twu.biblioteca.resources.Book;
-import com.twu.biblioteca.resources.BookHeader;
+import com.twu.biblioteca.resources.TableHeader;
 import com.twu.biblioteca.resources.Library;
 
 public class ListallBookOption implements SubMenuOption {
@@ -18,8 +18,8 @@ public class ListallBookOption implements SubMenuOption {
 
     @Override
     public void executeCommand(Library library, String input) {
-        BookHeader BH = new BookHeader();
-        String BookList =BH.getHeader("%-20s");
+        TableHeader BH = new TableHeader();
+        String BookList =BH.getBookHeader("%-20s");
         BookList = BookList.concat("\n");
         for (Book book: library.getListOfAllBooks().values()
                 ) {
