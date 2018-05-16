@@ -9,8 +9,8 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 import static org.junit.Assert.*;
 
 public class CheckOutResourceTest {
-    CheckOutResource checkOutResource;
-    Library library;
+    private CheckOutResource checkOutResource;
+
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -18,7 +18,6 @@ public class CheckOutResourceTest {
     @Before
     public void setUp() throws Exception {
         checkOutResource = new CheckOutResource();
-        library = new Library();
     }
 
     @Test
@@ -34,13 +33,13 @@ public class CheckOutResourceTest {
 
     @Test
     public void executeCommand() {
-        assertNotNull(checkOutResource.executeCommand(library,"bB"));
-        assertNotNull(checkOutResource.executeCommand(library,"bM"));
+        assertNotNull(checkOutResource.executeCommand("bB"));
+        assertNotNull(checkOutResource.executeCommand("bM"));
     }
 
     @Test
     public void processOption() {
-        checkOutResource.processOption(library);
+        checkOutResource.processOption();
         assertEquals("What would you like to (b)orrow: (B)ook or (M)ovie",systemOutRule.getLog());
     }
 }
