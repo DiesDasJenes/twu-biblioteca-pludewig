@@ -14,8 +14,6 @@ public class ListOneBookOptionTest {
     private static final String BOOK_KEY = "26";
     private static final String BOOK_TITLE = "The Tea Rose";
     private static final String BOOK_AUTHOR = "Jennifer Donelly";
-    public static final String SELECT_BOOK = "SB";
-    public static final String SELECT_MOVIE = "SM";
     private ListOneBookOption listOneBookOption;
     private Library library;
 
@@ -36,16 +34,11 @@ public class ListOneBookOptionTest {
         assertEquals("(S)how the Details of a Book", listOneBookOption.getCommandContent());
     }
 
-    @Test
-    public void canGetCommand() {
-        assertEquals(SELECT_BOOK, listOneBookOption.getCommand().get(0));
-        assertEquals(SELECT_MOVIE,listOneBookOption.getCommand().get(1));
-    }
 
     @Test
-    public void canGetDetailsofOneBook() {
-        listOneBookOption.executeCommand(library, null);
-        //TODO Mock INput set to One
+    public void shouldGetDetailsOfOneBook() {
+        listOneBookOption.executeCommand(library,"26");
+        assertEquals("",systemOutRule.getLog());
 
     }
 }

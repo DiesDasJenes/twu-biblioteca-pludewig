@@ -6,15 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuitOption implements MenuOption {
-
+    ArrayList<String> commandList;
+    public QuitOption(){
+        commandList = new ArrayList<>();
+        commandList.add("Q");
+    }
     @Override
     public String getCommandContent() {
         return "Press (Q) to Quit";
     }
 
     @Override
-    public String getCommand() {
-        return "Q";
+    public ArrayList<String> getCommand() {
+        return commandList;
     }
 
     @Override

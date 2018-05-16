@@ -6,17 +6,13 @@ import com.twu.biblioteca.resources.Library;
 
 import java.util.ArrayList;
 
-public class ListallBookOption implements MenuOption {
+public class ListallBookOption implements SubMenuOption {
 
     @Override
     public String getCommandContent() {
-        return "(L)ist all Books";
+        return "List all Books";
     }
 
-    @Override
-    public String getCommand() {
-        return "L";
-    }
 
     @Override
     public void executeCommand(Library library, String input) {

@@ -9,27 +9,22 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import static org.junit.Assert.assertEquals;
 
-public class CheckOutOptionTest {
+public class CheckOutBookOptionTest {
     private static final String VALID_ID = "0";
     private static final String INVALID_ID = "1";
-    private CheckOutOption checkOutOption;
+    private CheckOutBookOption checkOutBookOption;
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Before
     public void setUp() throws Exception {
-        checkOutOption = new CheckOutOption();
+        checkOutBookOption = new CheckOutBookOption();
     }
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("(B)orrow a book", checkOutOption.getCommandContent());
-    }
-
-    @Test
-    public void canGetCommand() {
-        assertEquals("B", checkOutOption.getCommand().get(0));
+        assertEquals("(B)orrow a book", checkOutBookOption.getCommandContent());
     }
 
     @Test
@@ -37,7 +32,7 @@ public class CheckOutOptionTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, VALID_ID);
         library.addBooks(book);
-        checkOutOption.executeCommand(library, "0");
+        checkOutBookOption.executeCommand(library, "0");
         assertEquals("Thank you! Enjoy the book\n", systemOutRule.getLog());
     }
 
@@ -50,7 +45,7 @@ public class CheckOutOptionTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), false, "0");
         library.addBooks(book);
-        checkOutOption.executeCommand(library, s);
+        checkOutBookOption.executeCommand(library, s);
         assertEquals("That book is not available.\n", systemOutRule.getLog());
     }
 

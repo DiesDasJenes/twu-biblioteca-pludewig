@@ -5,17 +5,13 @@ import com.twu.biblioteca.support.Querist;
 
 import java.util.ArrayList;
 
-public class CheckInOption implements MenuOption {
+public class CheckInBookOption implements SubMenuOption {
 
     @Override
     public String getCommandContent() {
-        return "(R)eturn a Book";
+        return "Please enter the ID of the book you want to return.";
     }
 
-    @Override
-    public String getCommand() {
-        return "R";
-    }
 
     @Override
     public void executeCommand(Library library, String input) {
@@ -30,6 +26,6 @@ public class CheckInOption implements MenuOption {
     @Override
     public void processOption(Library library) {
         Querist querist = new Querist(System.in,System.out);
-        executeCommand(library,querist.ask("Please enter the IDw of the book you want to see the details of.").toString().trim());
+        executeCommand(library,querist.ask(getCommandContent()).toString().trim());
     }
 }

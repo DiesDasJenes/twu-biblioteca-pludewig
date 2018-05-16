@@ -43,12 +43,12 @@ public class BibliotecaApp {
         ListallBookOption LBO = new ListallBookOption();
         QuitOption QO = new QuitOption();
         ListOneBookOption LOBO = new ListOneBookOption();
-        CheckOutOption COO = new CheckOutOption();
-        CheckInOption CIO = new CheckInOption();
+        CheckOutBookOption COO = new CheckOutBookOption();
+        CheckInBookOption CIO = new CheckInBookOption();
         ArrayList<MenuOption> Options= new ArrayList<>();
-        Options.add(LBO);  Options.add(LOBO);
-        Options.add(COO); Options.add(CIO);
-        Options.add(QO);
+       // Options.add(LBO);  Options.add(LOBO);
+        // Options.add(COO); Options.add(CIO);
+        // Options.add(QO);
         return Options;
     }
 

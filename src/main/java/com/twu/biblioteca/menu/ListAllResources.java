@@ -2,6 +2,8 @@ package com.twu.biblioteca.menu;
 
 import com.twu.biblioteca.resources.Library;
 
+import java.util.ArrayList;
+
 public class ListAllResources implements MenuOption {
     @Override
     public String getCommandContent() {
@@ -9,7 +11,7 @@ public class ListAllResources implements MenuOption {
     }
 
     @Override
-    public String getCommand() {
+    public ArrayList<String> getCommand() {
         return null;
     }
 

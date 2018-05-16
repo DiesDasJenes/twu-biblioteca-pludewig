@@ -6,15 +6,10 @@ import com.twu.biblioteca.support.Querist;
 
 import java.util.ArrayList;
 
-public class ListOneBookOption implements MenuOption {
+public class ListOneBookOption implements SubMenuOption {
     @Override
     public String getCommandContent() {
-        return "(S)how the Details of a Book";
-    }
-
-    @Override
-    public String getCommand() {
-        return "S";
+        return "Please enter the Id of the book you want to see the details of.";
     }
 
     @Override
@@ -37,6 +32,6 @@ public class ListOneBookOption implements MenuOption {
     @Override
     public void processOption(Library library) {
         Querist querist = new Querist(System.in,System.out);
-        executeCommand(library,querist.ask("Please enter the Id of the book you want to see the details of.").toString().trim());
+        executeCommand(library,querist.ask(this.getCommandContent()).toString().trim());
     }
 }

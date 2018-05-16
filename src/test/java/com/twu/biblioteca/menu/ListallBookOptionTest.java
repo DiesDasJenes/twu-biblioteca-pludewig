@@ -30,10 +30,6 @@ public class ListallBookOptionTest {
         assertEquals("(L)ist all Books", listallBookOption.getCommandContent());
     }
 
-    @Test
-    public void canGetCommand() {
-        assertEquals("L", listallBookOption.getCommand().get(0));
-    }
 
     @Test
     public void printAllBooks() {

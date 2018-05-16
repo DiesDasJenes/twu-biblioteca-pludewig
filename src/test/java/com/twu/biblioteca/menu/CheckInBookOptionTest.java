@@ -9,26 +9,21 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import static org.junit.Assert.assertEquals;
 
-public class CheckInOptionTest {
+public class CheckInBookOptionTest {
 
-    private CheckInOption checkInOption;
+    private CheckInBookOption checkInBookOption;
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Before
     public void setUp() {
-        checkInOption = new CheckInOption();
+        checkInBookOption = new CheckInBookOption();
     }
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("(R)eturn a Book", checkInOption.getCommandContent());
-    }
-
-    @Test
-    public void canGetCommand() {
-        assertEquals("R", checkInOption.getCommand().get(0));
+        assertEquals("(R)eturn a Book", checkInBookOption.getCommandContent());
     }
 
     @Test
@@ -36,7 +31,7 @@ public class CheckInOptionTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), false, "0");
         library.addBooks(book);
-        checkInOption.executeCommand(library, "0");
+        checkInBookOption.executeCommand(library, "0");
         assertEquals("Thank you for returning the book.\n", systemOutRule.getLog());
     }
 
@@ -54,7 +49,7 @@ public class CheckInOptionTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, "0");
         library.addBooks(book);
-        checkInOption.executeCommand(library, s);
+        checkInBookOption.executeCommand(library, s);
         assertEquals("That is not a valid book to return.\n", systemOutRule.getLog());
     }
 }
