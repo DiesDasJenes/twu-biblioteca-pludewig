@@ -1,4 +1,4 @@
-package com.twu.biblioteca.menu.submenu;
+package com.twu.biblioteca.menu.suboption;
 
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.resources.Movie;

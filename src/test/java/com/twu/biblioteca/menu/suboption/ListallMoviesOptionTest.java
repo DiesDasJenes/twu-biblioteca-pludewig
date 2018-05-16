@@ -1,9 +1,7 @@
-package com.twu.biblioteca.menu.submenu;
+package com.twu.biblioteca.menu.suboption;
 
-import com.twu.biblioteca.menu.submenu.ListallMoviesOption;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.resources.Movie;
-import com.twu.biblioteca.support.Setup;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Rule;

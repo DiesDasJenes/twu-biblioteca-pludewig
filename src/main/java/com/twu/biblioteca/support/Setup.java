@@ -3,8 +3,8 @@ package com.twu.biblioteca.support;
 import com.twu.biblioteca.dataprovider.FakeBookFactory;
 import com.twu.biblioteca.dataprovider.FakeCustomerFactory;
 import com.twu.biblioteca.dataprovider.FakeMovieFactory;
-import com.twu.biblioteca.menu.*;
-import com.twu.biblioteca.menu.submenu.*;
+import com.twu.biblioteca.menu.option.*;
+import com.twu.biblioteca.menu.suboption.*;
 import com.twu.biblioteca.resources.Library;
 
 import java.util.ArrayList;
@@ -22,9 +22,9 @@ public class Setup {
         return library;
     }
 
-    public ArrayList<MenuOption> setUpMenuOptions(){
+    public ArrayList<OptionWithSubOption> setUpMenuOptions(){
         QuitOption QO = new QuitOption();
-        ArrayList<MenuOption> Options= new ArrayList<>();
+        ArrayList<OptionWithSubOption> Options= new ArrayList<>();
         Options.add(setUpListAllResourceOption());
         Options.add(setUpListOneResourceOption());
         Options.add(setUpCheckOutResourceOption());
@@ -32,23 +32,23 @@ public class Setup {
         return Options;
     }
 
-    private MenuOption setUpListAllResourceOption(){
+    private OptionWithSubOption setUpListAllResourceOption(){
         ListallBookOption LABO = new ListallBookOption();
         ListallMoviesOption LAMO = new ListallMoviesOption();
         return new ListAllResources(LABO,LAMO);
     }
 
-    private MenuOption setUpCheckInResourceOption(){
+    private OptionWithSubOption setUpCheckInResourceOption(){
         CheckInBookOption CIBO = new CheckInBookOption();
         return new CheckInResource(CIBO);
     }
 
-    private MenuOption setUpCheckOutResourceOption(){
+    private OptionWithSubOption setUpCheckOutResourceOption(){
         CheckOutBookOption COBO = new CheckOutBookOption();
         return new CheckOutResource(COBO);
     }
 
-    private MenuOption setUpListOneResourceOption(){
+    private OptionWithSubOption setUpListOneResourceOption(){
         ListOneBookOption LOBO = new ListOneBookOption();
         return new ListOneResource(LOBO);
     }

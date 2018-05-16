@@ -1,17 +1,13 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.menu.submenu.ListallBookOption;
+import com.twu.biblioteca.menu.suboption.ListallBookOption;
 import com.twu.biblioteca.resources.Library;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 
-import java.util.ArrayList;
-
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class MenuTest {
     private Library library;
@@ -40,6 +36,11 @@ public class MenuTest {
 
 
     @Test
+    public void shouldPrintInvailOptionText(){
+
+    }
+
+    @Test
     public void canAddSeveralOptions(){
         //Library library = new Library();
         //ListAllResources listAllResources = mock(ListAllResources.class);
@@ -53,4 +54,5 @@ public class MenuTest {
         //menu.printOptions();
         //assertEquals("(L)ist all Books\nPress (Q) to Quit\n",systemOutRule.getLog());
     }
+
 }

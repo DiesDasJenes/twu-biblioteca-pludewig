@@ -1,4 +1,4 @@
-package com.twu.biblioteca.menu.submenu;
+package com.twu.biblioteca.menu.suboption;
 
 import com.twu.biblioteca.resources.Book;
 import com.twu.biblioteca.resources.TableHeader;

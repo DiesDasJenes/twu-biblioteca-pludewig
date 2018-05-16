@@ -1,17 +1,17 @@
-package com.twu.biblioteca.menu;
+package com.twu.biblioteca.menu.option;
 
-import com.twu.biblioteca.menu.submenu.SubMenuOption;
+import com.twu.biblioteca.menu.suboption.SubMenuOption;
 import com.twu.biblioteca.support.Querist;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MenuOption {
+public class OptionWithSubOption {
     private Map<String,SubMenuOption> subMenuOptions;
     private String commandContent;
 
-    MenuOption(String content,SubMenuOption... subMenuOptionsList){
+    OptionWithSubOption(String content, SubMenuOption... subMenuOptionsList){
         subMenuOptions = new HashMap<>();
         for (SubMenuOption option: subMenuOptionsList
              ) {
