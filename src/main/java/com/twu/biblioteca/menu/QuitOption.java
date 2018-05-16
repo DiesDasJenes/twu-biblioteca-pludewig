@@ -13,10 +13,8 @@ public class QuitOption implements MenuOption {
     }
 
     @Override
-    public ArrayList<String> getCommand() {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("Q");
-        return list;
+    public String getCommand() {
+        return "Q";
     }
 
     @Override
