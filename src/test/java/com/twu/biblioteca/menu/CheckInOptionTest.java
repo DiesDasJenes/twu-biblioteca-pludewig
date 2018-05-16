@@ -28,7 +28,7 @@ public class CheckInOptionTest {
 
     @Test
     public void canGetCommand() {
-        assertEquals("R", checkInOption.getCommand());
+        assertEquals("R", checkInOption.getCommand().get(0));
     }
 
     @Test

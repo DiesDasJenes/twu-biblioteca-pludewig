@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class FakeBookFactory implements FakeResourceFactory {
     private static final boolean CHECKED_IN = true;
+    private static final String PREFIX = "B";
 
     public Map<String, Book> getBookList(int amount) {
         Map<String, Book> listOfAllBooks = new HashMap<>();
@@ -24,7 +25,7 @@ public class FakeBookFactory implements FakeResourceFactory {
     @Override
     public Resource create() {
         Faker faker = new Faker(new Locale("en"));
-        return new Book(faker.book().title(), faker.name().fullName(), LocalDate.now().minusYears((int) (Math.random() * 500)), CHECKED_IN, String.valueOf(faker.number().digit()));
+        return new Book(faker.book().title(), faker.name().fullName(), LocalDate.now().minusYears((int) (Math.random() * 500)), CHECKED_IN, PREFIX + String.valueOf(faker.number().digit()));
     }
 
 }

@@ -32,7 +32,7 @@ public class ListallBookOptionTest {
 
     @Test
     public void canGetCommand() {
-        assertEquals("L", listallBookOption.getCommand());
+        assertEquals("L", listallBookOption.getCommand().get(0));
     }
 
     @Test

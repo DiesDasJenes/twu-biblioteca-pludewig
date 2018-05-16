@@ -2,15 +2,21 @@ package com.twu.biblioteca.menu;
 
 import com.twu.biblioteca.resources.Library;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuitOption implements MenuOption {
+
     @Override
     public String getCommandContent() {
         return "Press (Q) to Quit";
     }
 
     @Override
-    public String getCommand() {
-        return "Q";
+    public ArrayList<String> getCommand() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Q");
+        return list;
     }
 
     @Override

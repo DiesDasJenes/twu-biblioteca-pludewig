@@ -29,7 +29,7 @@ public class CheckOutOptionTest {
 
     @Test
     public void canGetCommand() {
-        assertEquals("B", checkOutOption.getCommand());
+        assertEquals("B", checkOutOption.getCommand().get(0));
     }
 
     @Test

@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class QuitOptionTest {
 
-    QuitOption quitOption;
+    private QuitOption quitOption;
     @Before
     public void setUp(){
         quitOption = new QuitOption();
@@ -19,6 +19,6 @@ public class QuitOptionTest {
 
     @Test
     public void getCommand() {
-        assertEquals("Q",quitOption.getCommand());
+        assertEquals("Q",quitOption.getCommand().get(0));
     }
 }
