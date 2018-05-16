@@ -7,7 +7,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CheckOutOptionTest {
     private static final String VALID_ID = "0";
@@ -29,16 +29,16 @@ public class CheckOutOptionTest {
 
     @Test
     public void canGetCommand() {
-        assertEquals("B",checkOutOption.getCommand());
+        assertEquals("B", checkOutOption.getCommand());
     }
 
     @Test
     public void canCheckOutValidBook() {
-        Library library = new Library(0);
-        Book book = new Book("Enders Game","Orson Scoott",new org.joda.time.LocalDate(1990,12,1),true, VALID_ID);
+        Library library = new Library();
+        Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, VALID_ID);
         library.addBooks(book);
-        checkOutOption.executeCommand(library,"0");
-        assertEquals("Thank you! Enjoy the book\n",systemOutRule.getLog());
+        checkOutOption.executeCommand(library, "0");
+        assertEquals("Thank you! Enjoy the book\n", systemOutRule.getLog());
     }
 
     @Test
@@ -47,11 +47,11 @@ public class CheckOutOptionTest {
     }
 
     private void checkOutBook(String s) {
-        Library library = new Library(0);
-        Book book = new Book("Enders Game","Orson Scoott",new org.joda.time.LocalDate(1990,12,1),false,"0");
+        Library library = new Library();
+        Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), false, "0");
         library.addBooks(book);
         checkOutOption.executeCommand(library, s);
-        assertEquals("That book is not available.\n",systemOutRule.getLog());
+        assertEquals("That book is not available.\n", systemOutRule.getLog());
     }
 
     @Test

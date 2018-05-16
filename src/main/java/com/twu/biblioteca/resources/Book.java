@@ -7,17 +7,17 @@ public class Book implements Resource {
     private static final int RANGE_OF_TABLE = 19;
     private static final int RANGE_MINUS_DOTS = RANGE_OF_TABLE-2;
     private String title;
-    private String Author;
-    private LocalDate Published;
+    private String author;
+    private LocalDate published;
     private Boolean checkedIn;
     private String id;
 
     public Book(String title, String author, LocalDate published, Boolean checkedIn, String id) {
         this.title = title;
-        Author = author;
-        Published = published;
+        this.author = author;
+        this.published = published;
         this.checkedIn = checkedIn;
-        id = id;
+        this.id = id;
     }
 
     public void invertCheckedFlag() {
@@ -29,19 +29,19 @@ public class Book implements Resource {
     }
 
     public int getYearPublished() {
-        return Published.getYear();
+        return published.getYear();
     }
 
     @Override
     public String toString() {
         return  "title='" + title + '\'' +
-                ", Author=" + Author +
-                ", Published=" + Published;
+                ", author=" + author +
+                ", published=" + published;
     }
 
     @Override
-    public void setID(String userID) {
-        this.id = id;
+    public void setID(String ID) {
+        this.id = ID;
     }
 
     public String getID() {
@@ -56,7 +56,7 @@ public class Book implements Resource {
         );
         return String.format(
                 formatStr,
-                id, isStringTooLong(title) ? reduceStringAddDots(title) : title, isStringTooLong(Author) ? reduceStringAddDots(Author) : Author, getYearPublished()
+                id, isStringTooLong(title) ? reduceStringAddDots(title) : title, isStringTooLong(author) ? reduceStringAddDots(author) : author, getYearPublished()
         );
     }
 
@@ -69,7 +69,7 @@ public class Book implements Resource {
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public String getReducedTitle(){

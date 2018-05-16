@@ -8,7 +8,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ListOneBookOptionTest {
     private static final String BOOK_KEY = "26";
@@ -24,8 +24,8 @@ public class ListOneBookOptionTest {
     @Before
     public void setUp() throws Exception {
         listOneBookOption = new ListOneBookOption();
-        library = new Library(0);
-        Book b = new Book(BOOK_TITLE, BOOK_AUTHOR, new LocalDate(2014,1,20),false,BOOK_KEY);
+        library = new Library();
+        Book b = new Book(BOOK_TITLE, BOOK_AUTHOR, new LocalDate(2014, 1, 20), false, BOOK_KEY);
         library.addBooks(b);
     }
 
@@ -36,12 +36,12 @@ public class ListOneBookOptionTest {
 
     @Test
     public void canGetCommand() {
-        assertEquals("S",listOneBookOption.getCommand());
+        assertEquals("S", listOneBookOption.getCommand());
     }
 
     @Test
     public void canGetDetailsofOneBook() {
-        listOneBookOption.executeCommand(library,null);
+        listOneBookOption.executeCommand(library, null);
         //TODO Mock INput set to One
 
     }
