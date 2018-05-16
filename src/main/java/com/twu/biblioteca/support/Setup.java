@@ -22,15 +22,24 @@ public class Setup {
         return library;
     }
 
-    public ArrayList<OptionWithSubOption> setUpMenuOptions(){
-        QuitOption QO = new QuitOption();
-        ArrayList<OptionWithSubOption> Options= new ArrayList<>();
-        Options.add(setUpListAllResourceOption());
-        Options.add(setUpListOneResourceOption());
-        Options.add(setUpCheckOutResourceOption());
-        Options.add(setUpCheckInResourceOption());
-        return Options;
+    public ArrayList<OptionWithSubOption> setUpSubOptions(){
+
+        ArrayList<OptionWithSubOption> optionWithSubOptions= new ArrayList<>();
+        optionWithSubOptions.add(setUpListAllResourceOption());
+        optionWithSubOptions.add(setUpListOneResourceOption());
+        optionWithSubOptions.add(setUpCheckOutResourceOption());
+        optionWithSubOptions.add(setUpCheckInResourceOption());
+        return optionWithSubOptions;
     }
+
+    public ArrayList<Option> setUpOptions(){
+        QuitOption QO = new QuitOption();
+        ArrayList<Option> options = new ArrayList<>();
+        options.add(QO);
+        return options;
+    }
+
+
 
     private OptionWithSubOption setUpListAllResourceOption(){
         ListallBookOption LABO = new ListallBookOption();

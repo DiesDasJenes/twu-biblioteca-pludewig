@@ -5,7 +5,7 @@ import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 import com.twu.biblioteca.support.Messages;
 
-public class LoginOption {
+public class LoginOption implements Option {
 
 
     private void loginUser(Library library) {
@@ -43,5 +43,20 @@ public class LoginOption {
             }
         }
         return false;
+    }
+
+    @Override
+    public void processOption() {
+
+    }
+
+    @Override
+    public String getCommandContent() {
+        return null;
+    }
+
+    @Override
+    public String getCommand() {
+        return null;
     }
 }

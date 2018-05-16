@@ -20,6 +20,6 @@ public class QuitOptionTest {
 
     @Test
     public void getCommand() {
-        assertEquals("Q",quitOption.getCommand().get(0));
+        assertEquals("Q",quitOption.getCommand());
     }
 }

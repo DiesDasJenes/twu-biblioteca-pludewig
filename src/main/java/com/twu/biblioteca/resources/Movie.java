@@ -44,10 +44,6 @@ public class Movie implements Resource {
         return stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title;
     }
 
-    public String getDirector() {
-        return director;
-    }
-
     @Override
     public String getPropertyList(String fieldFormatStr) {
         String formatStr = String.format(
@@ -71,7 +67,7 @@ public class Movie implements Resource {
         return checkedIn;
     }
 
-    public void invertCheckedFlag() {
+    void invertCheckedFlag() {
         this.checkedIn = !isCheckedIn();
     }
 }

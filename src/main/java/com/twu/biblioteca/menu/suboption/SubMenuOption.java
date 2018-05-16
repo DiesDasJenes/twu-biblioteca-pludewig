@@ -10,4 +10,5 @@ public interface SubMenuOption {
     void executeCommand(Library library, String input);
 
     void processOption(Library library);
+
 }

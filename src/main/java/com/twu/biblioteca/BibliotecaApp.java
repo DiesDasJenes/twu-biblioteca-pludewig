@@ -22,7 +22,7 @@ public class BibliotecaApp {
     private Menu setUpMenu()
     {
         Setup setup = new Setup();
-        return new Menu(setup.setUpMenuOptions(),setup.setUpLibrary());
+        return new Menu(setup.setUpSubOptions(),setup.setUpOptions(),setup.setUpLibrary());
     }
 
 

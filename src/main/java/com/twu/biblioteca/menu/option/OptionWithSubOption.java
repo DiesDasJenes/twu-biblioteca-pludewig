@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OptionWithSubOption {
+public class OptionWithSubOption   {
     private Map<String,SubMenuOption> subMenuOptions;
     private String commandContent;
 

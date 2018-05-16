@@ -5,21 +5,20 @@ import com.twu.biblioteca.resources.Library;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuitOption {
+public class QuitOption implements Option {
 
+    @Override
     public String getCommandContent() {
         return "Press (Q) to Quit";
     }
 
 
-    public ArrayList<String> getCommand() {
-        ArrayList<String> commandList;
-        commandList = new ArrayList<>();
-        commandList.add("Q");
-        return commandList;
+    public String getCommand() {
+
+        return "Q";
     }
 
-
+    @Override
     public void processOption() {
         executeCommand();
     }

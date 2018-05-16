@@ -19,6 +19,6 @@ public class SetupTest {
 
     @Test
     public void setUpMenuOptions() {
-        assertNotNull(setup.setUpMenuOptions());
+        assertNotNull(setup.setUpSubOptions());
     }
 }
