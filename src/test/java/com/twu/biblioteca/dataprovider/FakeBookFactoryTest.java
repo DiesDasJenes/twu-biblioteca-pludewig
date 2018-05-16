@@ -1,4 +1,4 @@
-package com.twu.biblioteca.support;
+package com.twu.biblioteca.dataprovider;
 
 import com.twu.biblioteca.dataprovider.FakeBookFactory;
 import com.twu.biblioteca.dataprovider.FakeResourceFactory;

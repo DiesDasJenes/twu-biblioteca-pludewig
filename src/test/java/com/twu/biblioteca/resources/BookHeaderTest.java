@@ -1,4 +1,4 @@
-package com.twu.biblioteca.support;
+package com.twu.biblioteca.resources;
 
 import com.twu.biblioteca.resources.BookHeader;
 import org.junit.Test;
