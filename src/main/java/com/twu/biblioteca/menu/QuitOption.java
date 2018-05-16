@@ -5,29 +5,27 @@ import com.twu.biblioteca.resources.Library;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuitOption implements MenuOption {
-    ArrayList<String> commandList;
-    public QuitOption(){
-        commandList = new ArrayList<>();
-        commandList.add("Q");
-    }
-    @Override
+public class QuitOption {
+
     public String getCommandContent() {
         return "Press (Q) to Quit";
     }
 
-    @Override
+
     public ArrayList<String> getCommand() {
+        ArrayList<String> commandList;
+        commandList = new ArrayList<>();
+        commandList.add("Q");
         return commandList;
     }
 
-    @Override
-    public void processOption(Library library) {
-        executeCommand(library,null);
+
+    public void processOption() {
+        executeCommand();
     }
 
-    @Override
-    public void executeCommand(Library library, String input) {
+
+    public void executeCommand() {
         System.exit(1);
     }
 }
