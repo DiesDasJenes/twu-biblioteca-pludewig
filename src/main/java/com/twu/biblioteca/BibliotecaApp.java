@@ -14,7 +14,7 @@ public class BibliotecaApp {
     private void run(){
         Messages.printWelcomeMessage();
         Menu MainMenu = setUpMenu();
-        while(true){
+        while(true) {
             MainMenu.executeMenu();
         }
     }

@@ -27,7 +27,7 @@ public class MenuTest {
     public void setUp() throws Exception {
         //library = new Library();
         //listallBookOption = mock(ListallBookOption.class);
-        //when(listallBookOption.getCommand()).thenReturn("L");
+        //when(listallBookOption.getSubMenuCommands()).thenReturn("L");
         //when(listallBookOption.getCommandContent()).thenReturn("(L)ist all Books");
         //menu = new Menu(library,listallBookOption);
     }
@@ -44,10 +44,10 @@ public class MenuTest {
         //Library library = new Library();
         //ListAllResources listAllResources = mock(ListAllResources.class);
         //ArrayList<String>
-        //when(listAllResources.getCommand()).thenReturn("L");
+        //when(listAllResources.getSubMenuCommands()).thenReturn("L");
         //when(listAllResources.getCommandContent()).thenReturn("(L)ist all Books");
         //QuitOption quitOption = mock(QuitOption.class);
-        //when(quitOption.getCommand()).thenReturn("Q");
+        //when(quitOption.getSubMenuCommands()).thenReturn("Q");
         //when(quitOption.getCommandContent()).thenReturn("Press (Q) to Quit");
         //Menu menu = new Menu(library,listallBookOption,quitOption);
         //menu.printOptions();

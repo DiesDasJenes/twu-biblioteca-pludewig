@@ -11,7 +11,6 @@ import static org.junit.Assert.assertEquals;
 public class BookTest {
 
     private Book TestBook;
-    private String Title;
     private String Author;
     private LocalDate randomYear;
     private String randomDigit;
@@ -19,11 +18,11 @@ public class BookTest {
     @Before
     public void setUp() throws Exception {
         Faker Faker = new Faker();
-        Title = Faker.book().title();
+        String title = Faker.book().title();
         Author = Faker.name().fullName();
         randomYear = LocalDate.now().minusYears((int)(Math.random()*500));
         randomDigit = String.valueOf(Faker.number().digit());
-        TestBook = new Book(Title,Author,randomYear,true,randomDigit);
+        TestBook = new Book(title,Author,randomYear,true,randomDigit);
     }
 
     @Test

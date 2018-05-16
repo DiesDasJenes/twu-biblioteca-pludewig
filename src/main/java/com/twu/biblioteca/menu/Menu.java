@@ -1,24 +1,19 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.menu.submenu.ListallBookOption;
+import com.twu.biblioteca.menu.submenu.SubMenuOption;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Menu {
 
-    private ArrayList<MenuOption> Options;
-    private Library Library;
-    public Menu(ArrayList<MenuOption> options,Library Library) {
-        this.Options = options;
-        this.Library = Library;
-    }
-
-    public void addOptions(MenuOption... options){
-        this.Options.addAll(Arrays.asList(options));
+    private ArrayList<MenuOption> menuOptions;
+    private Library library;
+    public Menu(ArrayList<MenuOption> menuOptions, Library Library) {
+        this.menuOptions = menuOptions;
+        this.library = Library;
     }
 
     public void executeMenu() {
@@ -26,14 +21,11 @@ public class Menu {
         executeOption(askForOption());
     }
 
-    public MenuOption askForOption() {
+    private SubMenuOption askForOption() {
         Querist Querist = new Querist(System.in, System.out);
-        String answer = Querist.ask("Choose an option through typing in the Letter within the brackets.").toString().trim();
+        String answer = Querist.ask("Choose an option through typing and combining in the Letter within the brackets from left to right.").toString().trim();
         if (isValidOption(answer)) {
-            return Options.stream()
-                    .filter(option -> answer.equals(option.getCommand()))
-                    .collect(Collectors.toList())
-                    .get(0);
+            return menuOptions.stream().filter(MenuOption -> MenuOption.getSubMenuCommands().contains(answer)).collect(Collectors.toList()).get(0).getSubMenu(answer);
         } else {
             System.out.println("Select a valid option!");
             printOptions();
@@ -42,18 +34,16 @@ public class Menu {
 
     }
 
-    private void executeOption(MenuOption Option){
-        Option.processOption();
+    private void executeOption(SubMenuOption Option){
+        Option.processOption(library);
     }
 
-    public void printOptions() {
-        Options.forEach(option -> System.out.println(option.getCommandContent()));
+    private void printOptions() {
+        menuOptions.forEach(option -> System.out.println(option.getCommandContent()));
     }
 
     private boolean isValidOption(String userInput) {
-        return Options.stream().anyMatch(
-                option -> userInput.equals(option.getCommand())
-        );
+        return menuOptions.stream().anyMatch(MenuOption -> MenuOption.getSubMenuCommands().stream().anyMatch(input -> input.equals(userInput)));
     }
 }
 

@@ -26,6 +26,7 @@ public class Setup {
         QuitOption QO = new QuitOption();
         ArrayList<MenuOption> Options= new ArrayList<>();
         Options.add(setUpListAllResourceOption());
+        Options.add(setUpListOneResourceOption());
         Options.add(setUpCheckOutResourceOption());
         Options.add(setUpCheckInResourceOption());
         return Options;
@@ -45,6 +46,11 @@ public class Setup {
     private MenuOption setUpCheckOutResourceOption(){
         CheckOutBookOption COBO = new CheckOutBookOption();
         return new CheckOutResource(COBO);
+    }
+
+    private MenuOption setUpListOneResourceOption(){
+        ListOneBookOption LOBO = new ListOneBookOption();
+        return new ListOneResource(LOBO);
     }
 
 

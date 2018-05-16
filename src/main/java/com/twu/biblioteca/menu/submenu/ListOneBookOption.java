@@ -12,7 +12,7 @@ public class ListOneBookOption implements SubMenuOption {
 
     @Override
     public String getCommand() {
-        return "lB";
+        return "dB";
     }
 
     @Override
