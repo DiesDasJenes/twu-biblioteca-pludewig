@@ -1,7 +1,5 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.resources.Library;
-
 import java.util.ArrayList;
 
 public interface MenuOption {
@@ -10,8 +8,8 @@ public interface MenuOption {
 
     ArrayList<String> getCommand();
 
-    void executeCommand(Library library,String input);
+    SubMenuOption executeCommand(String input);
 
-    void processOption(Library library);
+    void processOption();
 
 }

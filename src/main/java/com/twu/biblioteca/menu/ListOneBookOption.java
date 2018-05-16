@@ -13,6 +13,11 @@ public class ListOneBookOption implements SubMenuOption {
     }
 
     @Override
+    public String getCommand() {
+        return "lB";
+    }
+
+    @Override
     public void executeCommand(Library library, String input) {
         String id = input;
         if(library.getListOfAllBooks().containsKey(id)){

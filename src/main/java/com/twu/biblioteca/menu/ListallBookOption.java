@@ -13,6 +13,10 @@ public class ListallBookOption implements SubMenuOption {
         return "List all Books";
     }
 
+    @Override
+    public String getCommand() {
+        return "lB";
+    }
 
     @Override
     public void executeCommand(Library library, String input) {

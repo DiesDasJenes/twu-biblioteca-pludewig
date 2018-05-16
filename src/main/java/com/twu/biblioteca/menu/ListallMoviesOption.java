@@ -10,6 +10,11 @@ public class ListallMoviesOption implements SubMenuOption {
     }
 
     @Override
+    public String getCommand() {
+        return "lM";
+    }
+
+    @Override
     public void executeCommand(Library library, String input) {
 
     }
