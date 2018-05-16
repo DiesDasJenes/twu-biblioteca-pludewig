@@ -17,13 +17,6 @@ public class Menu {
         this.Library = Library;
     }
 
-    public Menu(Library Library,MenuOption... options) {
-        Options = new ArrayList<>();
-        addOptions(options);
-        this.Library = Library;
-    }
-
-
     public void addOptions(MenuOption... options){
         this.Options.addAll(Arrays.asList(options));
     }
