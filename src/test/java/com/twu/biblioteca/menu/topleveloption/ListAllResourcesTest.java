@@ -1,6 +1,8 @@
 package com.twu.biblioteca.menu.topleveloption;
 
+import com.twu.biblioteca.resources.Book;
 import com.twu.biblioteca.resources.Library;
+import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -25,19 +27,32 @@ public class ListAllResourcesTest {
 
     @Test
     public void getContent() {
-        assertEquals("Display (L)ist of Library Equipment",listAllResources.getContent());
+        assertEquals("Display (L)ist of Library Equipment", listAllResources.getContent());
     }
 
     @Test
     public void getKey() {
-        assertEquals("L",listAllResources.getKey());
+        assertEquals("L", listAllResources.getKey());
     }
 
     @Test
     public void executeOption() {
         Library library = new Library();
-        listAllResources.execute(library);
-        assertEquals("* (B)ook\n* (M)ovie\n* (A)bort\n* (Q)uit",systemOutRule.getLog().substring(0,35));
-        systemInRule.provideLines("Q");
+        systemInRule.provideLines("B");
+        String actual = listAllResources.execute(library);
+        assertEquals("* (B)ook\n* (M)ovie\n* (A)bort\n* (Q)uit\n*", systemOutRule.getLog());
+        assertEquals("| Book No.             | Title                | Author               | Published            |\n",actual);
     }
+
+    @Test
+    public void shouldDisplayOnBook(){
+        Library library = new Library();
+        Book b = new Book("The Hobbit","Henry Ford",new LocalDate(2011,2,23),true,"1");
+        library.addBooks(b);
+        systemInRule.provideLines("B");
+        String actual = listAllResources.execute(library);
+        assertEquals("* (B)ook\n* (M)ovie\n* (A)bort\n* (Q)uit\n*", systemOutRule.getLog());
+        assertEquals("| Book No.             | Title                | Author               | Published            |\n| 1                    | The Hobbit           | Henry Ford           | 2011                 |\n",actual);
+    }
+
 }

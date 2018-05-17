@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,6 +21,9 @@ public class DisplayBookTest {
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+
+    @Rule
+    public final TextFromStandardInputStream systemInRule = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Before
     public void setUp() throws Exception {
@@ -37,13 +41,13 @@ public class DisplayBookTest {
 
     @Test
     public void shouldGetDetailsOfOneBook() {
-        displayBook.execute(library);
+        systemInRule.provideLines("26");
+        String actual = displayBook.execute(library);
         assertEquals("\nBook Details:\n" +
                 "No.26\n" +
                 "Title: The Tea Rose\n" +
                 "Author: Jennifer Donelly\n" +
-                "Published: 2014\n" +
-                "\n",systemOutRule.getLog());
+                "Published: 2014\n",actual);
 
     }
 }

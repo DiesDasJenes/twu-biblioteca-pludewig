@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.*;
 
@@ -15,6 +16,9 @@ public class ListallMoviesTest {
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+
+    @Rule
+    public final TextFromStandardInputStream systemInRule = TextFromStandardInputStream.emptyStandardInputStream();
 
 
     @Before
@@ -30,20 +34,17 @@ public class ListallMoviesTest {
 
     @Test
     public void getCommand() {
-        assertEquals("lM", listallMovies.getKey());
+        assertEquals("M", listallMovies.getKey());
     }
 
     @Test
     public void executeCommand() {
         Library library = new Library();
         Movie movie = new Movie("M0","The Running Man",new LocalDate(1990,10,14),"Arnold Normal",10,true);
-        String test = "| Movie No.            | Title                | Author               | Published            | Rating               |\n| M0                   | The Running Man      | Arnold Normal        | 1990                 | 10/10                |\n\n";
+        String test = "| Movie No.            | Title                | Author               | Published            | Rating               |\n| M0                   | The Running Man      | Arnold Normal        | 1990                 | 10/10                |\n";
         library.addMovies(movie);
-        listallMovies.execute(library);
-        assertEquals(test,systemOutRule.getLog());
-    }
-
-    @Test
-    public void processOption() {
+        systemInRule.provideLines("M");
+        String actual = listallMovies.execute(library);
+        assertEquals(test,actual);
     }
 }

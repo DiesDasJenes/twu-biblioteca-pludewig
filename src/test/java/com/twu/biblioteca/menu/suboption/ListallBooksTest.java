@@ -33,7 +33,7 @@ public class ListallBooksTest {
 
     @Test
     public void printAllBooks() {
-        listallBooks.execute(library);
-        assertEquals("| Book No.             | Title                | Author               | Published            |\n| 0                    | Enders Game          | Orson Scoott         | 1990                 |\n| 1                    | Earth Unaware        | Orson Scoott         | 2005                 |\n\n", systemOutRule.getLog());
+        String actual = listallBooks.execute(library);
+        assertEquals("| Book No.             | Title                | Author               | Published            |\n| 0                    | Enders Game          | Orson Scoott         | 1990                 |\n| 1                    | Earth Unaware        | Orson Scoott         | 2005                 |\n", actual);
     }
 }

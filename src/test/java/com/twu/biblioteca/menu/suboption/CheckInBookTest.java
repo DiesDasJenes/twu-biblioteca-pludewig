@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,6 +16,9 @@ public class CheckInBookTest {
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+
+    @Rule
+    public final TextFromStandardInputStream systemInRule = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Before
     public void setUp() {
@@ -31,12 +35,13 @@ public class CheckInBookTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), false, "0");
         library.addBooks(book);
-        checkInBook.execute(library);
-        assertEquals("Thank you for returning the book.\n", systemOutRule.getLog());
+        systemInRule.provideLines("0");
+        String actual = checkInBook.execute(library);
+        assertEquals("Thank you for returning the book.", actual);
     }
 
     @Test
-    public void cannotCheckInInvalidBook() {
+    public void cannotCheckInWhichIsCheckedOutBook() {
         checkInBook("0");
     }
 
@@ -49,7 +54,8 @@ public class CheckInBookTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, "0");
         library.addBooks(book);
-        checkInBook.execute(library);
-        assertEquals("That is not a valid book to return.\n", systemOutRule.getLog());
+        systemInRule.provideLines(s);
+        String x = checkInBook.execute(library);
+        assertEquals("That is not a valid book to return.", x);
     }
 }

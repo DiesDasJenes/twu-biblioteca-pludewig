@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.*;
 
@@ -15,6 +16,9 @@ public class DisplayMoviesTest {
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+
+    @Rule
+    public final TextFromStandardInputStream systemInRule = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Before
     public void setUp() throws Exception {
@@ -36,6 +40,15 @@ public class DisplayMoviesTest {
         Library library = new Library();
         Movie m = new Movie("M1","Star Trek",new LocalDate(2013,12,1),"Hani & Nani",3,true);
         library.addMovies(m);
-        displayMovies.execute(library);
+        systemInRule.provideLines("M1");
+        String actual = displayMovies.execute(library);
+        assertEquals("\n" +
+                "Movie Details:\n" +
+                "No." + "M1"  + "\n" +
+                "Title: " + "Star Trek" + "\n" +
+                "Director: " + "Hani & Nani" + "\n" +
+                "Published: " + "2013" +
+                "Rating: " + "3" + "/10" +
+                "\n",actual);
     }
 }

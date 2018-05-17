@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,6 +17,9 @@ public class CheckOutBookTest {
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+
+    @Rule
+    public final TextFromStandardInputStream systemInRule = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Before
     public void setUp() throws Exception {
@@ -32,8 +36,9 @@ public class CheckOutBookTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, VALID_ID);
         library.addBooks(book);
-        checkOutBook.execute(library);
-        assertEquals("Thank you! Enjoy the book\n", systemOutRule.getLog());
+        systemInRule.provideLines(VALID_ID);
+        String actual = checkOutBook.execute(library);
+        assertEquals("Thank you! Enjoy the book", actual);
     }
 
     @Test
@@ -45,8 +50,9 @@ public class CheckOutBookTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), false, "0");
         library.addBooks(book);
-        checkOutBook.execute(library);
-        assertEquals("That book is not available.\n", systemOutRule.getLog());
+        systemInRule.provideLines(s);
+        String actual = checkOutBook.execute(library);
+        assertEquals("That book is not available.", actual);
     }
 
     @Test
