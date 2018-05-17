@@ -37,7 +37,7 @@ public class DisplayUserTest {
     @Test
     public void execute() {
         Library library = new Library();
-        library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig");
+        library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig"));
         String actual = displayUser.execute(library);
         assertEquals("\n" +
                 "User Details:\n" +

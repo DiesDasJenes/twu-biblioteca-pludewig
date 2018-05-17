@@ -22,6 +22,7 @@ public class FakeCustomerFactory implements FakeUserFactory {
     public User create() {
         Faker Faker = new Faker();
         String loginCred = "111-111" + count++;
-        return new Customer(loginCred,"TWiscool".hashCode(), , , );
+        return new Customer(loginCred,"tw".hashCode(),Faker.phoneNumber().phoneNumber(),Faker.internet().emailAddress(),Faker.name().fullName());
+
     }
 }
