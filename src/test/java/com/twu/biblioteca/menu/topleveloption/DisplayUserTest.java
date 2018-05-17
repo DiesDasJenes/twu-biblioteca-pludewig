@@ -47,4 +47,9 @@ public class DisplayUserTest {
                 "Phonenumber: " + "+49 09090990" +
                 "\n",actual);
     }
+
+    @Test
+    public void shouldGetPermission(){
+        assertEquals(1,displayUser.getRequiredPermission());
+    }
 }

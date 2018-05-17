@@ -17,6 +17,11 @@ public class QuitOption implements Option {
 
     public String execute(Library library) {
         System.exit(1);
-        return "Cyao"; //TODO Umbauen zu string sagt quit
+        return "";
+    }
+
+    @Override
+    public int getRequiredPermission() {
+        return 0;
     }
 }

@@ -27,4 +27,9 @@ public class CheckOutBook implements Option {
             return "That book is not available.";
         }
     }
+
+    @Override
+    public int getRequiredPermission() {
+        return 1;
+    }
 }

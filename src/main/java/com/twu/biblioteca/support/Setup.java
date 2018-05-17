@@ -22,7 +22,7 @@ public class Setup {
         return library;
     }
 
-    Library setUpCleanLibray(){
+    public Library setUpCleanLibray(){
         return new Library();
     }
 

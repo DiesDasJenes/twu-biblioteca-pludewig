@@ -25,4 +25,9 @@ public class CheckOutMovie implements Option {
             return "That movie is not available.";
         }
     }
+
+    @Override
+    public int getRequiredPermission() {
+        return 0;
+    }
 }

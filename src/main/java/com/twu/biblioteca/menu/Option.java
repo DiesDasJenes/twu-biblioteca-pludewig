@@ -8,4 +8,6 @@ public interface Option {
     String getKey();
 
     String execute(Library library);
+
+    int getRequiredPermission();
 }

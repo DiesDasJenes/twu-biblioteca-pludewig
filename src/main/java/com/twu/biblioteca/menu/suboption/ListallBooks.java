@@ -31,4 +31,9 @@ public class ListallBooks implements Option {
 
         return BookList;
     }
+
+    @Override
+    public int getRequiredPermission() {
+        return 0;
+    }
 }

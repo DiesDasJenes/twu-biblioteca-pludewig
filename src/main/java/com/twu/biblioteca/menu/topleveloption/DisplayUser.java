@@ -28,4 +28,9 @@ public class DisplayUser implements Option {
         }
         return "Select a valid option!";
     }
+
+    @Override
+    public int getRequiredPermission() {
+        return 1;
+    }
 }

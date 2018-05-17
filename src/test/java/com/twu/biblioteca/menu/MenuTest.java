@@ -1,14 +1,16 @@
 package com.twu.biblioteca.menu;
 
 import com.twu.biblioteca.menu.suboption.ListallBooks;
+import com.twu.biblioteca.resources.Customer;
 import com.twu.biblioteca.resources.Library;
+import com.twu.biblioteca.support.Setup;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.assertEquals;
 
 public class MenuTest {
     private Library library;
@@ -19,20 +21,29 @@ public class MenuTest {
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
+    @Rule
+    public final TextFromStandardInputStream systemInRule = TextFromStandardInputStream.emptyStandardInputStream();
+
 
     @Before
     public void setUp() throws Exception {
-        library = new Library();
-        listallBooks = mock(ListallBooks.class);
-        when(listallBooks.getContent()).thenReturn("L");
-        when(listallBooks.getContent()).thenReturn("(L)ist all Books");
-        //menu = new Menu(library,listallBooks);
+        Setup setup = new Setup();
+        Library library = new Library();
+        library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig"));
+        menu = new Menu(setup.setUpOptions(),library);
     }
 
     @Test
-    public void printOptions() {
+    public void printOptionsWithPermission() {
         //menu.printOptions();
         //assertEquals("(L)ist all Books\n",systemOutRule.getLog());
+    }
+
+    @Test
+    public void printOptionsWithoutPermission() {
+        systemInRule.provideLines("Q");
+        menu.execute();
+        assertEquals("(L)ist all Books\n",systemOutRule.getLog());
     }
 
 

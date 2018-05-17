@@ -39,7 +39,7 @@ public class Menu {
     }
 
     private void printTopLevelOption(){
-        optionTopLevel.forEach(option -> System.out.println(option.getContent()));
+
     }
 
     private boolean isValidOption(String userInput) {

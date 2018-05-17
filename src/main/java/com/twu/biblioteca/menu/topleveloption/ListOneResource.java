@@ -30,4 +30,9 @@ public class ListOneResource implements Option {
         }
         return "Please select a valid option!";
     }
+
+    @Override
+    public int getRequiredPermission() {
+        return 0;
+    }
 }

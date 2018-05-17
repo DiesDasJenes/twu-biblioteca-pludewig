@@ -31,4 +31,9 @@ public class ListallMovies implements Option {
 
         return MovieList;
     }
+
+    @Override
+    public int getRequiredPermission() {
+        return 0;
+    }
 }

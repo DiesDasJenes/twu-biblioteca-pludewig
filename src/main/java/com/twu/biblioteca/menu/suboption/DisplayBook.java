@@ -31,4 +31,9 @@ public class DisplayBook implements Option {
         }
          return "Select a valid option!";
     }
+
+    @Override
+    public int getRequiredPermission() {
+        return 0;
+    }
 }

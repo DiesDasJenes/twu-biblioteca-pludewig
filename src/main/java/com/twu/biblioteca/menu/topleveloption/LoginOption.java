@@ -45,4 +45,9 @@ public class LoginOption implements Option {
         }
     }
 
+    @Override
+    public int getRequiredPermission() {
+        return 0;
+    }
+
 }

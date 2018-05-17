@@ -26,4 +26,9 @@ public class CheckInMovie implements Option {
             return "That is not a valid movie to return.\n";
         }
     }
+
+    @Override
+    public int getRequiredPermission() {
+        return 1;
+    }
 }
