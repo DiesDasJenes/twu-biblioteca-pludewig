@@ -20,8 +20,8 @@ public class LoginOptionTest {
     public void setUp() throws Exception {
         library = new Library();
         loginOption = new LoginOption();
-        alice = new Customer("111-1110", "Alice", "WOnderland", "111-1110", "TWiscool".hashCode());
-        bob = new Customer("222-2222", "Bob", "der Baumeister", "222-2222", "tw2@".hashCode());
+        alice = new Customer("111-1110", "TWiscool".hashCode(), , , );
+        bob = new Customer("222-2222", "tw2@".hashCode(), , , );
         HashMap<String, Customer> List = new HashMap<>();
         List.putIfAbsent(alice.getID(), alice);
         List.putIfAbsent(bob.getID(), bob);
@@ -45,6 +45,6 @@ public class LoginOptionTest {
 
     @Test
     public void shouldCheckCredentials() {
-        assertTrue(loginOption.checkCredentials(library, alice.getLoginName(), "TWiscool"));
+        assertTrue(loginOption.checkCredentials(library, alice.getLoginLibraryNumber(), "TWiscool"));
     }
 }

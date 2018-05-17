@@ -3,33 +3,28 @@ package com.twu.biblioteca.resources;
 import java.util.Map;
 
 public class Customer implements User {
-    private String firstname;
-    private String lastname;
-    private String loginName;
+    private String fullName;
+    private String phoneNumber;
+    private String emailAdress;
+    private String loginLibraryNumber;
     private int passwordHash;
     private String id;
 
-    public Customer(String id, String firstname, String lastname, String loginName, int passwordHash){
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.loginName = loginName;
+    public Customer(String loginLibraryNumber, int passwordHash, String phoneNumber, String emailAdress, String fullname){
+        this.loginLibraryNumber = loginLibraryNumber;
         this.passwordHash = passwordHash;
-        this.id = id;
+        this.id = loginLibraryNumber;
+        this.fullName = fullname;
+        this.phoneNumber = phoneNumber;
+        this.emailAdress = emailAdress;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getLoginLibraryNumber() {
+        return loginLibraryNumber;
     }
 
     public int getPasswordHash() {
         return passwordHash;
-    }
-
-    @Override
-    public String toString() {
-        return "Customer: " +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname;
     }
 
     @Override
@@ -45,5 +40,17 @@ public class Customer implements User {
     @Override
     public Map<String, Resource> getBorrowedResources() {
         return null;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getEmailAdress() {
+        return emailAdress;
     }
 }

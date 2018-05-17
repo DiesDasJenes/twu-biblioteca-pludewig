@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class Menu {
-
-
     private ArrayList<Option> optionTopLevel;
     private Library library;
     public Menu(ArrayList<Option> optionTopLevel, Library Library) {

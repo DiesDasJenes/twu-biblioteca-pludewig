@@ -19,6 +19,6 @@ public class FakeCustomerFactoryTest {
     public void shouldCreateFirstLoginCycle(){
         FakeUserFactory factory = new FakeCustomerFactory();
         Customer customer = (Customer) factory.create();
-        assertEquals("111-1110",customer.getLoginName());
+        assertEquals("111-1110",customer.getLoginLibraryNumber());
     }
 }

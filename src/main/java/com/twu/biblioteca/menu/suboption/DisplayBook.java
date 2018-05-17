@@ -30,6 +30,5 @@ public class DisplayBook implements Option {
                     "\n";
         }
          return "Select a valid option!";
-
     }
 }
