@@ -1,9 +1,9 @@
-package com.twu.biblioteca.menu.option;
+package com.twu.biblioteca.menu.topleveloption;
 
 import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 
-public class CheckInResource implements Option {
+public class ListOneResource implements Option {
 
     @Override
     public String getCommandContent() {
@@ -17,11 +17,6 @@ public class CheckInResource implements Option {
 
     @Override
     public String executeCommand(Library library) {
-        return null;
-    }
-
-    @Override
-    public String getUserInput() {
         return null;
     }
 }

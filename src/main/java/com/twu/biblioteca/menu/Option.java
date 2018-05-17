@@ -8,6 +8,4 @@ public interface Option {
     String getCommand();
 
     String executeCommand(Library library);
-
-    String getUserInput();
 }

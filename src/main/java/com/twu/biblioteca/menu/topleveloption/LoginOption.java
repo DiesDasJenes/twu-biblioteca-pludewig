@@ -1,4 +1,4 @@
-package com.twu.biblioteca.menu.option;
+package com.twu.biblioteca.menu.topleveloption;
 
 import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Customer;
@@ -61,8 +61,4 @@ public class LoginOption implements Option {
         return null;
     }
 
-    @Override
-    public String getUserInput() {
-        return null;
-    }
 }

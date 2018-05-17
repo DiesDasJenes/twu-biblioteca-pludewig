@@ -29,14 +29,7 @@ public class ListOneBookOption implements Option {
                     "Published " + Book.getYearPublished() +
                     "\n";
         }
-         return "Select a valid option!";
+         return "Select a valid topleveloption!";
 
     }
-
-    @Override
-    public String getUserInput() {
-        return null;
-    }
-
-
 }

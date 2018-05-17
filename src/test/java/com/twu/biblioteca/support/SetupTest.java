@@ -13,12 +13,18 @@ public class SetupTest {
     }
 
     @Test
-    public void setUpLibrary() {
-        assertNotNull(setup.setUpLibrary());
+    public void shouldSetUpLibrarywithFakeData() {
+        assertNotNull(setup.setUpLibraryandFakeData());
     }
 
     @Test
-    public void setUpMenuOptions() {
+    public void shouldSetUpMenuOptions() {
         assertNotNull(setup.setUpOptions());
+    }
+
+    @Test
+    public void shouldSetUpCleanLibray() {
+        assertNotNull(setup.setUpCleanLibray());
+        assertTrue(setup.setUpCleanLibray().getListOfAllBooks().isEmpty());
     }
 }

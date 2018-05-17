@@ -31,11 +31,4 @@ public class ListallBookOption implements Option {
 
         return BookList;
     }
-
-    @Override
-    public String getUserInput() {
-        return null;
-    }
-
-
 }

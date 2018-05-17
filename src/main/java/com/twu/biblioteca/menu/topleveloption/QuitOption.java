@@ -1,10 +1,7 @@
-package com.twu.biblioteca.menu.option;
+package com.twu.biblioteca.menu.topleveloption;
 
 import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class QuitOption implements Option {
 
@@ -21,10 +18,5 @@ public class QuitOption implements Option {
     public String executeCommand(Library library) {
         System.exit(1);
         return "Cyao"; //TODO Umbauen zu string sagt quit
-    }
-
-    @Override
-    public String getUserInput() {
-        return null;
     }
 }

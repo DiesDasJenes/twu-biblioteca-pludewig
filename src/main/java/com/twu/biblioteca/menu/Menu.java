@@ -16,10 +16,10 @@ public class Menu {
         this.library = Library;
     }
 
-    public void executeMenu() {
+    public void execute() {
         printTopLevelOption();
-        String userInput = askUserForInput();
-        executeOption(getOption(userInput));
+        String userInput = getInput();
+        printResultFor(getOption(userInput));
     }
 
     private Option getOption(String userInput){
@@ -28,17 +28,15 @@ public class Menu {
         }else {
             System.out.println("Select a valid option!");
             printTopLevelOption();
-            return getOption(userInput);
+            return getOption(getInput());
         }
-
     }
 
-    private String askUserForInput(){
+    private String getInput(){
         Querist Querist = new Querist(System.in, System.out);
-        return Querist.ask("Choose an option through typing and combining in the Letter within the brackets from left to right.").toString().trim();
-
+        return Querist.ask("Choose an option through typing in the Letter within the brackets.").trim();
     }
-    private void executeOption(Option Option){
+    private void printResultFor(Option Option){
         System.out.println(Option.executeCommand(library));
     }
 

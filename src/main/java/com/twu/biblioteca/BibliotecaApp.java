@@ -15,14 +15,14 @@ public class BibliotecaApp {
         Messages.printWelcomeMessage();
         Menu MainMenu = setUpMenu();
         while(true) {
-            MainMenu.executeMenu();
+            MainMenu.execute();
         }
     }
 
     private Menu setUpMenu()
     {
         Setup setup = new Setup();
-        return new Menu(setup.setUpOptions(),setup.setUpLibrary());
+        return new Menu(setup.setUpOptions(),setup.setUpLibraryandFakeData());
     }
 
 

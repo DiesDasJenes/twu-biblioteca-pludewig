@@ -19,7 +19,7 @@ public class CheckOutBookOption implements Option {
 
     @Override
     public String executeCommand(Library library) {
-        String input = getUserInput();
+        String input = new Querist(System.in,System.out).ask(getCommandContent());
         if(library.getListOfAllBooks().containsKey(input) && library.getListOfAllBooks().get(input).isCheckedIn()){
             library.getListOfAllBooks().get(input).invertCheckedFlag();
             return "Thank you! Enjoy the book";
@@ -27,11 +27,4 @@ public class CheckOutBookOption implements Option {
             return "That book is not available.";
         }
     }
-
-    @Override
-    public String getUserInput() {
-        return new Querist(System.in,System.out).ask(getCommandContent());
-    }
-
-
 }

@@ -31,10 +31,4 @@ public class ListallMoviesOption implements Option {
 
         return MovieList;
     }
-
-    @Override
-    public String getUserInput() {
-        return null;
-    }
-
 }

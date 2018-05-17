@@ -1,4 +1,4 @@
-package com.twu.biblioteca.menu.option;
+package com.twu.biblioteca.menu.topleveloption;
 
 import com.twu.biblioteca.menu.suboption.ListallBookOption;
 import com.twu.biblioteca.menu.suboption.ListallMoviesOption;
@@ -12,7 +12,7 @@ public class ListAllResources implements Option {
 
     @Override
     public String getCommandContent() {
-        return "(L)ist Resources";
+        return "Display (L)ist of Resources";
     }
 
     @Override
@@ -22,19 +22,14 @@ public class ListAllResources implements Option {
 
     @Override
     public String executeCommand(Library library) {
-        String userInput = getUserInput();
+        String userInput =  new Querist(System.in, System.out).ask("* (B)ook\n* (M)ovie\n* (A)bort\n* (Q)uit");
         switch (userInput){
             case "B" : return new ListallBookOption().executeCommand(library);
             case "M" : return new ListallMoviesOption().executeCommand(library);
             case "A" : return "Abort";
             case "Q" : return new QuitOption().executeCommand(library);
-            default: this.executeCommand(library);
+            default: executeCommand(library);
         }
-        return null;
-    }
-
-    @Override
-    public String getUserInput() {
-        return new Querist(System.in, System.out).ask("(B)ook\n(M)ovie\n(A)bort\n(Q)uit");
+        return "Please select a valid option!";
     }
 }
