@@ -9,5 +9,5 @@ public interface Option {
 
     String execute(Library library);
 
-    int getRequiredPermission();
+    boolean isPermitted(int Permission);
 }

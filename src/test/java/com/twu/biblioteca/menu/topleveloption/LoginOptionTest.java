@@ -47,4 +47,9 @@ public class LoginOptionTest {
     public void shouldCheckCredentials() {
         assertTrue(loginOption.checkCredentials(library, alice.getLoginLibraryNumber(), "TWiscool"));
     }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(loginOption.isPermitted(0));
+    }
 }

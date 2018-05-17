@@ -6,7 +6,7 @@ import com.twu.biblioteca.resources.TableHeader;
 import com.twu.biblioteca.resources.Library;
 
 public class ListallBooks implements Option {
-
+    private static int PERMISSION_LEVEL = 0;
     @Override
     public String getContent() {
         return "List all Books";
@@ -33,7 +33,7 @@ public class ListallBooks implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 0;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

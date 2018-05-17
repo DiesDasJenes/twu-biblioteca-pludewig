@@ -10,6 +10,7 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class DisplayBookTest {
     private static final String BOOK_KEY = "26";
@@ -49,5 +50,10 @@ public class DisplayBookTest {
                 "Author: Jennifer Donelly\n" +
                 "Published: 2014\n",actual);
 
+    }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(displayBook.isPermitted(0));
     }
 }

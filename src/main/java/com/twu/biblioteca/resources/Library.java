@@ -10,11 +10,12 @@ public class Library {
     private Map<String, Movie> ListOfAllMovies;
     private Map<String, Customer> ListOfAllCustomer;
     private Customer currentCustomer;
-
+    private int currentPermissionLevel;
     public Library(){
         ListOfAllBooks = new HashMap<>();
         ListOfAllMovies = new HashMap<>();
         ListOfAllCustomer = new HashMap<>();
+        currentPermissionLevel = 0;
     }
 
     public void addBooks(Book... books) {
@@ -60,5 +61,13 @@ public class Library {
 
     public void setCurrentCustomer(Customer currentCustomer) {
         this.currentCustomer = currentCustomer;
+    }
+
+    public int getCurrentPermissionLevel() {
+        return currentPermissionLevel;
+    }
+
+    public void setCurrentPermissionLevel(int currentPermissionLevel) {
+        this.currentPermissionLevel = currentPermissionLevel;
     }
 }

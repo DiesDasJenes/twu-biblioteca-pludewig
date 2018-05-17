@@ -9,7 +9,6 @@ public class Customer implements User {
     private String loginLibraryNumber;
     private int passwordHash;
     private String id;
-
     public Customer(String loginLibraryNumber, int passwordHash, String phoneNumber, String emailAdress, String fullname){
         this.loginLibraryNumber = loginLibraryNumber;
         this.passwordHash = passwordHash;
@@ -17,6 +16,7 @@ public class Customer implements User {
         this.fullName = fullname;
         this.phoneNumber = phoneNumber;
         this.emailAdress = emailAdress;
+
     }
 
     public String getLoginLibraryNumber() {
@@ -52,5 +52,9 @@ public class Customer implements User {
 
     public String getEmailAdress() {
         return emailAdress;
+    }
+
+    public int getPermission() {
+        return 1;
     }
 }

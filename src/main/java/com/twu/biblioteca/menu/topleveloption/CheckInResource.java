@@ -7,7 +7,7 @@ import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
 public class CheckInResource implements Option {
-
+    private static int PERMISSION_LEVEL = 1;
     @Override
     public String getContent() {
         return "(R)eturn Item from Libary";
@@ -32,8 +32,8 @@ public class CheckInResource implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 1;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 
 }

@@ -4,6 +4,7 @@ import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 
 public class DisplayUser implements Option {
+    private static int PERMISSION_LEVEL = 1;
     @Override
     public String getContent() {
         return "Show (U)ser Information";
@@ -30,7 +31,7 @@ public class DisplayUser implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 1;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

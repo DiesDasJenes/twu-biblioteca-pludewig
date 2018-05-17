@@ -5,6 +5,7 @@ import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
 public class CheckOutMovie implements Option {
+    private static int PERMISSION_LEVEL = 1;
     @Override
     public String getContent() {
         return "Please enter the Id of the movie you want to borrow.";
@@ -27,7 +28,7 @@ public class CheckOutMovie implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 0;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

@@ -50,6 +50,6 @@ public class DisplayUserTest {
 
     @Test
     public void shouldGetPermission(){
-        assertEquals(1,displayUser.getRequiredPermission());
+        assertTrue(displayUser.isPermitted(1));
     }
 }

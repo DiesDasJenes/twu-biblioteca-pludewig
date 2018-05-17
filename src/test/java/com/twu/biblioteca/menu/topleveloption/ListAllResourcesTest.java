@@ -55,4 +55,9 @@ public class ListAllResourcesTest {
         assertEquals("| Book No.             | Title                | Author               | Published            |\n| 1                    | The Hobbit           | Henry Ford           | 2011                 |\n",actual);
     }
 
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(listAllResources.isPermitted(0));
+    }
+
 }

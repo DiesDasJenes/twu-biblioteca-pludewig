@@ -5,7 +5,7 @@ import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
 public class CheckOutBook implements Option {
-
+    private static int PERMISSION_LEVEL = 1;
     @Override
     public String getContent() {
         return "Please enter the Id of the book you want to borrow.";
@@ -29,7 +29,7 @@ public class CheckOutBook implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 1;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

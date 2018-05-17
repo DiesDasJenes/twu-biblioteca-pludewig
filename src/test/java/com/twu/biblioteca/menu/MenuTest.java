@@ -28,43 +28,28 @@ public class MenuTest {
     @Before
     public void setUp() throws Exception {
         Setup setup = new Setup();
-        Library library = new Library();
+        library = new Library();
         library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig"));
         menu = new Menu(setup.setUpOptions(),library);
     }
 
     @Test
     public void printOptionsWithPermission() {
-        //menu.printOptions();
-        //assertEquals("(L)ist all Books\n",systemOutRule.getLog());
+        menu.printTopLevelOption();
+        library.setCurrentPermissionLevel(1);
+        assertEquals("Display (L)ist of Library Equipment\n" +
+                "(D)isplay Item of Library\n" +
+                "(S)ign Up\n" +
+                "Press (Q) to Quit\n",systemOutRule.getLog());
     }
 
     @Test
     public void printOptionsWithoutPermission() {
         systemInRule.provideLines("Q");
-        menu.execute();
-        assertEquals("(L)ist all Books\n",systemOutRule.getLog());
+        menu.printTopLevelOption();
+        assertEquals("Display (L)ist of Library Equipment\n" +
+                "(D)isplay Item of Library\n" +
+                "(S)ign Up\n" +
+                "Press (Q) to Quit\n",systemOutRule.getLog());
     }
-
-
-    @Test
-    public void shouldPrintInvailOptionText(){
-
-    }
-
-    @Test
-    public void canAddSeveralOptions(){
-        //Library library = new Library();
-        //ListAllResources listAllResources = mock(ListAllResources.class);
-        //ArrayList<String>
-        //when(listAllResources.getSubMenuCommands()).thenReturn("L");
-        //when(listAllResources.getContent()).thenReturn("(L)ist all Books");
-        //QuitOption quitOption = mock(QuitOption.class);
-        //when(quitOption.getSubMenuCommands()).thenReturn("Q");
-        //when(quitOption.getContent()).thenReturn("Press (Q) to Quit");
-        //Menu menu = new Menu(library,listallBooks,quitOption);
-        //menu.printOptions();
-        //assertEquals("(L)ist all Books\nPress (Q) to Quit\n",systemOutRule.getLog());
-    }
-
 }

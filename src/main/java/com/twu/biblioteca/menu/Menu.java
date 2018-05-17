@@ -38,12 +38,17 @@ public class Menu {
         System.out.println(Option.execute(library));
     }
 
-    private void printTopLevelOption(){
-
+    void printTopLevelOption(){
+            for (Option option: optionTopLevel
+                 ) {
+                if(option.isPermitted(library.getCurrentPermissionLevel())){
+                    System.out.println(option.getContent());
+                }
+            }
     }
 
     private boolean isValidOption(String userInput) {
-        return optionTopLevel.stream().anyMatch(option -> userInput.equals(option.getKey()));
+        return optionTopLevel.stream().anyMatch(option -> userInput.equals(option.getKey()) && option.isPermitted(library.getCurrentPermissionLevel()));
     }
 }
 

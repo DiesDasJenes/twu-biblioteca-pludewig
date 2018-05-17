@@ -9,6 +9,7 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class CheckInBookTest {
 
@@ -57,5 +58,10 @@ public class CheckInBookTest {
         systemInRule.provideLines(s);
         String x = checkInBook.execute(library);
         assertEquals("That is not a valid book to return.", x);
+    }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(checkInBook.isPermitted(1));
     }
 }

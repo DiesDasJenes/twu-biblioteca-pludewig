@@ -51,4 +51,9 @@ public class DisplayMoviesTest {
                 "Rating: " + "3" + "/10" +
                 "\n",actual);
     }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(displayMovies.isPermitted(0));
+    }
 }

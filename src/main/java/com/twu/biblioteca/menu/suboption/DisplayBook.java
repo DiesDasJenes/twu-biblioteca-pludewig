@@ -6,6 +6,7 @@ import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
 public class DisplayBook implements Option {
+    private static int PERMISSION_LEVEL = 0;
     @Override
     public String getContent() {
         return "Please enter the Id of the book you want to see the details of.";
@@ -33,7 +34,7 @@ public class DisplayBook implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 0;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

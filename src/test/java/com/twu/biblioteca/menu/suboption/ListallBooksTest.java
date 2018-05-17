@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ListallBooksTest {
     private Library library;
@@ -35,5 +36,10 @@ public class ListallBooksTest {
     public void printAllBooks() {
         String actual = listallBooks.execute(library);
         assertEquals("| Book No.             | Title                | Author               | Published            |\n| 0                    | Enders Game          | Orson Scoott         | 1990                 |\n| 1                    | Earth Unaware        | Orson Scoott         | 2005                 |\n", actual);
+    }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(listallBooks.isPermitted(0));
     }
 }

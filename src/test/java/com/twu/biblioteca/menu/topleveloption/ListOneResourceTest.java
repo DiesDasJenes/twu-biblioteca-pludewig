@@ -26,5 +26,9 @@ public class ListOneResourceTest {
     public void execute() {
     }
 
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(listOneResource.isPermitted(0));
+    }
 
 }

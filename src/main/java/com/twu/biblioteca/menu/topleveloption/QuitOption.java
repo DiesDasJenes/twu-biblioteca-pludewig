@@ -4,7 +4,7 @@ import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 
 public class QuitOption implements Option {
-
+    private static int PERMISSION_LEVEL = 0;
     @Override
     public String getContent() {
         return "Press (Q) to Quit";
@@ -21,7 +21,7 @@ public class QuitOption implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 0;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

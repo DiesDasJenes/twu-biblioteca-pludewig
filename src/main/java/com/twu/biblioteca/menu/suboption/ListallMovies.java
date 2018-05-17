@@ -6,7 +6,7 @@ import com.twu.biblioteca.resources.Movie;
 import com.twu.biblioteca.resources.TableHeader;
 
 public class ListallMovies implements Option {
-
+    private static int PERMISSION_LEVEL = 0;
     @Override
     public String getContent() {
         return "List all Movies";
@@ -33,7 +33,7 @@ public class ListallMovies implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 0;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

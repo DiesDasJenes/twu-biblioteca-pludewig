@@ -47,4 +47,9 @@ public class ListallMoviesTest {
         String actual = listallMovies.execute(library);
         assertEquals(test,actual);
     }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(listallMovies.isPermitted(0));
+    }
 }

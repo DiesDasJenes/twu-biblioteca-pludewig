@@ -7,7 +7,7 @@ import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
 public class ListOneResource implements Option {
-
+    private static int PERMISSION_LEVEL = 0;
     @Override
     public String getContent() {
         return "(D)isplay Item of Library";
@@ -32,7 +32,7 @@ public class ListOneResource implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 0;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

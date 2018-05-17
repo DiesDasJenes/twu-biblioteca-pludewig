@@ -9,7 +9,7 @@ import com.twu.biblioteca.support.Querist;
 
 
 public class ListAllResources implements Option {
-
+    private static int PERMISSION_LEVEL = 0;
     @Override
     public String getContent() {
         return "Display (L)ist of Library Equipment";
@@ -34,7 +34,7 @@ public class ListAllResources implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 0;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 }

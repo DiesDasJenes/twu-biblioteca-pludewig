@@ -64,4 +64,9 @@ public class CheckInMovieTest {
         String actual = checkInMovie.execute(library);
         assertEquals("That is not a valid movie to return.\n", actual);
     }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(checkInMovie.isPermitted(1));
+    }
 }

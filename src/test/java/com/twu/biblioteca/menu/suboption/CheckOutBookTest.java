@@ -9,6 +9,7 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class CheckOutBookTest {
     private static final String VALID_ID = "0";
@@ -58,6 +59,11 @@ public class CheckOutBookTest {
     @Test
     public void cannotCheckOutNonExistingBook() {
         checkOutBook(INVALID_ID);
+    }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(checkOutBook.isPermitted(1));
     }
 
 }

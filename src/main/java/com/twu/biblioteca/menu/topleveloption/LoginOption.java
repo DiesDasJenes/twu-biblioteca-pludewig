@@ -5,7 +5,7 @@ import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
 public class LoginOption implements Option {
-
+    private static int PERMISSION_LEVEL = 0;
     private String askForLoginName() {
         Querist q = new Querist(System.in, System.out);
         return q.ask("Please Enter your Library number");
@@ -38,6 +38,7 @@ public class LoginOption implements Option {
         String password = askForPassword();
         if (checkCredentials(library, LoginName, password)) {
             library.setCurrentCustomer(library.getListOfAllCustomer().get(LoginName));
+            library.setCurrentPermissionLevel(library.getCurrentCustomer().getPermission());
             return "Sign Up succeeded.";
         } else {
             System.out.println("LoginName or Password wrong.");
@@ -46,8 +47,8 @@ public class LoginOption implements Option {
     }
 
     @Override
-    public int getRequiredPermission() {
-        return 0;
+    public boolean isPermitted(int Permission) {
+        return Permission >= PERMISSION_LEVEL;
     }
 
 }

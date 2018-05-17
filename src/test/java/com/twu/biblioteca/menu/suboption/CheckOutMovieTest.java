@@ -64,4 +64,9 @@ public class CheckOutMovieTest {
     public void cannotCheckOutNonExistingBook() {
         checkOutMovie(INVALID_ID);
     }
+
+    @Test
+    public void shouldGetPermission(){
+        assertTrue(checkOutMovie.isPermitted(1));
+    }
 }
