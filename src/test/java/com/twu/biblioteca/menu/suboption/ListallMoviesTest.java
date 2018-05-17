@@ -10,8 +10,8 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import static org.junit.Assert.*;
 
-public class ListallMoviesOptionTest {
-    private ListallMoviesOption listallMoviesOption;
+public class ListallMoviesTest {
+    private ListallMovies listallMovies;
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -19,18 +19,18 @@ public class ListallMoviesOptionTest {
 
     @Before
     public void setUp() throws Exception {
-        listallMoviesOption = new ListallMoviesOption();
+        listallMovies = new ListallMovies();
 
     }
 
     @Test
     public void getCommandContent() {
-        assertEquals("List all Movies",listallMoviesOption.getContent());
+        assertEquals("List all Movies", listallMovies.getContent());
     }
 
     @Test
     public void getCommand() {
-        assertEquals("lM",listallMoviesOption.getKey());
+        assertEquals("lM", listallMovies.getKey());
     }
 
     @Test
@@ -39,7 +39,7 @@ public class ListallMoviesOptionTest {
         Movie movie = new Movie("M0","The Running Man",new LocalDate(1990,10,14),"Arnold Normal",10,true);
         String test = "| Movie No.            | Title                | Author               | Published            | Rating               |\n| M0                   | The Running Man      | Arnold Normal        | 1990                 | 10/10                |\n\n";
         library.addMovies(movie);
-        listallMoviesOption.execute(library);
+        listallMovies.execute(library);
         assertEquals(test,systemOutRule.getLog());
     }
 

@@ -9,9 +9,9 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import static org.junit.Assert.assertEquals;
 
-public class ListallBookOptionTest {
+public class ListallBooksTest {
     private Library library;
-    private ListallBookOption listallBookOption;
+    private ListallBooks listallBooks;
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -19,7 +19,7 @@ public class ListallBookOptionTest {
     @Before
     public void setUp() {
         library = new Library();
-        listallBookOption = new ListallBookOption();
+        listallBooks = new ListallBooks();
         Book b1 = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, "0");
         Book b2 = new Book("Earth Unaware", "Orson Scoott", new org.joda.time.LocalDate(2005, 4, 14), true, "1");
         library.addBooks(b1, b2);
@@ -27,13 +27,13 @@ public class ListallBookOptionTest {
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("List all Books", listallBookOption.getContent());
+        assertEquals("List all Books", listallBooks.getContent());
     }
 
 
     @Test
     public void printAllBooks() {
-        listallBookOption.execute(library);
+        listallBooks.execute(library);
         assertEquals("| Book No.             | Title                | Author               | Published            |\n| 0                    | Enders Game          | Orson Scoott         | 1990                 |\n| 1                    | Earth Unaware        | Orson Scoott         | 2005                 |\n\n", systemOutRule.getLog());
     }
 }

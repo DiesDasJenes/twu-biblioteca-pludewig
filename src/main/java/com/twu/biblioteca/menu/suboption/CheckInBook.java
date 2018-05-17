@@ -4,7 +4,7 @@ import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
-public class CheckInBookOption implements Option {
+public class CheckInBook implements Option {
 
     @Override
     public String getContent() {

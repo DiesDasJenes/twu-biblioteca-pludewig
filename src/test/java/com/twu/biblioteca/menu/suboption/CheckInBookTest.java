@@ -9,21 +9,21 @@ import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import static org.junit.Assert.assertEquals;
 
-public class CheckInBookOptionTest {
+public class CheckInBookTest {
 
-    private CheckInBookOption checkInBookOption;
+    private CheckInBook checkInBook;
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Before
     public void setUp() {
-        checkInBookOption = new CheckInBookOption();
+        checkInBook = new CheckInBook();
     }
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("Please enter the ID of the book you want to return.", checkInBookOption.getContent());
+        assertEquals("Please enter the ID of the book you want to return.", checkInBook.getContent());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class CheckInBookOptionTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), false, "0");
         library.addBooks(book);
-        checkInBookOption.execute(library);
+        checkInBook.execute(library);
         assertEquals("Thank you for returning the book.\n", systemOutRule.getLog());
     }
 
@@ -49,7 +49,7 @@ public class CheckInBookOptionTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, "0");
         library.addBooks(book);
-        checkInBookOption.execute(library);
+        checkInBook.execute(library);
         assertEquals("That is not a valid book to return.\n", systemOutRule.getLog());
     }
 }

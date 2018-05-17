@@ -5,7 +5,7 @@ import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.resources.Movie;
 import com.twu.biblioteca.resources.TableHeader;
 
-public class ListallMoviesOption implements Option {
+public class ListallMovies implements Option {
 
     @Override
     public String getContent() {

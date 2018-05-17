@@ -5,7 +5,7 @@ import com.twu.biblioteca.resources.Book;
 import com.twu.biblioteca.resources.TableHeader;
 import com.twu.biblioteca.resources.Library;
 
-public class ListallBookOption implements Option {
+public class ListallBooks implements Option {
 
     @Override
     public String getContent() {

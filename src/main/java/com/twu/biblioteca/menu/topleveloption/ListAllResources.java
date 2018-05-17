@@ -1,7 +1,7 @@
 package com.twu.biblioteca.menu.topleveloption;
 
-import com.twu.biblioteca.menu.suboption.ListallBookOption;
-import com.twu.biblioteca.menu.suboption.ListallMoviesOption;
+import com.twu.biblioteca.menu.suboption.ListallBooks;
+import com.twu.biblioteca.menu.suboption.ListallMovies;
 import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
@@ -24,8 +24,8 @@ public class ListAllResources implements Option {
     public String execute(Library library) {
         String userInput =  new Querist(System.in, System.out).ask("* (B)ook\n* (M)ovie\n* (A)bort\n* (Q)uit");
         switch (userInput){
-            case "B" : return new ListallBookOption().execute(library);
-            case "M" : return new ListallMoviesOption().execute(library);
+            case "B" : return new ListallBooks().execute(library);
+            case "M" : return new ListallMovies().execute(library);
             case "A" : return "Abort";
             case "Q" : return new QuitOption().execute(library);
             default: execute(library);

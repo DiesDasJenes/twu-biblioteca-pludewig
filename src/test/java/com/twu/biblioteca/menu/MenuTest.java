@@ -1,6 +1,6 @@
 package com.twu.biblioteca.menu;
 
-import com.twu.biblioteca.menu.suboption.ListallBookOption;
+import com.twu.biblioteca.menu.suboption.ListallBooks;
 import com.twu.biblioteca.resources.Library;
 import org.junit.Before;
 import org.junit.Rule;
@@ -11,7 +11,7 @@ import static org.mockito.Mockito.mock;
 
 public class MenuTest {
     private Library library;
-    private ListallBookOption listallBookOption;
+    private ListallBooks listallBooks;
     private Menu menu;
 
 
@@ -22,10 +22,10 @@ public class MenuTest {
     @Before
     public void setUp() throws Exception {
         //library = new Library();
-        //listallBookOption = mock(ListallBookOption.class);
-        //when(listallBookOption.getSubMenuCommands()).thenReturn("L");
-        //when(listallBookOption.getContent()).thenReturn("(L)ist all Books");
-        //menu = new Menu(library,listallBookOption);
+        //listallBooks = mock(ListallBooks.class);
+        //when(listallBooks.getSubMenuCommands()).thenReturn("L");
+        //when(listallBooks.getContent()).thenReturn("(L)ist all Books");
+        //menu = new Menu(library,listallBooks);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class MenuTest {
         //QuitOption quitOption = mock(QuitOption.class);
         //when(quitOption.getSubMenuCommands()).thenReturn("Q");
         //when(quitOption.getContent()).thenReturn("Press (Q) to Quit");
-        //Menu menu = new Menu(library,listallBookOption,quitOption);
+        //Menu menu = new Menu(library,listallBooks,quitOption);
         //menu.printOptions();
         //assertEquals("(L)ist all Books\nPress (Q) to Quit\n",systemOutRule.getLog());
     }

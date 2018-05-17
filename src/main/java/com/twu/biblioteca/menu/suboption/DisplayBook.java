@@ -5,7 +5,7 @@ import com.twu.biblioteca.resources.Book;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
-public class ListOneBookOption implements Option {
+public class DisplayBook implements Option {
     @Override
     public String getContent() {
         return "Please enter the Id of the book you want to see the details of.";
