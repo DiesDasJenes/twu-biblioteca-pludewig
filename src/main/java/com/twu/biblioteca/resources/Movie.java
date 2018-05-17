@@ -67,7 +67,7 @@ public class Movie implements Resource {
         return checkedIn;
     }
 
-    void invertCheckedFlag() {
+    public void invertCheckedFlag() {
         this.checkedIn = !isCheckedIn();
     }
 
