@@ -1,64 +1,48 @@
 package com.twu.biblioteca.menu.topleveloption;
 
 import com.twu.biblioteca.menu.Option;
-import com.twu.biblioteca.resources.Customer;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
-import com.twu.biblioteca.support.Messages;
 
 public class LoginOption implements Option {
 
-
-    private void loginUser(Library library) {
-        System.out.println("Please Login with your Credentials");
-
-        if(checkCredentials(library,askForLoginName(),askForPassword())){
-                // For Release 2
-            }else{
-                Messages.clearConsole();
-                Messages.printWelcomeMessage();
-                System.out.println("LoginName or Password wrong.");
-                System.out.println("Please try again.");
-                this.loginUser(library);
-            }
-
-    }
-
     private String askForLoginName() {
         Querist q = new Querist(System.in, System.out);
-        return q.ask("Please Enter your LoginName").toString();
+        return q.ask("Please Enter your Library number");
     }
 
     private String askForPassword() {
         Querist q = new Querist(System.in, System.out);
-        return q.ask("Please Enter your Password").toString();
+        return q.ask("Please Enter your Password");
     }
 
 
-    private boolean checkCredentials(Library library, String LoginName, String Password){
-        for (Customer c: library.getListOfAllCustomer().values()) {
-            if(c.getLoginName().equals(LoginName)){
-                if(c.getPasswordHash() == Password.hashCode()){
-                    return true;
-                }
-            }
-        }
-        return false;
+    boolean checkCredentials(Library library, String loginName, String password) {
+        return library.getListOfAllCustomer().containsKey(loginName) && (password.hashCode() == library.getListOfAllCustomer().get(loginName).getPasswordHash());
     }
 
     @Override
     public String getContent() {
-        return null;
+        return "(S)ign Up";
     }
 
     @Override
     public String getKey() {
-        return null;
+        return "S";
     }
 
     @Override
     public String execute(Library library) {
-        return null;
+        System.out.println("Please Login with your Credentials");
+        String LoginName = askForLoginName();
+        String password = askForPassword();
+        if (checkCredentials(library, LoginName, password)) {
+            library.setCurrentCustomer(library.getListOfAllCustomer().get(LoginName));
+            return "Sign Up succeeded.";
+        } else {
+            System.out.println("LoginName or Password wrong.");
+            return "Please try again.";
+        }
     }
 
 }

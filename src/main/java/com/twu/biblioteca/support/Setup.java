@@ -33,13 +33,14 @@ public class Setup {
         ListOneResource LOR = new ListOneResource();
         CheckOutResource COR = new CheckOutResource();
         CheckInResource CIR = new CheckInResource();
+        LoginOption LO = new LoginOption();
         ArrayList<Option> TopLevelOption = new ArrayList<>();
         TopLevelOption.add(LAR);
         TopLevelOption.add(LOR);
         TopLevelOption.add(COR);
         TopLevelOption.add(CIR);
+        TopLevelOption.add(LO);
         TopLevelOption.add(QO);
-
         return TopLevelOption;
     }
 

@@ -21,9 +21,9 @@ public class CheckInMovie implements Option {
         String input = new Querist(System.in,System.out).ask(getContent());
         if(library.getListOfAllMovies().containsKey(input) && !library.getListOfAllMovies().get(input).isCheckedIn()){
             library.getListOfAllMovies().get(input).invertCheckedFlag();
-            return "Thank you for returning the book.";
+            return "Thank you for returning the movie.";
         }else{
-            return "That is not a valid book to return.";
+            return "That is not a valid movie to return.\n";
         }
     }
 }

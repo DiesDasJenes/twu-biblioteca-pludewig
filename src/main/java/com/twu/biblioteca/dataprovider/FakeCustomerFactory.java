@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FakeCustomerFactory implements FakeUserFactory {
-
+    int count = 0;
     public Map<String, Customer> getListOfCustomers(int amount) {
         Map<String, Customer> ListOfAllCustomer = new HashMap<>();
         for (int i = 0; i < amount; i++) {
@@ -21,6 +21,7 @@ public class FakeCustomerFactory implements FakeUserFactory {
     @Override
     public User create() {
         Faker Faker = new Faker();
-        return new Customer(String.valueOf((int)(Math.random()*Integer.MAX_VALUE)),Faker.name().firstName(),Faker.name().lastName(),"Cos1","TWiscool".hashCode());
+        String loginCred = "111-111" + count++;
+        return new Customer(loginCred,Faker.name().firstName(),Faker.name().lastName(),loginCred,"TWiscool".hashCode());
     }
 }

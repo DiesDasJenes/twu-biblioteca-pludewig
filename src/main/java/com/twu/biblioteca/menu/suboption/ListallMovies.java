@@ -14,7 +14,7 @@ public class ListallMovies implements Option {
 
     @Override
     public String getKey() {
-        return "lM";
+        return "M";
     }
 
     @Override

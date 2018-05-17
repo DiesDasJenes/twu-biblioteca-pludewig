@@ -16,7 +16,7 @@ public class Querist {
     public String ask(String message){
         out.println(message);
         out.print("*");
-        return scanner.next().toUpperCase().trim();
+        return scanner.next();
     }
 
 }

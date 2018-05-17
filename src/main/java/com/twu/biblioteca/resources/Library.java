@@ -9,6 +9,7 @@ public class Library {
     private Map<String, Book> ListOfAllBooks;
     private Map<String, Movie> ListOfAllMovies;
     private Map<String, Customer> ListOfAllCustomer;
+    private Customer currentCustomer;
 
     public Library(){
         ListOfAllBooks = new HashMap<>();
@@ -51,5 +52,13 @@ public class Library {
 
     public void setListOfAllMovies(Map<String, Movie> listOfAllMovies) {
         ListOfAllMovies = listOfAllMovies;
+    }
+
+    public Customer getCurrentCustomer() {
+        return currentCustomer;
+    }
+
+    public void setCurrentCustomer(Customer currentCustomer) {
+        this.currentCustomer = currentCustomer;
     }
 }

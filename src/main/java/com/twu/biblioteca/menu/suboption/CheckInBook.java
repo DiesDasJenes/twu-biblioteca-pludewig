@@ -13,7 +13,7 @@ public class CheckInBook implements Option {
 
     @Override
     public String getKey() {
-        return "rB";
+        return "B";
     }
 
     @Override

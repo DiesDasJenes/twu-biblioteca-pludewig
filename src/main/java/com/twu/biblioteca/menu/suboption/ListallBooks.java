@@ -14,7 +14,7 @@ public class ListallBooks implements Option {
 
     @Override
     public String getKey() {
-        return "lB";
+        return "B";
     }
 
     @Override

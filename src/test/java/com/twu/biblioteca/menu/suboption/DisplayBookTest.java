@@ -41,8 +41,8 @@ public class DisplayBookTest {
         assertEquals("\nBook Details:\n" +
                 "No.26\n" +
                 "Title: The Tea Rose\n" +
-                "Author Jennifer Donelly\n" +
-                "Published 2014\n" +
+                "Author: Jennifer Donelly\n" +
+                "Published: 2014\n" +
                 "\n",systemOutRule.getLog());
 
     }

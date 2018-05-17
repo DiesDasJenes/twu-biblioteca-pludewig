@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class MenuTest {
     private Library library;
@@ -21,10 +22,10 @@ public class MenuTest {
 
     @Before
     public void setUp() throws Exception {
-        //library = new Library();
-        //listallBooks = mock(ListallBooks.class);
-        //when(listallBooks.getSubMenuCommands()).thenReturn("L");
-        //when(listallBooks.getContent()).thenReturn("(L)ist all Books");
+        library = new Library();
+        listallBooks = mock(ListallBooks.class);
+        when(listallBooks.getContent()).thenReturn("L");
+        when(listallBooks.getContent()).thenReturn("(L)ist all Books");
         //menu = new Menu(library,listallBooks);
     }
 
