@@ -3,8 +3,6 @@ package com.twu.biblioteca.menu.topleveloption;
 import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.menu.suboption.CheckInBook;
 import com.twu.biblioteca.menu.suboption.CheckInMovie;
-import com.twu.biblioteca.menu.suboption.CheckOutBook;
-import com.twu.biblioteca.menu.suboption.CheckOutMovie;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 

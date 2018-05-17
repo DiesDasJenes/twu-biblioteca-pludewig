@@ -29,7 +29,7 @@ public class DisplayBook implements Option {
                     "Published " + Book.getYearPublished() +
                     "\n";
         }
-         return "Select a valid topleveloption!";
+         return "Select a valid option!";
 
     }
 }

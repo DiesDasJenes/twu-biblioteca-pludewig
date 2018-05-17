@@ -55,7 +55,7 @@ public class Movie implements Resource {
         );
     }
 
-    int getRating() {
+    public int getRating() {
         return rating;
     }
 
@@ -70,4 +70,10 @@ public class Movie implements Resource {
     void invertCheckedFlag() {
         this.checkedIn = !isCheckedIn();
     }
+
+    public String getDirector() {
+        return director;
+    }
+
+
 }
