@@ -20,8 +20,8 @@ public class LoginOptionTest {
     public void setUp() throws Exception {
         library = new Library();
         loginOption = new LoginOption();
-        alice = new Customer("111-1110", "TWiscool".hashCode(), , , );
-        bob = new Customer("222-2222", "tw2@".hashCode(), , , );
+        alice = new Customer("111-1110", "TWiscool".hashCode(),"as" ,"asd" ,"asd" );
+        bob = new Customer("222-2222", "tw2@".hashCode(), "asd", "asd", "asd");
         HashMap<String, Customer> List = new HashMap<>();
         List.putIfAbsent(alice.getID(), alice);
         List.putIfAbsent(bob.getID(), bob);

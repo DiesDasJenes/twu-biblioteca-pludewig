@@ -11,11 +11,21 @@ public class DisplayUser implements Option {
 
     @Override
     public String getKey() {
-        return "S";
+        return "U";
     }
 
     @Override
     public String execute(Library library) {
-        return null;
+
+        if(library.getCurrentCustomer() != null){
+            return  "\n" +
+                    "User Details:\n" +
+                    "No." + library.getCurrentCustomer().getID()  + "\n" +
+                    "Name: " + library.getCurrentCustomer().getFullName() + "\n" +
+                    "Email: " + library.getCurrentCustomer().getEmailAdress() + "\n" +
+                    "Phonenumber: " + library.getCurrentCustomer().getPhoneNumber() +
+                    "\n";
+        }
+        return "Select a valid option!";
     }
 }
