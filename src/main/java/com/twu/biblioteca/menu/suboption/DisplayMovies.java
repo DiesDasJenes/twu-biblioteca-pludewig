@@ -19,15 +19,15 @@ public class DisplayMovies implements Option {
     @Override
     public String execute(Library library) {
         String id = new Querist(System.in,System.out).ask(this.getContent());
-        if(library.getListOfAllBooks().containsKey(id)){
+        if(library.getListOfAllMovies().containsKey(id)){
             Movie movie = library.getListOfAllMovies().get(id);
             return  "\n" +
                     "Movie Details:\n" +
                     "No." + movie.getID()  + "\n" +
                     "Title: " + movie.getTitle() + "\n" +
-                    "Director " + movie.getDirector() + "\n" +
-                    "Published " + movie.getYear() +
-                    "Rating " + movie.getRating() + "/10" +
+                    "Director: " + movie.getDirector() + "\n" +
+                    "Published: " + movie.getYear() +
+                    "Rating: " + movie.getRating() + "/10" +
                     "\n";
         }
         return "Select a valid option!";

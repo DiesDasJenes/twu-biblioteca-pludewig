@@ -25,8 +25,8 @@ public class DisplayBook implements Option {
                     "Book Details:\n" +
                     "No." + Book.getID()  + "\n" +
                     "Title: " + Book.getTitle() + "\n" +
-                    "Author " + Book.getAuthor() + "\n" +
-                    "Published " + Book.getYearPublished() +
+                    "Author: " + Book.getAuthor() + "\n" +
+                    "Published: " + Book.getYearPublished() +
                     "\n";
         }
          return "Select a valid option!";
