@@ -4,8 +4,7 @@ import com.twu.biblioteca.dataprovider.FakeBookFactory;
 import com.twu.biblioteca.dataprovider.FakeCustomerFactory;
 import com.twu.biblioteca.dataprovider.FakeMovieFactory;
 import com.twu.biblioteca.menu.Option;
-import com.twu.biblioteca.menu.topleveloption.ListAllResources;
-import com.twu.biblioteca.menu.topleveloption.QuitOption;
+import com.twu.biblioteca.menu.topleveloption.*;
 import com.twu.biblioteca.resources.Library;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class Setup {
         return library;
     }
 
-    public Library setUpCleanLibray(){
+    Library setUpCleanLibray(){
         return new Library();
     }
 
@@ -31,8 +30,14 @@ public class Setup {
     public ArrayList<Option> setUpOptions(){
         QuitOption QO = new QuitOption();
         ListAllResources LAR = new ListAllResources();
+        ListOneResource LOR = new ListOneResource();
+        CheckOutResource COR = new CheckOutResource();
+        CheckInResource CIR = new CheckInResource();
         ArrayList<Option> TopLevelOption = new ArrayList<>();
         TopLevelOption.add(LAR);
+        TopLevelOption.add(LOR);
+        TopLevelOption.add(COR);
+        TopLevelOption.add(CIR);
         TopLevelOption.add(QO);
 
         return TopLevelOption;
