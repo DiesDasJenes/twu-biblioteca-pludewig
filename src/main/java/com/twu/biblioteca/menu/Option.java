@@ -3,9 +3,9 @@ package com.twu.biblioteca.menu;
 import com.twu.biblioteca.resources.Library;
 
 public interface Option {
-    String getCommandContent();
+    String getContent();
 
-    String getCommand();
+    String getKey();
 
-    String executeCommand(Library library);
+    String execute(Library library);
 }

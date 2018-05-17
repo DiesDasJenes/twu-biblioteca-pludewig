@@ -24,7 +24,7 @@ public class Menu {
 
     private Option getOption(String userInput){
         if(isValidOption(userInput)){
-            return optionTopLevel.stream().filter(option -> userInput.equals(option.getCommand())).collect(Collectors.toList()).get(0);
+            return optionTopLevel.stream().filter(option -> userInput.equals(option.getKey())).collect(Collectors.toList()).get(0);
         }else {
             System.out.println("Select a valid option!");
             printTopLevelOption();
@@ -37,15 +37,15 @@ public class Menu {
         return Querist.ask("Choose an option through typing in the Letter within the brackets.").trim();
     }
     private void printResultFor(Option Option){
-        System.out.println(Option.executeCommand(library));
+        System.out.println(Option.execute(library));
     }
 
     private void printTopLevelOption(){
-        optionTopLevel.forEach(option -> System.out.println(option.getCommandContent()));
+        optionTopLevel.forEach(option -> System.out.println(option.getContent()));
     }
 
     private boolean isValidOption(String userInput) {
-        return optionTopLevel.stream().anyMatch(option -> userInput.equals(option.getCommand()));
+        return optionTopLevel.stream().anyMatch(option -> userInput.equals(option.getKey()));
     }
 }
 

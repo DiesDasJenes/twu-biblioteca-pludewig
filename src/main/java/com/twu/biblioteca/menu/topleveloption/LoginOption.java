@@ -47,17 +47,17 @@ public class LoginOption implements Option {
     }
 
     @Override
-    public String getCommandContent() {
+    public String getContent() {
         return null;
     }
 
     @Override
-    public String getCommand() {
+    public String getKey() {
         return null;
     }
 
     @Override
-    public String executeCommand(Library library) {
+    public String execute(Library library) {
         return null;
     }
 

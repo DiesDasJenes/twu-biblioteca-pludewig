@@ -8,17 +8,17 @@ import com.twu.biblioteca.resources.TableHeader;
 public class ListallMoviesOption implements Option {
 
     @Override
-    public String getCommandContent() {
+    public String getContent() {
         return "List all Movies";
     }
 
     @Override
-    public String getCommand() {
+    public String getKey() {
         return "lM";
     }
 
     @Override
-    public String executeCommand(Library library) {
+    public String execute(Library library) {
         TableHeader TH = new TableHeader();
         String MovieList = TH.getMovieHeader("%-20s");
         MovieList = MovieList.concat("\n");

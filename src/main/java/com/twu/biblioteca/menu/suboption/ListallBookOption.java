@@ -8,17 +8,17 @@ import com.twu.biblioteca.resources.Library;
 public class ListallBookOption implements Option {
 
     @Override
-    public String getCommandContent() {
+    public String getContent() {
         return "List all Books";
     }
 
     @Override
-    public String getCommand() {
+    public String getKey() {
         return "lB";
     }
 
     @Override
-    public String executeCommand(Library library) {
+    public String execute(Library library) {
         TableHeader BH = new TableHeader();
         String BookList =BH.getBookHeader("%-20s");
         BookList = BookList.concat("\n");

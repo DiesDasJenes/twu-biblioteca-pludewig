@@ -11,24 +11,24 @@ import com.twu.biblioteca.support.Querist;
 public class ListAllResources implements Option {
 
     @Override
-    public String getCommandContent() {
-        return "Display (L)ist of Resources";
+    public String getContent() {
+        return "Display (L)ist of Library Equipment";
     }
 
     @Override
-    public String getCommand() {
+    public String getKey() {
         return "L";
     }
 
     @Override
-    public String executeCommand(Library library) {
+    public String execute(Library library) {
         String userInput =  new Querist(System.in, System.out).ask("* (B)ook\n* (M)ovie\n* (A)bort\n* (Q)uit");
         switch (userInput){
-            case "B" : return new ListallBookOption().executeCommand(library);
-            case "M" : return new ListallMoviesOption().executeCommand(library);
+            case "B" : return new ListallBookOption().execute(library);
+            case "M" : return new ListallMoviesOption().execute(library);
             case "A" : return "Abort";
-            case "Q" : return new QuitOption().executeCommand(library);
-            default: executeCommand(library);
+            case "Q" : return new QuitOption().execute(library);
+            default: execute(library);
         }
         return "Please select a valid option!";
     }

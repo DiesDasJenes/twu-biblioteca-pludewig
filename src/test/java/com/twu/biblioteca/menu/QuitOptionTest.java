@@ -15,11 +15,11 @@ public class QuitOptionTest {
     }
     @Test
     public void getCommandContent() {
-        assertEquals("Press (Q) to Quit",quitOption.getCommandContent());
+        assertEquals("Press (Q) to Quit",quitOption.getContent());
     }
 
     @Test
     public void getCommand() {
-        assertEquals("Q",quitOption.getCommand());
+        assertEquals("Q",quitOption.getKey());
     }
 }

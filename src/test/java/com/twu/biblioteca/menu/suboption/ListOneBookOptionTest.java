@@ -31,13 +31,13 @@ public class ListOneBookOptionTest {
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("Please enter the Id of the book you want to see the details of.", listOneBookOption.getCommandContent());
+        assertEquals("Please enter the Id of the book you want to see the details of.", listOneBookOption.getContent());
     }
 
 
     @Test
     public void shouldGetDetailsOfOneBook() {
-        listOneBookOption.executeCommand(library);
+        listOneBookOption.execute(library);
         assertEquals("\nBook Details:\n" +
                 "No.26\n" +
                 "Title: The Tea Rose\n" +

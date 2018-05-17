@@ -7,18 +7,18 @@ import com.twu.biblioteca.support.Querist;
 public class CheckInBookOption implements Option {
 
     @Override
-    public String getCommandContent() {
+    public String getContent() {
         return "Please enter the ID of the book you want to return.";
     }
 
     @Override
-    public String getCommand() {
+    public String getKey() {
         return "rB";
     }
 
     @Override
-    public String executeCommand(Library library) {
-        String input = new Querist(System.in,System.out).ask(getCommandContent());
+    public String execute(Library library) {
+        String input = new Querist(System.in,System.out).ask(getContent());
         if(library.getListOfAllBooks().containsKey(input) && !library.getListOfAllBooks().get(input).isCheckedIn()){
             library.getListOfAllBooks().get(input).invertCheckedFlag();
             return "Thank you for returning the book.";

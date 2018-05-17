@@ -27,13 +27,13 @@ public class ListallBookOptionTest {
 
     @Test
     public void canGetCommandContent() {
-        assertEquals("List all Books", listallBookOption.getCommandContent());
+        assertEquals("List all Books", listallBookOption.getContent());
     }
 
 
     @Test
     public void printAllBooks() {
-        listallBookOption.executeCommand(library);
+        listallBookOption.execute(library);
         assertEquals("| Book No.             | Title                | Author               | Published            |\n| 0                    | Enders Game          | Orson Scoott         | 1990                 |\n| 1                    | Earth Unaware        | Orson Scoott         | 2005                 |\n\n", systemOutRule.getLog());
     }
 }

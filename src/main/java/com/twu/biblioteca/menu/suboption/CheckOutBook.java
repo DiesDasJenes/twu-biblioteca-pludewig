@@ -4,22 +4,22 @@ import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
-public class CheckOutBookOption implements Option {
+public class CheckOutBook implements Option {
 
     @Override
-    public String getCommandContent() {
+    public String getContent() {
         return "Please enter the Id of the book you want to borrow.";
     }
 
     @Override
-    public String getCommand() {
+    public String getKey() {
         return "B";
     }
 
 
     @Override
-    public String executeCommand(Library library) {
-        String input = new Querist(System.in,System.out).ask(getCommandContent());
+    public String execute(Library library) {
+        String input = new Querist(System.in,System.out).ask(getContent());
         if(library.getListOfAllBooks().containsKey(input) && library.getListOfAllBooks().get(input).isCheckedIn()){
             library.getListOfAllBooks().get(input).invertCheckedFlag();
             return "Thank you! Enjoy the book";

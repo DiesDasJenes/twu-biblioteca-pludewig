@@ -7,18 +7,18 @@ import com.twu.biblioteca.support.Querist;
 
 public class ListOneBookOption implements Option {
     @Override
-    public String getCommandContent() {
+    public String getContent() {
         return "Please enter the Id of the book you want to see the details of.";
     }
 
     @Override
-    public String getCommand() {
+    public String getKey() {
         return "B";
     }
 
     @Override
-    public String executeCommand(Library library) {
-        String id = new Querist(System.in,System.out).ask(this.getCommandContent());
+    public String execute(Library library) {
+        String id = new Querist(System.in,System.out).ask(this.getContent());
         if(library.getListOfAllBooks().containsKey(id)){
             Book Book = library.getListOfAllBooks().get(id);
             return  "\n" +

@@ -6,17 +6,17 @@ import com.twu.biblioteca.resources.Library;
 public class ListOneResource implements Option {
 
     @Override
-    public String getCommandContent() {
+    public String getContent() {
         return null;
     }
 
     @Override
-    public String getCommand() {
+    public String getKey() {
         return null;
     }
 
     @Override
-    public String executeCommand(Library library) {
+    public String execute(Library library) {
         return null;
     }
 }

@@ -10,7 +10,7 @@ import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import static org.junit.Assert.*;
 
 public class ListAllResourcesTest {
-    ListAllResources listAllResources;
+    private ListAllResources listAllResources;
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -24,19 +24,19 @@ public class ListAllResourcesTest {
     }
 
     @Test
-    public void getCommandContent() {
-        assertEquals("Display (L)ist of Resources",listAllResources.getCommandContent());
+    public void getContent() {
+        assertEquals("Display (L)ist of Library Equipment",listAllResources.getContent());
     }
 
     @Test
-    public void getCommand() {
-        assertEquals("L",listAllResources.getCommand());
+    public void getKey() {
+        assertEquals("L",listAllResources.getKey());
     }
 
     @Test
-    public void executeCommand() {
+    public void executeOption() {
         Library library = new Library();
-        listAllResources.executeCommand(library);
+        listAllResources.execute(library);
         assertEquals("* (B)ook\n* (M)ovie\n* (A)bort\n* (Q)uit",systemOutRule.getLog().substring(0,35));
         systemInRule.provideLines("Q");
     }

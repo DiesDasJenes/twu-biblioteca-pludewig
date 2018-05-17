@@ -1,10 +1,9 @@
-package com.twu.biblioteca.menu.topleveloption;
+package com.twu.biblioteca.menu.suboption;
 
 import com.twu.biblioteca.menu.Option;
 import com.twu.biblioteca.resources.Library;
 
-public class CheckInResource implements Option {
-
+public class CheckOutMovie implements Option {
     @Override
     public String getContent() {
         return null;
@@ -19,5 +18,4 @@ public class CheckInResource implements Option {
     public String execute(Library library) {
         return null;
     }
-
 }
