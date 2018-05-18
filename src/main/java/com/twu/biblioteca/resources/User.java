@@ -6,7 +6,5 @@ public interface User {
 
     String getID();
 
-    void setID(String ID);
-
     Map<String, Resource> getBorrowedResources();
 }

@@ -29,8 +29,8 @@ public class MenuTest {
     public void setUp() throws Exception {
         Setup setup = new Setup();
         library = new Library();
-        library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig"));
-        menu = new Menu(setup.setUpOptions(),library);
+        library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig", null));
+        menu = new Menu(setup.setUpOptions(library),library);
     }
 
     @Test

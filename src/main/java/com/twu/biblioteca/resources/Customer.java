@@ -9,14 +9,15 @@ public class Customer implements User {
     private String loginLibraryNumber;
     private int passwordHash;
     private String id;
-    public Customer(String loginLibraryNumber, int passwordHash, String phoneNumber, String emailAdress, String fullname){
+    private Map<String,Resource> borrowedResources;
+    public Customer(String loginLibraryNumber, int passwordHash, String phoneNumber, String emailAdress, String fullname, Map<String, Resource> borrowedResources){
         this.loginLibraryNumber = loginLibraryNumber;
         this.passwordHash = passwordHash;
         this.id = loginLibraryNumber;
         this.fullName = fullname;
         this.phoneNumber = phoneNumber;
         this.emailAdress = emailAdress;
-
+        this.borrowedResources = borrowedResources;
     }
 
     public String getLoginLibraryNumber() {
@@ -33,13 +34,8 @@ public class Customer implements User {
     }
 
     @Override
-    public void setID(String userID) {
-        this.id = userID;
-    }
-
-    @Override
     public Map<String, Resource> getBorrowedResources() {
-        return null;
+        return borrowedResources;
     }
 
     public String getFullName() {

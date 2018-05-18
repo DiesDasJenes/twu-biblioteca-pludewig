@@ -27,7 +27,7 @@ public class LogoutOptionTest {
     @Test
     public void execute() {
         Library library =  new Library();
-        library.setCurrentCustomer(new Customer("a","asd".hashCode(),"asd","asd","asd asd"));
+        library.setCurrentCustomer(new Customer("a","asd".hashCode(),"asd","asd","asd asd", null));
         assertNotNull(library.getCurrentCustomer());
         logoutOption.execute(library);
         assertNull(library.getCurrentCustomer());

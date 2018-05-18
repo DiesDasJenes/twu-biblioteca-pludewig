@@ -8,9 +8,6 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static org.junit.Assert.*;
 
 public class AuthenticationOptionTest {
@@ -36,7 +33,7 @@ public class AuthenticationOptionTest {
 
     @Test
     public void shouldGetContentofLogout() {
-        library.setCurrentCustomer(new Customer("1","tw".hashCode(),"s","a","Hein a"));
+        library.setCurrentCustomer(new Customer("1","tw".hashCode(),"s","a","Hein a", null));
         assertNotNull(library.getCurrentCustomer());
         assertEquals("(S)ign Out",authenticationOption.getContent());
     }
@@ -50,7 +47,7 @@ public class AuthenticationOptionTest {
 
     @Test
     public void shouldGetKeyofLogout() {
-        library.setCurrentCustomer(new Customer("1","tw".hashCode(),"s","a","Hein a"));
+        library.setCurrentCustomer(new Customer("1","tw".hashCode(),"s","a","Hein a", null));
         assertNotNull(library.getCurrentCustomer());
         assertEquals("S",authenticationOption.getKey());
     }
@@ -63,7 +60,7 @@ public class AuthenticationOptionTest {
 
     @Test
     public void shouldGetPermissionofLogout() {
-        library.setCurrentCustomer(new Customer("1","tw".hashCode(),"s","a","Hein a"));
+        library.setCurrentCustomer(new Customer("1","tw".hashCode(),"s","a","Hein a", null));
         assertNotNull(library.getCurrentCustomer());
         assertTrue(authenticationOption.isPermitted(1));
     }
