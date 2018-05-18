@@ -29,7 +29,7 @@ public class BookTest {
     public void propertyList() {
         String formatTestStr = String.format("| %1$s | %1$s | %1$s | %1$s |%n", "%-20s");
         String test = String.format(formatTestStr,
-                randomDigit, TestBook.getReducedTitle(),Author, randomYear.getYear()
+                randomDigit,StringFormatter.reduceStringAddDots(TestBook.getTitle()) ,StringFormatter.reduceStringAddDots(TestBook.getAuthor()), randomYear.getYear()
         );
         assertEquals(test,TestBook.getPropertyList("%-20s"));
     }

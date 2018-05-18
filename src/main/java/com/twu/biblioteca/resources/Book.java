@@ -4,7 +4,6 @@ import org.joda.time.LocalDate;
 
 
 public class Book implements Resource {
-    private StringFormatter stringFormatter;
     private String title;
     private String author;
     private LocalDate published;
@@ -17,7 +16,6 @@ public class Book implements Resource {
         this.published = published;
         this.checkedIn = checkedIn;
         this.id = id;
-        stringFormatter = new StringFormatter();
     }
 
     public void invertCheckedFlag() {
@@ -48,7 +46,7 @@ public class Book implements Resource {
         );
         return String.format(
                 formatStr,
-                id, stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title, stringFormatter.isStringTooLong(author) ? stringFormatter.reduceStringAddDots(author) : author, getYearPublished()
+                id, StringFormatter.reduceStringAddDots(title),StringFormatter.reduceStringAddDots(author), getYearPublished()
         );
     }
 
@@ -65,7 +63,7 @@ public class Book implements Resource {
     }
 
     public String getReducedTitle(){
-        return stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title;
+        return StringFormatter.reduceStringAddDots(title);
     }
 
     public String getTitle() {

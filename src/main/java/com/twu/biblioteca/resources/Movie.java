@@ -4,7 +4,6 @@ import org.joda.time.LocalDate;
 
 public class Movie implements Resource {
     private static final int HIGHEST_POSSIBLE_RATING = 10;
-    private StringFormatter stringFormatter;
     private String id;
     private String title;
     private LocalDate published;
@@ -19,7 +18,6 @@ public class Movie implements Resource {
         this.director = director;
         this.rating =   reduceRatingOutOfRange(rating);
         this.checkedIn = checkedIn;
-        stringFormatter = new StringFormatter();
     }
 
     @Override
@@ -41,7 +39,7 @@ public class Movie implements Resource {
     }
 
     public String getReducedTitle(){
-        return stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title;
+        return StringFormatter.reduceStringAddDots(title);
     }
 
     @Override
@@ -51,7 +49,7 @@ public class Movie implements Resource {
         );
         return String.format(
                 formatStr,
-                id, stringFormatter.isStringTooLong(title) ? stringFormatter.reduceStringAddDots(title) : title, stringFormatter.isStringTooLong(director) ? stringFormatter.reduceStringAddDots(director) : director, getYear(), getRating() + "/10"
+                id, StringFormatter.reduceStringAddDots(title),StringFormatter.reduceStringAddDots(director), getYear(), getRating() + "/10"
         );
     }
 
