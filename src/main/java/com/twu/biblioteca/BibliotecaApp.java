@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.menu.Menu;
+import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Messages;
 import com.twu.biblioteca.support.Setup;
 
@@ -22,7 +23,8 @@ public class BibliotecaApp {
     private Menu setUpMenu()
     {
         Setup setup = new Setup();
-        return new Menu(setup.setUpOptions(),setup.setUpLibraryandFakeData());
+        Library library = new Library();
+        return new Menu(setup.setUpOptions(library),setup.setUpLibraryandFakeData(library));
     }
 
 

@@ -11,8 +11,7 @@ import java.util.ArrayList;
 
 public class Setup {
 
-    public Library setUpLibraryandFakeData(){
-        Library library = new Library();
+    public Library setUpLibraryandFakeData(Library library){
         FakeMovieFactory fakeMovieFactory = new FakeMovieFactory();
         FakeBookFactory fakeBookFactory = new FakeBookFactory();
         FakeCustomerFactory fakeCustomerFactory = new FakeCustomerFactory();
@@ -27,19 +26,19 @@ public class Setup {
     }
 
 
-    public ArrayList<Option> setUpOptions(){
+    public ArrayList<Option> setUpOptions(Library library){
         QuitOption QO = new QuitOption();
         ListAllResources LAR = new ListAllResources();
         ListOneResource LOR = new ListOneResource();
         CheckOutResource COR = new CheckOutResource();
         CheckInResource CIR = new CheckInResource();
-        LoginOption LO = new LoginOption();
+        AuthenticationOption AO = new AuthenticationOption(library);
         ArrayList<Option> TopLevelOption = new ArrayList<>();
         TopLevelOption.add(LAR);
         TopLevelOption.add(LOR);
         TopLevelOption.add(COR);
         TopLevelOption.add(CIR);
-        TopLevelOption.add(LO);
+        TopLevelOption.add(AO);
         TopLevelOption.add(QO);
         return TopLevelOption;
     }
