@@ -1,6 +1,7 @@
 package com.twu.biblioteca.menu.suboption;
 
 import com.twu.biblioteca.resources.Book;
+import com.twu.biblioteca.resources.Customer;
 import com.twu.biblioteca.resources.Library;
 import org.junit.Before;
 import org.junit.Rule;
@@ -37,6 +38,7 @@ public class CheckOutBookTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, VALID_ID);
         library.addBooks(book);
+        library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig", null));
         systemInRule.provideLines(VALID_ID);
         String actual = checkOutBook.execute(library);
         assertEquals("Thank you! Enjoy the book", actual);

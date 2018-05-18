@@ -1,5 +1,6 @@
 package com.twu.biblioteca.menu.suboption;
 
+import com.twu.biblioteca.resources.Customer;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.resources.Movie;
 import org.junit.Before;
@@ -41,6 +42,7 @@ public class CheckInMovieTest {
         Library library = new Library();
         Movie movie= new Movie(VALID_ID, "Enders Game", new org.joda.time.LocalDate(1990, 12, 1), "Orson Scott",9,false);
         library.addMovies(movie);
+        library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig", null));
         systemInRule.provideLines(VALID_ID);
         String actual = checkInMovie.execute(library);
         assertEquals("Thank you for returning the movie.", actual);

@@ -35,16 +35,20 @@ public class MenuTest {
 
     @Test
     public void printOptionsWithPermission() {
-        menu.printTopLevelOption();
         library.setCurrentPermissionLevel(1);
+        menu.printTopLevelOption();
         assertEquals("Display (L)ist of Library Equipment\n" +
                 "(D)isplay Item of Library\n" +
-                "(S)ign Up\n" +
+                "(B)orrow Item of Library Equipment\n" +
+                "(R)eturn Item from Libary\n" +
+                "(S)ign Out\n" +
                 "Press (Q) to Quit\n",systemOutRule.getLog());
     }
 
     @Test
     public void printOptionsWithoutPermission() {
+        library.setCurrentPermissionLevel(0);
+        library.setCurrentCustomer(null);
         systemInRule.provideLines("Q");
         menu.printTopLevelOption();
         assertEquals("Display (L)ist of Library Equipment\n" +

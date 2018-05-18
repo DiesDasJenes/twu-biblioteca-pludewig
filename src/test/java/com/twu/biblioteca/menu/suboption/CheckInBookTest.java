@@ -1,6 +1,7 @@
 package com.twu.biblioteca.menu.suboption;
 
 import com.twu.biblioteca.resources.Book;
+import com.twu.biblioteca.resources.Customer;
 import com.twu.biblioteca.resources.Library;
 import org.junit.Before;
 import org.junit.Rule;
@@ -36,6 +37,7 @@ public class CheckInBookTest {
         Library library = new Library();
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), false, "0");
         library.addBooks(book);
+        library.setCurrentCustomer(new Customer("111-1111","tw".hashCode(),"+49 09090990","sho@sho.com","Peter Lustig", null));
         systemInRule.provideLines("0");
         String actual = checkInBook.execute(library);
         assertEquals("Thank you for returning the book.", actual);
@@ -56,8 +58,8 @@ public class CheckInBookTest {
         Book book = new Book("Enders Game", "Orson Scoott", new org.joda.time.LocalDate(1990, 12, 1), true, "0");
         library.addBooks(book);
         systemInRule.provideLines(s);
-        String x = checkInBook.execute(library);
-        assertEquals("That is not a valid book to return.", x);
+        String actual = checkInBook.execute(library);
+        assertEquals("That is not a valid book to return.", actual);
     }
 
     @Test

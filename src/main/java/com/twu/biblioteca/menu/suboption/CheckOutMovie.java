@@ -1,6 +1,7 @@
 package com.twu.biblioteca.menu.suboption;
 
 import com.twu.biblioteca.menu.Option;
+import com.twu.biblioteca.resources.Customer;
 import com.twu.biblioteca.resources.Library;
 import com.twu.biblioteca.support.Querist;
 
@@ -21,6 +22,7 @@ public class CheckOutMovie implements Option {
         String input = new Querist(System.in,System.out).ask(getContent());
         if(library.getListOfAllMovies().containsKey(input) && library.getListOfAllMovies().get(input).isCheckedIn()){
             library.getListOfAllMovies().get(input).invertCheckedFlag();
+            library.setCurrentCustomer((Customer) CheckOutHandler.getUpdatedCustomer(library,library.getListOfAllMovies().get(input)));
             return "Thank you! Enjoy the movie";
         }else{
             return "That movie is not available.";
